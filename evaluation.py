@@ -26,13 +26,13 @@ def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     Returns n-gram -> list of strings, where each string has n words
     common to both the provided arguments.
     """
-    common_strings = []
+    common_strings = set()
     system_strings = n_split_answer(system_answer, n)
     ref_strings = n_split_answer(ref_answer, n)
     for system_string in system_strings:
         if system_string in ref_strings:
-            common_strings.append(system_string)
-    return common_strings
+            common_strings.add(system_string)
+    return list(common_strings)
 
 
 def n_split_answer(answer: str, n: int) -> List[str]:
@@ -129,7 +129,6 @@ def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
     for skip_2_system_string in skip_2_system:
         if skip_2_system_string in skip_2_ref:
             skip_2_system_ref_intersection.append(skip_2_system_string)
-    print(skip_2_system_ref_intersection)
     # calculate recall and precision
     if skip_2_ref:
         recall = len(skip_2_system_ref_intersection) / len(skip_2_ref)
