@@ -65,9 +65,26 @@ def lcs(system_answer: str, ref_answer: str) -> List[str]:
     return lcs_gram
 
 
+def skip_n(answer: str, n: int) -> List[str]:
+    """
+    
+    """
+    words_with_max_n_gaps = []
+    answer_string = answer.split()
+    answer_string_size = len(answer_string)
+    for i in range(answer_string_size):
+        current_string = answer_string[i]
+        for j in range(1, n+2):
+                if i + j < answer_string_size:
+                    string_to_add = current_string + " " + answer_string[i+j].strip("!.,;:'\"")
+                    words_with_max_n_gaps.append(string_to_add.strip())
+    return words_with_max_n_gaps
+
+
 def rouge_n(system_answer: str, ref_answer: str, n: int) -> Tuple[float, float]:
     """
     Calculates and returns recall and precision for system's answer given the reference answer
+    using ROUGE-N approach
     """
     recall, precision = 0, 0
     number_of_overlapping_words = len(ngram(system_answer, ref_answer, n))
@@ -81,9 +98,12 @@ def rouge_n(system_answer: str, ref_answer: str, n: int) -> Tuple[float, float]:
 
 
 def rouge_l(system_answer: str, ref_answer: str) -> Tuple[float, float]:
+    """
+    Calculates and returns recall and precision for system's answer given the reference answer
+    using ROUGE-L approach
+    """
     recall, precision = 0, 0
     _lcs = lcs(system_answer, ref_answer)
-    print(_lcs)
     if _lcs:
         any_lcs = _lcs[0]
         number_of_words_in_lcs = len(any_lcs.split())
@@ -93,4 +113,26 @@ def rouge_l(system_answer: str, ref_answer: str) -> Tuple[float, float]:
             recall = number_of_words_in_lcs / total_words_in_reference_summary
         if total_words_in_system_summary:
             precision = number_of_words_in_lcs / total_words_in_system_summary
+    return (recall, precision)
+
+
+def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
+    """
+    Calculates and returns recall and precision for system's answer given the reference answer
+    using ROUGE-S approach
+    """
+    recall, precision = 0, 0
+    skip_2_system = skip_n(system_answer, 2)
+    skip_2_ref = skip_n(ref_answer, 2)
+    # find s the number of skip-bigram matches between system and ref answers
+    skip_2_system_ref_intersection = []
+    for skip_2_system_string in skip_2_system:
+        if skip_2_system_string in skip_2_ref:
+            skip_2_system_ref_intersection.append(skip_2_system_string)
+    print(skip_2_system_ref_intersection)
+    # calculate recall and precision
+    if skip_2_ref:
+        recall = len(skip_2_system_ref_intersection) / len(skip_2_ref)
+    if skip_2_system:
+        precision = len(skip_2_system_ref_intersection) / len(skip_2_system)
     return (recall, precision)
