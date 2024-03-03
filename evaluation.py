@@ -28,13 +28,13 @@ def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     Returns n-gram -> list of strings, where each string has n words
     common to both the provided arguments.
     """
-    common_strings = set()
+    common_strings = []
     system_strings = n_split_answer(system_answer, n)
     ref_strings = n_split_answer(ref_answer, n)
-    for system_string in system_strings:
-        if system_string in ref_strings:
-            common_strings.add(system_string)
-    return list(common_strings)
+    for ref_string in ref_strings:
+        if ref_string in system_strings:
+            common_strings.append(ref_string)
+    return common_strings
 
 
 def n_split_answer(answer: str, n: int) -> List[str]:
