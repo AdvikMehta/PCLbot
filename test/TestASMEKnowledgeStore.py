@@ -1,6 +1,6 @@
 from db.ASMEKnowledgeStore import ASMEKnowledgeStore
 
-pdf_path = "../test/data/marvel_prop_auction.pdf"
+pdf_path_1 = "../test/data/marvel_prop_auction.pdf"
 pdf_path_2 = "../test/data/golf_guidebook.pdf"
 
 index_name = "asme-bot-knowledge"
@@ -14,4 +14,4 @@ vectordb = ASMEKnowledgeStore(index_name)
 
 # print(vectordb.add_docs([pdf_path_2]))
 # print(vectordb.similarity_search(query2))
-vectordb.clear_db()
+# vectordb.clear_db()
