@@ -18,6 +18,8 @@ precision = number_of_overlapping_words / total_words_in_system_summary
 """
 
 from typing import List, Tuple
+import argparse
+import os, sys
 
 
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
@@ -94,7 +96,7 @@ def rouge_n(system_answer: str, ref_answer: str, n: int) -> Tuple[float, float]:
         recall = number_of_overlapping_words / total_words_in_reference_summary
     if total_words_in_system_summary:
         precision = number_of_overlapping_words / total_words_in_system_summary
-    return (recall, precision)
+    return (round(recall, 4), round(precision, 4))
 
 
 def rouge_l(system_answer: str, ref_answer: str) -> Tuple[float, float]:
@@ -113,7 +115,7 @@ def rouge_l(system_answer: str, ref_answer: str) -> Tuple[float, float]:
             recall = number_of_words_in_lcs / total_words_in_reference_summary
         if total_words_in_system_summary:
             precision = number_of_words_in_lcs / total_words_in_system_summary
-    return (recall, precision)
+    return (round(recall, 4), round(precision, 4))
 
 
 def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
@@ -134,4 +136,49 @@ def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
         recall = len(skip_2_system_ref_intersection) / len(skip_2_ref)
     if skip_2_system:
         precision = len(skip_2_system_ref_intersection) / len(skip_2_system)
-    return (recall, precision)
+    return (round(recall, 4), round(precision, 4))
+
+
+def process_arguments() -> argparse.Namespace:
+    """
+    Processes the input path arguments to the scripts
+    """
+    parser = argparse.ArgumentParser(description="Calculate recall and precision for model's answer, using ROUGE, provided the reference answer")
+    parser.add_argument("model_ans_path", type=str, help="path to file with model's answer")
+    parser.add_argument("ref_ans_path", type=str, help="path to file with reference answer")
+    args = parser.parse_args()
+    # check if user provided valid arguments
+    if not os.path.isfile(args.model_ans_path) or not os.path.isfile(args.ref_ans_path):
+        print("\nOne of the provided argument paths to the script do not exist !")
+        print("Please provide valid paths with model and reference answers.")
+        sys.exit()
+    return args
+
+
+def main():
+    """Main Function"""
+    args = process_arguments()
+    model_ans_path = args.model_ans_path
+    ref_ans_path = args.ref_ans_path
+    model_answer = open(model_ans_path, "r").read()
+    ref_answer = open(ref_ans_path, "r").read()
+
+    # Calculate all the Rouge scores
+    print("\n----------------------------------")
+    print("ROUGE scores (recall, precision):")
+    print("----------------------------------")
+    # Rouge_n, mainly 1, 2, 3
+    for n in range(1, 4):
+        rouge_n_score = rouge_n(model_answer, ref_answer, n)
+        print(f"ROUGE {n}: {rouge_n_score}")
+    # Rouge_l
+    rouge_l_score = rouge_l(model_answer, ref_answer)
+    print(f"ROUGE L: {rouge_l_score}")
+    # Rouge_s
+    rouge_s_score = rouge_s(model_answer, ref_answer)
+    print(f"ROUGE S: {rouge_s_score}")
+    print("----------------------------------")
+    
+
+if __name__ == "__main__":
+    main()
