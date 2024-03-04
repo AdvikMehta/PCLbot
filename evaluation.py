@@ -85,20 +85,20 @@ def lcs(system_answer_list: List[str], ref_answer_list: List[str]) -> List[str]:
     return lcs_result[::-1]
 
 
-def skip_n(answer: str, n: int) -> List[str]:
+def skip_words(answer: str) -> List[str]:
     """
-    
+    Returns a list of 2 words from answer by allowing words separated by one-or-more other words
     """
-    words_with_max_n_gaps = []
+    words_with_gaps = []
     answer_string = answer.split()
     answer_string_size = len(answer_string)
     for i in range(answer_string_size):
         current_string = answer_string[i]
-        for j in range(1, n+2):
-                if i + j < answer_string_size:
-                    string_to_add = current_string + " " + answer_string[i+j].strip("!.,;:'\"")
-                    words_with_max_n_gaps.append(string_to_add.strip())
-    return words_with_max_n_gaps
+        for j in range(i+1, answer_string_size):
+                if j < answer_string_size:
+                    string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
+                    words_with_gaps.append(string_to_add.strip())
+    return words_with_gaps
 
 
 def rouge_n(system_answer: str, ref_answer: str, n: int) -> Tuple[float, float]:
@@ -143,18 +143,18 @@ def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
     using ROUGE-S approach
     """
     recall, precision = 0, 0
-    skip_2_system = skip_n(system_answer, 2)
-    skip_2_ref = skip_n(ref_answer, 2)
-    # find s the number of skip-bigram matches between system and ref answers
-    skip_2_system_ref_intersection = []
-    for skip_2_system_string in skip_2_system:
-        if skip_2_system_string in skip_2_ref:
-            skip_2_system_ref_intersection.append(skip_2_system_string)
+    skip_words_system = skip_words(system_answer)
+    skip_words_ref = skip_words(ref_answer)
+    # find the number of skip-bigram matches between system and ref answers
+    skip_words_system_ref_intersection = []
+    for skip_word_ref_string in skip_words_ref:
+        if skip_word_ref_string in skip_words_system:
+            skip_words_system_ref_intersection.append(skip_word_ref_string)
     # calculate recall and precision
-    if skip_2_ref:
-        recall = len(skip_2_system_ref_intersection) / len(skip_2_ref)
-    if skip_2_system:
-        precision = len(skip_2_system_ref_intersection) / len(skip_2_system)
+    if skip_words_ref:
+        recall = len(skip_words_system_ref_intersection) / len(skip_words_ref)
+    if skip_words_system:
+        precision = len(skip_words_system_ref_intersection) / len(skip_words_system)
     return (round(recall, 4), round(precision, 4))
 
 
