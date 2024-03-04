@@ -18,6 +18,8 @@ precision = number_of_overlapping_words / total_words_in_system_summary
 """
 
 from typing import List, Tuple
+import argparse
+import os, sys
 
 
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
@@ -26,13 +28,13 @@ def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     Returns n-gram -> list of strings, where each string has n words
     common to both the provided arguments.
     """
-    common_strings = set()
+    common_strings = []
     system_strings = n_split_answer(system_answer, n)
     ref_strings = n_split_answer(ref_answer, n)
-    for system_string in system_strings:
-        if system_string in ref_strings:
-            common_strings.add(system_string)
-    return list(common_strings)
+    for ref_string in ref_strings:
+        if ref_string in system_strings:
+            common_strings.append(ref_string)
+    return common_strings
 
 
 def n_split_answer(answer: str, n: int) -> List[str]:
@@ -51,34 +53,52 @@ def n_split_answer(answer: str, n: int) -> List[str]:
     return n_size_strings
 
 
-def lcs(system_answer: str, ref_answer: str) -> List[str]:
+def lcs(system_answer_list: List[str], ref_answer_list: List[str]) -> List[str]:
     """
     Measures and returns list of longest matching sequences of words using LCS
     """
-    lcs_gram = []
-    for i in range(1, len(ref_answer.split())+1):
-        potential_lcs_gram = ngram(system_answer, ref_answer, i)
-        if potential_lcs_gram:
-            lcs_gram = potential_lcs_gram
+    system_answer_size, ref_answer_size = len(system_answer_list), len(ref_answer_list)
+    # Initialize a 2D table to store the lengths of common subsequences
+    lcs_table = [[0 for j in range(ref_answer_size+1)] for i in range(system_answer_size+1)]
+
+    # Fill in the table using dynamic programming
+    for i in range(1, system_answer_size+1):
+        for j in range(1, ref_answer_size+1):
+            if system_answer_list[i-1] == ref_answer_list[j-1]:
+                lcs_table[i][j] = 1 + lcs_table[i-1][j-1]
+            else:
+                lcs_table[i][j] = max(lcs_table[i-1][j], lcs_table[i][j-1])
+
+    lcs_result = []
+    i, j = system_answer_size, ref_answer_size
+    # Reconstruct and return the longest common subsequence
+    while i > 0 and j > 0:
+        if system_answer_list[i-1] == ref_answer_list[j-1]:
+            lcs_result.append(system_answer_list[i-1])
+            i -= 1
+            j -= 1
+        elif lcs_table[i-1][j] > lcs_table[i][j-1]:
+            i -= 1
         else:
-            break
-    return lcs_gram
+            j -= 1
+
+    return lcs_result[::-1]
 
 
-def skip_n(answer: str, n: int) -> List[str]:
+def skip_words(answer: str) -> List[str]:
     """
-    
+    Returns a list of 2 words from answer by allowing words separated by one-or-more other words
     """
-    words_with_max_n_gaps = []
+    words_with_gaps = []
     answer_string = answer.split()
     answer_string_size = len(answer_string)
     for i in range(answer_string_size):
         current_string = answer_string[i]
-        for j in range(1, n+2):
-                if i + j < answer_string_size:
-                    string_to_add = current_string + " " + answer_string[i+j].strip("!.,;:'\"")
-                    words_with_max_n_gaps.append(string_to_add.strip())
-    return words_with_max_n_gaps
+        for j in range(i+1, answer_string_size):
+                if j < answer_string_size:
+                    string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
+                    words_with_gaps.append(string_to_add.strip())
+    return words_with_gaps
 
 
 def rouge_n(system_answer: str, ref_answer: str, n: int) -> Tuple[float, float]:
@@ -94,7 +114,7 @@ def rouge_n(system_answer: str, ref_answer: str, n: int) -> Tuple[float, float]:
         recall = number_of_overlapping_words / total_words_in_reference_summary
     if total_words_in_system_summary:
         precision = number_of_overlapping_words / total_words_in_system_summary
-    return (recall, precision)
+    return (round(recall, 4), round(precision, 4))
 
 
 def rouge_l(system_answer: str, ref_answer: str) -> Tuple[float, float]:
@@ -103,17 +123,18 @@ def rouge_l(system_answer: str, ref_answer: str) -> Tuple[float, float]:
     using ROUGE-L approach
     """
     recall, precision = 0, 0
-    _lcs = lcs(system_answer, ref_answer)
+    system_answer_list = n_split_answer(system_answer, 1)
+    ref_answer_list = n_split_answer(ref_answer, 1)
+    _lcs = lcs(system_answer_list, ref_answer_list)
     if _lcs:
-        any_lcs = _lcs[0]
-        number_of_words_in_lcs = len(any_lcs.split())
-        total_words_in_reference_summary = len(n_split_answer(ref_answer, 1))
-        total_words_in_system_summary = len(n_split_answer(system_answer, 1))
+        number_of_words_in_lcs = len(_lcs)
+        total_words_in_reference_summary = len(ref_answer_list)
+        total_words_in_system_summary = len(system_answer_list)
         if total_words_in_reference_summary:
             recall = number_of_words_in_lcs / total_words_in_reference_summary
         if total_words_in_system_summary:
             precision = number_of_words_in_lcs / total_words_in_system_summary
-    return (recall, precision)
+    return (round(recall, 4), round(precision, 4))
 
 
 def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
@@ -122,16 +143,61 @@ def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
     using ROUGE-S approach
     """
     recall, precision = 0, 0
-    skip_2_system = skip_n(system_answer, 2)
-    skip_2_ref = skip_n(ref_answer, 2)
-    # find s the number of skip-bigram matches between system and ref answers
-    skip_2_system_ref_intersection = []
-    for skip_2_system_string in skip_2_system:
-        if skip_2_system_string in skip_2_ref:
-            skip_2_system_ref_intersection.append(skip_2_system_string)
+    skip_words_system = skip_words(system_answer)
+    skip_words_ref = skip_words(ref_answer)
+    # find the number of skip-bigram matches between system and ref answers
+    skip_words_system_ref_intersection = []
+    for skip_word_ref_string in skip_words_ref:
+        if skip_word_ref_string in skip_words_system:
+            skip_words_system_ref_intersection.append(skip_word_ref_string)
     # calculate recall and precision
-    if skip_2_ref:
-        recall = len(skip_2_system_ref_intersection) / len(skip_2_ref)
-    if skip_2_system:
-        precision = len(skip_2_system_ref_intersection) / len(skip_2_system)
-    return (recall, precision)
+    if skip_words_ref:
+        recall = len(skip_words_system_ref_intersection) / len(skip_words_ref)
+    if skip_words_system:
+        precision = len(skip_words_system_ref_intersection) / len(skip_words_system)
+    return (round(recall, 4), round(precision, 4))
+
+
+def process_arguments() -> argparse.Namespace:
+    """
+    Processes the input path arguments to the scripts
+    """
+    parser = argparse.ArgumentParser(description="Calculate recall and precision for model's answer, using ROUGE, provided the reference answer")
+    parser.add_argument("model_ans_path", type=str, help="path to file with model's answer")
+    parser.add_argument("ref_ans_path", type=str, help="path to file with reference answer")
+    args = parser.parse_args()
+    # check if user provided valid arguments
+    if not os.path.isfile(args.model_ans_path) or not os.path.isfile(args.ref_ans_path):
+        print("\nOne of the provided argument paths to the script do not exist !")
+        print("Please provide valid paths with model and reference answers.")
+        sys.exit()
+    return args
+
+
+def main():
+    """Main Function"""
+    args = process_arguments()
+    model_ans_path = args.model_ans_path
+    ref_ans_path = args.ref_ans_path
+    model_answer = open(model_ans_path, "r").read()
+    ref_answer = open(ref_ans_path, "r").read()
+
+    # Calculate all the Rouge scores
+    print("\n----------------------------------")
+    print("ROUGE scores (recall, precision):")
+    print("----------------------------------")
+    # Rouge_n, mainly 1, 2, 3
+    for n in range(1, 4):
+        rouge_n_score = rouge_n(model_answer, ref_answer, n)
+        print(f"ROUGE {n}: {rouge_n_score}")
+    # Rouge_l
+    rouge_l_score = rouge_l(model_answer, ref_answer)
+    print(f"ROUGE L: {rouge_l_score}")
+    # Rouge_s
+    rouge_s_score = rouge_s(model_answer, ref_answer)
+    print(f"ROUGE S: {rouge_s_score}")
+    print("----------------------------------")
+    
+
+if __name__ == "__main__":
+    main()
