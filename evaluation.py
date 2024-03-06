@@ -20,7 +20,8 @@ precision = number_of_overlapping_words / total_words_in_system_summary
 from typing import List, Tuple
 import argparse
 import os, sys
-
+import pandas as pd
+current_path = os.path.realpath(__file__)
 
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     """
@@ -42,14 +43,16 @@ def n_split_answer(answer: str, n: int) -> List[str]:
     Splits the answer string into sub-strings of length n in order
     """
     n_size_strings = []
-    answer_string = answer.split()
-    answer_string_size = len(answer_string)
-    for i in range(answer_string_size):
-        if i + n <= answer_string_size:
-            n_size_string = ""
-            for j in range(n):
-                n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
-            n_size_strings.append(n_size_string.strip())
+    print(answer)
+    if answer:
+        answer_string = answer.split()
+        answer_string_size = len(answer_string)
+        for i in range(answer_string_size):
+            if i + n <= answer_string_size:
+                n_size_string = ""
+                for j in range(n):
+                    n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
+                n_size_strings.append(n_size_string.strip())
     return n_size_strings
 
 
@@ -90,14 +93,15 @@ def skip_words(answer: str) -> List[str]:
     Returns a list of 2 words from answer by allowing words separated by one-or-more other words
     """
     words_with_gaps = []
-    answer_string = answer.split()
-    answer_string_size = len(answer_string)
-    for i in range(answer_string_size):
-        current_string = answer_string[i]
-        for j in range(i+1, answer_string_size):
-                if j < answer_string_size:
-                    string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
-                    words_with_gaps.append(string_to_add.strip())
+    if answer:
+        answer_string = answer.split()
+        answer_string_size = len(answer_string)
+        for i in range(answer_string_size):
+            current_string = answer_string[i]
+            for j in range(i+1, answer_string_size):
+                    if j < answer_string_size:
+                        string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
+                        words_with_gaps.append(string_to_add.strip())
     return words_with_gaps
 
 
@@ -158,6 +162,44 @@ def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
     return (round(recall, 4), round(precision, 4))
 
 
+def get_score_string(system_answer: str, ref_answer: str) -> str:
+    """
+    Calculates ROUGE N (1, 2, 3), L, S using functions defined and returns score string to add to the csv
+    """
+    score_string = ""
+    # Rouge_n, mainly 1, 2, 3
+    for n in range(1, 4):
+        rouge_n_score = rouge_n(system_answer, ref_answer, n)
+        score_string += f"ROUGE {n}: {rouge_n_score}\n"
+    # Rouge_l
+    rouge_l_score = rouge_l(system_answer, ref_answer)
+    score_string += f"ROUGE L: {rouge_l_score}\n"
+    # Rouge_s
+    rouge_s_score = rouge_s(system_answer, ref_answer)
+    score_string += f"ROUGE S: {rouge_s_score}"
+
+    return score_string
+
+
+def add_scores_to_csv() -> None:
+    """
+    Add similarity scores (ROUGE N (1, 2, 3), L, S) to InnovAItors Q&A - Sheet1.csv
+    """
+    qa_csv_path = f"{current_path}\../test/InnovAItors_Q&A_Sheet.csv"
+    qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False)  # read qa dataframe from the csv
+    
+    # Mistral model scores
+    qa_df['Mistral scores'] = qa_df.apply(lambda row: get_score_string(row['DE answer'], row['Mistral']), axis=1)
+    # Mistral + RAG scores
+    qa_df['Mistral + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['DE answer'], row['Mistral + RAG']), axis=1)
+    # Mistral Fine-Tuned scores
+    qa_df['Mistral Fine-Tuned scores'] = qa_df.apply(lambda row: get_score_string(row['DE answer'], row['Mistral Fine-Tuned']), axis=1)
+    # Mistral Fine-Tuned + RAG scores
+    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['DE answer'], row['Mistral Fine-Tuned + RAG scores']), axis=1)
+    
+    qa_df.to_csv(qa_csv_path, index=False)  # write updated dataframe to csv
+
+
 def process_arguments() -> argparse.Namespace:
     """
     Processes the input path arguments to the scripts
@@ -201,3 +243,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # comment main and uncomment below function to update csv with scores
+    #add_scores_to_csv()
