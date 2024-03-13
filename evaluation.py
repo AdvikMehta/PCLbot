@@ -23,6 +23,7 @@ import os, sys
 import pandas as pd
 current_path = os.path.realpath(__file__)
 
+
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     """
     Measures unigram, bigram, trigram and higher order n-gram overlap.
@@ -35,7 +36,7 @@ def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     for ref_string in ref_strings:
         if ref_string in system_strings:
             common_strings.append(ref_string)
-    return common_strings
+    return list(set(common_strings))
 
 
 def n_split_answer(answer: str, n: int) -> List[str]:
@@ -43,7 +44,6 @@ def n_split_answer(answer: str, n: int) -> List[str]:
     Splits the answer string into sub-strings of length n in order
     """
     n_size_strings = []
-    print(answer)
     if answer:
         answer_string = answer.split()
         answer_string_size = len(answer_string)
@@ -185,17 +185,17 @@ def add_scores_to_csv() -> None:
     """
     Add similarity scores (ROUGE N (1, 2, 3), L, S) to InnovAItors Q&A - Sheet1.csv
     """
-    qa_csv_path = f"{current_path}\../test/InnovAItors_Q&A_Sheet.csv"
+    qa_csv_path = f"{current_path}\../test/InnovAItors Q&A - Sheet1.csv"
     qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False)  # read qa dataframe from the csv
     
     # Mistral model scores
-    qa_df['Mistral scores'] = qa_df.apply(lambda row: get_score_string(row['DE answer'], row['Mistral']), axis=1)
+    qa_df['Mistral scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral'], row['DE answer']), axis=1)
     # Mistral + RAG scores
-    qa_df['Mistral + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['DE answer'], row['Mistral + RAG']), axis=1)
+    qa_df['Mistral + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral + RAG'], row['DE answer']), axis=1)
     # Mistral Fine-Tuned scores
-    qa_df['Mistral Fine-Tuned scores'] = qa_df.apply(lambda row: get_score_string(row['DE answer'], row['Mistral Fine-Tuned']), axis=1)
+    qa_df['Mistral Fine-Tuned scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
     # Mistral Fine-Tuned + RAG scores
-    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['DE answer'], row['Mistral Fine-Tuned + RAG scores']), axis=1)
+    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
     
     qa_df.to_csv(qa_csv_path, index=False)  # write updated dataframe to csv
 
