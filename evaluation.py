@@ -186,8 +186,8 @@ def add_scores_to_csv() -> None:
     Add similarity scores (ROUGE N (1, 2, 3), L, S) to InnovAItors Q&A - Sheet1.csv
     """
     qa_csv_path = f"{current_path}\../test/InnovAItors Q&A - Sheet1.csv"
-    qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False)  # read qa dataframe from the csv
-    
+    qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False, encoding='unicode_escape')  # read qa dataframe from the csv
+
     # Mistral model scores
     qa_df['Mistral scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral'], row['DE answer']), axis=1)
     # Mistral + RAG scores
