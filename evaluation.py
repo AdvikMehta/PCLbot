@@ -21,6 +21,9 @@ from typing import List, Tuple
 import argparse
 import os, sys
 import pandas as pd
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 current_path = os.path.realpath(__file__)
 
 
@@ -166,6 +169,10 @@ def get_score_string(system_answer: str, ref_answer: str) -> str:
     """
     Calculates ROUGE N (1, 2, 3), L, S using functions defined and returns score string to add to the csv
     """
+    # remove stopwords
+    system_answer = remove_stopwords(system_answer)
+    ref_answer = remove_stopwords(ref_answer)
+
     score_string = ""
     # Rouge_n, mainly 1, 2, 3
     for n in range(1, 4):
@@ -216,6 +223,25 @@ def process_arguments() -> argparse.Namespace:
     return args
 
 
+def remove_stopwords(answer: str) -> str:
+    """
+    Removes stopwords from the input answer using nltk library
+    """
+    # Download stopwords if you haven't already
+    #nltk.download('stopwords')
+    #nltk.download('punkt')
+
+    # Tokenize the answer sentence
+    words = word_tokenize(answer)
+    # Get the English stopwords
+    english_stopwords = set(stopwords.words('english'))
+    # Remove stopwords
+    filtered_words = [word for word in words if word.lower() not in english_stopwords]
+    filtered_sentence = ' '.join(filtered_words)
+
+    return filtered_sentence
+
+
 def main():
     """Main Function"""
     args = process_arguments()
@@ -223,6 +249,10 @@ def main():
     ref_ans_path = args.ref_ans_path
     model_answer = open(model_ans_path, "r").read()
     ref_answer = open(ref_ans_path, "r").read()
+
+    # remove stopwords
+    model_answer = remove_stopwords(model_answer)
+    ref_answer = remove_stopwords(ref_answer)
 
     # Calculate all the Rouge scores
     print("\n----------------------------------")
@@ -242,6 +272,6 @@ def main():
     
 
 if __name__ == "__main__":
-    main()
+    #main()
     # comment main and uncomment below function to update csv with scores
-    #add_scores_to_csv()
+    add_scores_to_csv()
