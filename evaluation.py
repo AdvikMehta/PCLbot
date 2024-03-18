@@ -272,6 +272,6 @@ def main():
     
 
 if __name__ == "__main__":
-    #main()
+    main()
     # comment main and uncomment below function to update csv with scores
-    add_scores_to_csv()
+    #add_scores_to_csv()
