@@ -165,6 +165,39 @@ def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
     return (round(recall, 4), round(precision, 4))
 
 
+def calculate_f_value(recall: float, precision: float) -> float:
+    """
+    Calculate and return f value provided recall and precision
+    """
+    f_value = 0.0
+    if recall and precision:
+        beta = precision / recall
+        beta_square = beta**2 
+        f_numerator = (1 + beta_square) * recall * precision
+        f_denominator = recall + beta_square*precision
+        f_value = f_numerator / f_denominator
+    return f_value
+
+
+def remove_stopwords(answer: str) -> str:
+    """
+    Removes stopwords from the input answer using nltk library
+    """
+    # Download stopwords if you haven't already
+    #nltk.download('stopwords')
+    #nltk.download('punkt')
+
+    # Tokenize the answer sentence
+    words = word_tokenize(answer)
+    # Get the English stopwords
+    english_stopwords = set(stopwords.words('english'))
+    # Remove stopwords
+    filtered_words = [word for word in words if word.lower() not in english_stopwords]
+    filtered_sentence = ' '.join(filtered_words)
+
+    return filtered_sentence
+
+
 def get_score_string(system_answer: str, ref_answer: str) -> str:
     """
     Calculates ROUGE N (1, 2, 3), L, S using functions defined and returns score string to add to the csv
@@ -221,25 +254,6 @@ def process_arguments() -> argparse.Namespace:
         print("Please provide valid paths with model and reference answers.")
         sys.exit()
     return args
-
-
-def remove_stopwords(answer: str) -> str:
-    """
-    Removes stopwords from the input answer using nltk library
-    """
-    # Download stopwords if you haven't already
-    #nltk.download('stopwords')
-    #nltk.download('punkt')
-
-    # Tokenize the answer sentence
-    words = word_tokenize(answer)
-    # Get the English stopwords
-    english_stopwords = set(stopwords.words('english'))
-    # Remove stopwords
-    filtered_words = [word for word in words if word.lower() not in english_stopwords]
-    filtered_sentence = ' '.join(filtered_words)
-
-    return filtered_sentence
 
 
 def main():
