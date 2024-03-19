@@ -24,6 +24,7 @@ import pandas as pd
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+import matplotlib.pyplot as plt
 current_path = os.path.realpath(__file__)
 
 
@@ -221,12 +222,40 @@ def get_score_string(system_answer: str, ref_answer: str) -> str:
     return score_string
 
 
+def get_f_score(system_answer: str, ref_answer: str) -> float:
+    """
+    Calculates and returns final f value using ROUGE N (1, 2, 3), L, S
+    f = [ f(rouge1) + f(rouge2) + f(rouge3) + f(rougeL) + f(rougeS) ] / 5 
+    """
+    # remove stopwords
+    system_answer = remove_stopwords(system_answer)
+    ref_answer = remove_stopwords(ref_answer)
+
+    f_score = 0.0
+    # Rouge_n, mainly 1, 2, 3
+    for n in range(1, 4):
+        rouge_n_score = rouge_n(system_answer, ref_answer, n)
+        f_score += 0.2 * calculate_f_value(rouge_n_score[0], rouge_n_score[1])
+    # Rouge_l
+    rouge_l_score = rouge_l(system_answer, ref_answer)
+    f_score += 0.2 * calculate_f_value(rouge_l_score[0], rouge_l_score[1])
+    # Rouge_s
+    rouge_s_score = rouge_s(system_answer, ref_answer)
+    f_score += 0.2 * calculate_f_value(rouge_s_score[0], rouge_s_score[1])
+
+    return f_score
+
+
 def add_scores_to_csv() -> None:
     """
     Add similarity scores (ROUGE N (1, 2, 3), L, S) to InnovAItors Q&A - Sheet1.csv
+    Add f values to bar_plots.csv and draw the bar graph
     """
+    # read qa dataframe from the csv
     qa_csv_path = f"{current_path}\../test/InnovAItors Q&A - Sheet1.csv"
-    qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False, encoding='unicode_escape')  # read qa dataframe from the csv
+    qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False, encoding='unicode_escape')
+    plot_csv_path = f"{current_path}\../test/bar_plots.csv"
+    plot_df = pd.read_csv(plot_csv_path, dtype=str, na_filter=False, encoding='unicode_escape')
 
     # Mistral model scores
     qa_df['Mistral scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral'], row['DE answer']), axis=1)
@@ -236,8 +265,32 @@ def add_scores_to_csv() -> None:
     qa_df['Mistral Fine-Tuned scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
     # Mistral Fine-Tuned + RAG scores
     qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
-    
-    qa_df.to_csv(qa_csv_path, index=False)  # write updated dataframe to csv
+    # write updated dataframe with ROUGE scores to csv
+    qa_df.to_csv(qa_csv_path, index=False)
+
+    # Mistral f scores
+    plot_df['Mistral f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral'], row['DE answer']), axis=1)
+    # Mistral + RAG f scores
+    plot_df['Mistral + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral + RAG'], row['DE answer']), axis=1)
+    # Mistral Fine-Tuned f scores
+    plot_df['Mistral fine-tuned f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
+    # Mistral Fine-Tuned + RAG f scores
+    plot_df['Mistral Fine-Tuned + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
+    # write updated dataframe with f scores to bas_plot.csv
+    plot_df.to_csv(plot_csv_path, index=False)
+
+    # create a bar plot
+    graph_data = plot_df.iloc[:, :4].values
+    plt.figure(figsize=(10, 6))  # Set the figure size
+    num_columns = len(plot_df.columns[:4])
+    bar_width = 0.2
+    for i, column_name in enumerate(plot_df.columns[:4]):
+        plt.bar([x + i * bar_width for x in range(len(graph_data))], graph_data[:, i], width=bar_width, align='center', label=column_name)
+    plt.xlabel('question number')
+    plt.ylabel('F value')
+    plt.title('F scores for different models')
+    plt.legend()
+    plt.show()
 
 
 def process_arguments() -> argparse.Namespace:
@@ -286,6 +339,6 @@ def main():
     
 
 if __name__ == "__main__":
-    main()
+    #main()
     # comment main and uncomment below function to update csv with scores
-    #add_scores_to_csv()
+    add_scores_to_csv()

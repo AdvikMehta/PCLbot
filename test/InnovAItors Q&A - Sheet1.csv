@@ -1,13 +1,13 @@
 Question,DE answer,Mistral,Mistral scores,Mistral + RAG,Mistral + RAG scores,Mistral Fine-Tuned,Mistral Fine-Tuned scores,Mistral Fine-Tuned + RAG,Mistral Fine-Tuned + RAG scores, 
-"According to ASME B31.3, what is the minimum design metal temperature (in ÃÂÃÂ°F) for carbon steel without impact testing?",-20,"The minimum design metal temperature for carbon steel without impact testing, as per ASME B31.3, is -20ÃÂÃÂ°F (-29ÃÂÃÂ°C). This temperature is used as a basis for determining the allowable stress values for carbon steel piping systems in the absence of impact testing data. It is important to note that this temperature is a default value and may not be suitable for all applications. In such cases, it is recommended to perform impact testing to determine the appropriate minimum design metal temperature for the specific application.","ROUGE 1: (0.0, 0.0)
+"According to ASME B31.3, what is the minimum design metal temperature (in ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) for carbon steel without impact testing?",-20,"The minimum design metal temperature for carbon steel without impact testing, as per ASME B31.3, is -20ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (-29ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C). This temperature is used as a basis for determining the allowable stress values for carbon steel piping systems in the absence of impact testing data. It is important to note that this temperature is a default value and may not be suitable for all applications. In such cases, it is recommended to perform impact testing to determine the appropriate minimum design metal temperature for the specific application.","ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)","According to ASME B31.3, the minimum design metal temperature without impact testing for carbon steel is -20ÃÂÃÂ°F (-29ÃÂÃÂ°C) for Category D Fluid Service. This means that for carbon steel materials used in Category D fluid service, impact testing is not required down to a minimum temperature of -20ÃÂÃÂ°F. It is important to note that this minimum temperature may be different for other fluid categories or if the carbon steel material is an X grade of API 5L or ASTM A381 that has been normalized or quenched and tempered, or if it is a material listed in Note 3 of the figure. Additionally, impact testing of welds and the heat-affected zone (HAZ) is required for any design minimum temperature below -20ÃÂÃÂ°F, except as provided in the code.","ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)","According to ASME B31.3, the minimum design metal temperature without impact testing for carbon steel is -20ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (-29ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C) for Category D Fluid Service. This means that for carbon steel materials used in Category D fluid service, impact testing is not required down to a minimum temperature of -20ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F. It is important to note that this minimum temperature may be different for other fluid categories or if the carbon steel material is an X grade of API 5L or ASTM A381 that has been normalized or quenched and tempered, or if it is a material listed in Note 3 of the figure. Additionally, impact testing of welds and the heat-affected zone (HAZ) is required for any design minimum temperature below -20ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F, except as provided in the code.","ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)","The minimum design metal temperature (in ÃÂÃÂ°F) for carbon steel is -29ÃÂÃÂ°C (-20ÃÂÃÂ°F).
+ROUGE S: (0, 0.0)","The minimum design metal temperature (in ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) for carbon steel is -29ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C (-20ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F).
 
 ","ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
@@ -47,12 +47,12 @@ ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
 ROUGE S: (0, 0.0)",
-"What is the standard ambient temperature range (in ÃÂÃÂ°F) considered in the design basis of ASME B31.3?
-",-29 to 120,"The ASME B31.3 standard, which covers the rules for the design and construction of in-plant piping within refineries, covers a wide range of applications and conditions. The design basis of the standard considers a standard ambient temperature range of 60 to 100ÃÂÃÂ°F (15.6 to 37.8ÃÂÃÂ°C).
+"What is the standard ambient temperature range (in ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) considered in the design basis of ASME B31.3?
+",-29 to 120,"The ASME B31.3 standard, which covers the rules for the design and construction of in-plant piping within refineries, covers a wide range of applications and conditions. The design basis of the standard considers a standard ambient temperature range of 60 to 100ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (15.6 to 37.8ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C).
 
 However, it is important to note that the standard also accounts for other temperature ranges and conditions. For instance, the standard includes rules for low-temperature operation, which may be encountered in certain applications or locations. Additionally, the standard accounts for high-temperature operation, which may be necessary for specific processes or materials.
 
-In summary, the standard ambient temperature range considered in the design basis of ASME B31.3 is 60 to 100ÃÂÃÂ°F (15.6 to 37.8ÃÂÃÂ°C), but the standard also accounts for other temperature ranges and conditions as needed for specific applications and environments.
+In summary, the standard ambient temperature range considered in the design basis of ASME B31.3 is 60 to 100ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (15.6 to 37.8ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C), but the standard also accounts for other temperature ranges and conditions as needed for specific applications and environments.
 ","ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
@@ -61,7 +61,7 @@ ROUGE S: (0.0, 0.0)","The ASME B31.3 piping code does not specify a standard amb
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0.0, 0.0)",The standard ambient temperature range (in ÃÂÃÂ°F) considered in the design basis of ASME B31.3 is from the installation temperature of 21ÃÂÃÂ°C (70ÃÂÃÂ°F) to the maximum design metal temperature at the design pressure of 260ÃÂÃÂ°F (143ÃÂÃÂ°C).,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)",The standard ambient temperature range (in ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) considered in the design basis of ASME B31.3 is from the installation temperature of 21ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C (70ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) to the maximum design metal temperature at the design pressure of 260ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (143ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C).,"ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -167,7 +167,7 @@ ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.0256)
 ROUGE S: (0, 0.0)",
-"Under ASME B31.3, what is the minimum post-weld heat treatment temperature (in ÃÂÃÂ°F) for carbon steel?",1100,"The minimum post-weld heat treatment temperature for carbon steel in ASME B31.3 is 1000ÃÂÃÂ°F (538ÃÂÃÂ°C).
+"Under ASME B31.3, what is the minimum post-weld heat treatment temperature (in ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) for carbon steel?",1100,"The minimum post-weld heat treatment temperature for carbon steel in ASME B31.3 is 1000ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (538ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C).
 
 What is the purpose of post-weld heat treatment?
 
@@ -208,7 +208,7 @@ ROUGE S: (0, 0.0)", According to ASME B31.3-2,"ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)","The minimum post-weld heat treatment temperature (in ÃÂÃÂ°F) for carbon steel is the following table: -20ÃÂÃÂ°F (-29ÃÂÃÂ°C) for P-No. 1, Group No. 1 and 2, P-No. 5B, Group No. 1, P-No. 15E, Group No. 1, and P-No. 62. For P-No. 3, Group Nos. 1 and 2, P-No. 4, Group Nos. 1 and 2, P-No. 10H, Group No. 1, and P-No. 11A, the minimum post-weld heat treatment temperature (in ÃÂÃÂ°F) for seamless piping is 150. For P-No. 10I, Group No. 1, the minimum post-weld heat treatment temperature (in ÃÂÃÂ°F) for seamless piping is 200.","ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)","The minimum post-weld heat treatment temperature (in ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) for carbon steel is the following table: -20ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (-29ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C) for P-No. 1, Group No. 1 and 2, P-No. 5B, Group No. 1, P-No. 15E, Group No. 1, and P-No. 62. For P-No. 3, Group Nos. 1 and 2, P-No. 4, Group Nos. 1 and 2, P-No. 10H, Group No. 1, and P-No. 11A, the minimum post-weld heat treatment temperature (in ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) for seamless piping is 150. For P-No. 10I, Group No. 1, the minimum post-weld heat treatment temperature (in ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F) for seamless piping is 200.","ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -221,9 +221,9 @@ What is the minimum required impact test energy (in ft-lbf) at the minimum desig
 
 To determine the minimum required impact test energy, you need to refer to Table 320.1(B)(1) in ASME B31.3. This table provides the minimum required impact test energy for various materials and temperature ranges.
 
-For Category D fluid service, the minimum design metal temperature is typically -40ÃÂÃÂ°F (-40ÃÂÃÂ°C) or lower. In this case, you would look for the corresponding minimum required impact test energy in the table.
+For Category D fluid service, the minimum design metal temperature is typically -40ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (-40ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C) or lower. In this case, you would look for the corresponding minimum required impact test energy in the table.
 
-For example, if the material is carbon steel, the minimum required impact test energy at -40ÃÂÃÂ°F (-40ÃÂÃÂ°C) is 30 ft-lbf.
+For example, if the material is carbon steel, the minimum required impact test energy at -40ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (-40ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C) is 30 ft-lbf.
 
 It is important to note that the minimum required impact test energy may vary depending on the specific material and temperature range. Always consult the latest edition of ASME B31.3 for the most accurate information.","ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
@@ -292,8 +292,8 @@ Test Pressure (PS) = Design Pressure (PD) x Test Pressure Factor (PTF)
 
 The Test Pressure Factor (PTF) is calculated as follows:
 
-PTF = 1.5 for PD ÃÂ¢ÃÂÃÂ¤ 0.5 MPa (72.5 psi)
-PTF = 1.3 for 0.5 MPa (72.5 psi) < PD ÃÂ¢ÃÂÃÂ¤ 1.0 MPa (145 psi)
+PTF = 1.5 for PD ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤ 0.5 MPa (72.5 psi)
+PTF = 1.3 for 0.5 MPa (72.5 psi) < PD ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¤ 1.0 MPa (145 psi)
 PTF = 1.1 for PD > 1.0 MPa (145 psi)
 
 Therefore, it is not a fixed multiplier and depends on the design pressure (PD) of the piping system.","ROUGE 1: (1.0, 0.0109)
@@ -310,7 +310,7 @@ ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
 ROUGE S: (0, 0.0)",
 "According to ASME B31.3, for materials subject to Charpy impact testing, what is the minimum design metal temperature without additional impact testing?
-", -20ÃÂÃÂ°F,"The minimum design metal temperature (MDMT) without additional impact testing is -40ÃÂÃÂ°F (-40ÃÂÃÂ°C).
+", -20ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F,"The minimum design metal temperature (MDMT) without additional impact testing is -40ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (-40ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C).
 
 However, it is important to note that the MDMT may be higher for certain materials and services. The MDMT is determined based on the specific material and service conditions, as well as the results of Charpy impact tests.
 
@@ -336,7 +336,7 @@ ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
 ROUGE S: (0, 0.0)",
-What is the ASME B31.3 requirement for the examination of butt welds in Category D fluid service?, Visual examination,"The ASME B31.3 Code for Process Piping outlines the requirements for the examination of butt welds in Category D fluid service. Category D fluid service includes those services where the fluid is at a temperature above 399ÃÂÃÂ°F (204ÃÂÃÂ°C) and has a pressure above 150 psi (1034 kPa) or where the fluid is at a temperature above 700ÃÂÃÂ°F (371ÃÂÃÂ°C) and has a pressure above 10 psi (69 kPa).
+What is the ASME B31.3 requirement for the examination of butt welds in Category D fluid service?, Visual examination,"The ASME B31.3 Code for Process Piping outlines the requirements for the examination of butt welds in Category D fluid service. Category D fluid service includes those services where the fluid is at a temperature above 399ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (204ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C) and has a pressure above 150 psi (1034 kPa) or where the fluid is at a temperature above 700ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (371ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C) and has a pressure above 10 psi (69 kPa).
 
 For butt welds in Category D fluid service, the ASME B31.3 requires the following examination procedures:
 
