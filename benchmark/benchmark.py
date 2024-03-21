@@ -83,7 +83,6 @@ class Benchmark:
             res = invoke({"context": context, "question": q})
             try:
                 output = res['choices'][0]['message']['content'].strip()
-                print(output)
             except Exception as e:
                 output = f"Failed to get response: {e}"
             outputs.append(output)
