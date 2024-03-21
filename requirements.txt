@@ -2,5 +2,8 @@ openai~=1.13.3
 python-dotenv~=1.0.1
 langchain~=0.1.10
 pinecone-client~=3.1.0
-langchain_openai
-langchain_pinecone
+langchain-openai
+langchain-pinecone
+langchain-mistralai
+requests~=2.31.0
+pandas~=2.2.1
