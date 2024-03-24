@@ -25,7 +25,11 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plt
+from math import sqrt
 current_path = os.path.realpath(__file__)
+# Load the English NLP pipeline
+import spacy
+nlp = spacy.load("en_core_web_sm")
 
 
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
@@ -246,6 +250,26 @@ def get_f_score(system_answer: str, ref_answer: str) -> float:
     return f_score
 
 
+def squared_sum(x: List[float]) -> float:
+  """
+  return 3 rounded square rooted value
+  """
+  return round(sqrt(sum([a*a for a in x])),3)
+
+
+def get_semantic_score(system_answer: str, ref_answer: str) -> float:
+    """
+    Returns the cosine similarity between model and reference answer
+    Useful for semantic similarities between the two answers 
+    """
+    system_answer_vector = nlp(system_answer).vector
+    ref_answer_vector = nlp(ref_answer).vector
+    cs_numerator = sum(a*b for a,b in zip(system_answer_vector, ref_answer_vector))
+    cs_denominator = squared_sum(system_answer_vector) * squared_sum(ref_answer_vector)
+    cosine_similarity = round(cs_numerator/float(cs_denominator), 3)
+    return cosine_similarity
+
+
 def add_scores_to_csv() -> None:
     """
     Add similarity scores (ROUGE N (1, 2, 3), L, S) to InnovAItors Q&A - Sheet1.csv
@@ -339,6 +363,6 @@ def main():
     
 
 if __name__ == "__main__":
-    #main()
+    main()
     # comment main and uncomment below function to update csv with scores
-    add_scores_to_csv()
+    #add_scores_to_csv()
