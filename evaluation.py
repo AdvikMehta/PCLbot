@@ -294,7 +294,7 @@ def add_scores_to_csv() -> None:
     # Mistral Fine-Tuned scores
     qa_df['Mistral Fine-Tuned scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
     # Mistral Fine-Tuned + RAG scores
-    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
+    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned + RAG'], row['DE answer']), axis=1)
     # write updated dataframe with ROUGE scores to csv
     qa_df.to_csv(qa_csv_path, index=False)
 
@@ -305,7 +305,7 @@ def add_scores_to_csv() -> None:
     # Mistral Fine-Tuned f scores
     plot_df['Mistral fine-tuned f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
     # Mistral Fine-Tuned + RAG f scores
-    plot_df['Mistral Fine-Tuned + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
+    plot_df['Mistral Fine-Tuned + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned + RAG'], row['DE answer']), axis=1)
     # write updated dataframe with f scores to bas_plot.csv
     plot_df.to_csv(plot_csv_path, index=False)
 
@@ -369,6 +369,6 @@ def main():
     
 
 if __name__ == "__main__":
-    main()
+    #main()
     # comment main and uncomment below function to update csv with scores
-    #add_scores_to_csv()
+    add_scores_to_csv()
