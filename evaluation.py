@@ -207,11 +207,14 @@ def get_score_string(system_answer: str, ref_answer: str) -> str:
     """
     Calculates ROUGE N (1, 2, 3), L, S using functions defined and returns score string to add to the csv
     """
+    score_string = ""
+    cos_simi = get_semantic_score(system_answer, ref_answer)
+    score_string += f"Cosine similarity: {cos_simi}\n"
+
     # remove stopwords
     system_answer = remove_stopwords(system_answer)
     ref_answer = remove_stopwords(ref_answer)
 
-    score_string = ""
     # Rouge_n, mainly 1, 2, 3
     for n in range(1, 4):
         rouge_n_score = rouge_n(system_answer, ref_answer, n)
@@ -231,21 +234,24 @@ def get_f_score(system_answer: str, ref_answer: str) -> float:
     Calculates and returns final f value using ROUGE N (1, 2, 3), L, S
     f = [ f(rouge1) + f(rouge2) + f(rouge3) + f(rougeL) + f(rougeS) ] / 5 
     """
+    f_score = 0.0
+    cos_simi = get_semantic_score(system_answer, ref_answer)
+    f_score += 0.25 * cos_simi
+
     # remove stopwords
     system_answer = remove_stopwords(system_answer)
     ref_answer = remove_stopwords(ref_answer)
 
-    f_score = 0.0
     # Rouge_n, mainly 1, 2, 3
     for n in range(1, 4):
         rouge_n_score = rouge_n(system_answer, ref_answer, n)
-        f_score += 0.2 * calculate_f_value(rouge_n_score[0], rouge_n_score[1])
+        f_score += 0.15 * calculate_f_value(rouge_n_score[0], rouge_n_score[1])
     # Rouge_l
     rouge_l_score = rouge_l(system_answer, ref_answer)
-    f_score += 0.2 * calculate_f_value(rouge_l_score[0], rouge_l_score[1])
+    f_score += 0.15 * calculate_f_value(rouge_l_score[0], rouge_l_score[1])
     # Rouge_s
     rouge_s_score = rouge_s(system_answer, ref_answer)
-    f_score += 0.2 * calculate_f_value(rouge_s_score[0], rouge_s_score[1])
+    f_score += 0.15 * calculate_f_value(rouge_s_score[0], rouge_s_score[1])
 
     return f_score
 
