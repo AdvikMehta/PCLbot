@@ -1,19 +1,23 @@
 Question,DE answer,Mistral,Mistral scores,Mistral + RAG,Mistral + RAG scores,Mistral Fine-Tuned,Mistral Fine-Tuned scores,Mistral Fine-Tuned + RAG,Mistral Fine-Tuned + RAG scores, 
-"According to ASME B31.3, what is the minimum design metal temperature (in �F) for carbon steel without impact testing?",-20,"The minimum design metal temperature for carbon steel without impact testing, as per ASME B31.3, is -20 �C). This temperature is used as a basis for determining the allowable stress values for carbon steel piping systems in the absence of impact testing data. It is important to note that this temperature is a default value and may not be suitable for all applications. In such cases, it is recommended to perform impact testing to determine the appropriate minimum design metal temperature for the specific application.","ROUGE 1: (0.0, 0.0)
+"According to ASME B31.3, what is the minimum design metal temperature (in °F) for carbon steel without impact testing?",-20,"The minimum design metal temperature for carbon steel without impact testing, as per ASME B31.3, is -20 °C). This temperature is used as a basis for determining the allowable stress values for carbon steel piping systems in the absence of impact testing data. It is important to note that this temperature is a default value and may not be suitable for all applications. In such cases, it is recommended to perform impact testing to determine the appropriate minimum design metal temperature for the specific application.","Cosine similarity: 0.093
+ROUGE 1: (1.0, 0.0172)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
-ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)","According to ASME B31.3, the minimum design metal temperature without impact testing for carbon steel is -20 �C) for Category D Fluid Service. This means that for carbon steel materials used in Category D fluid service, impact testing is not required down to a minimum temperature of -20 �F. It is important to note that this minimum temperature may be different for other fluid categories or if the carbon steel material is an X grade of API 5L or ASTM A381 that has been normalized or quenched and tempered, or if it is a material listed in Note 3 of the figure. Additionally, impact testing of welds and the heat-affected zone (HAZ) is required for any design minimum temperature below -20 �F, except as provided in the code.","ROUGE 1: (0.0, 0.0)
+ROUGE L: (1.0, 0.0172)
+ROUGE S: (0, 0.0)","According to ASME B31.3, the minimum design metal temperature without impact testing for carbon steel is -20 °C) for Category D Fluid Service. This means that for carbon steel materials used in Category D fluid service, impact testing is not required down to a minimum temperature of -20 °F. It is important to note that this minimum temperature may be different for other fluid categories or if the carbon steel material is an X grade of API 5L or ASTM A381 that has been normalized or quenched and tempered, or if it is a material listed in Note 3 of the figure. Additionally, impact testing of welds and the heat-affected zone (HAZ) is required for any design minimum temperature below -20 °F, except as provided in the code.","Cosine similarity: 0.115
+ROUGE 1: (1.0, 0.0118)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
-ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)","The minimum design metal temperature (in �F) for carbon steel is -29 �F).
+ROUGE L: (1.0, 0.0118)
+ROUGE S: (0, 0.0)","The minimum design metal temperature (in °F) for carbon steel is -29 °F).
 
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.251
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.274
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -25,7 +29,8 @@ Sour service refers to the use of carbon steel materials in environments contain
 ASME B31.3 is a standard for the design and installation of in-plant piping within refineries and petroleum processing plants. It provides guidelines and requirements for the materials, design, and construction of piping systems to ensure their safety and reliability.
 
 The maximum sulfur content allowed for carbon steel materials in sour service is limited to 0.030 weight percent because sulfur can react with hydrogen sulfide to form iron sulfide, which is a brittle and non-ductile material. This reaction can lead to the formation of cracks and reduce the overall strength and ductility of the steel. By limiting the sulfur content to 0.030 weight percent, the risk of sulfide stress cracking (SS
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.118
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -33,39 +38,46 @@ ROUGE S: (0, 0.0)","The maximum sulfur content for carbon steel materials used i
 
 However, according to ASME B31.3, the maximum sulfur content for carbon steel materials used in sour service is typically limited to 0.05% (0.0005) wt% to ensure sufficient resistance to sulfide stress cracking (SSC) or hydrogen-induced cracking (HIC). This limit may be specified in the material specification or the purchasing requirements.
 
-It is important to note that the specific sour service requirement and material selection should be based on the actual operating conditions and the specific code requirements, such as NACE MR0175 or ISO 15156.']","ROUGE 1: (0.0, 0.0)
+It is important to note that the specific sour service requirement and material selection should be based on the actual operating conditions and the specific code requirements, such as NACE MR0175 or ISO 15156.']","Cosine similarity: 0.117
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
 ROUGE S: (0, 0.0)","The maximum sulfur content (in weight percent) allowed for carbon steel materials used in sour service under ASME B31.3 is 0.10%.
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.201
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.501
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
 ROUGE S: (0, 0.0)",
-"What is the standard ambient temperature range (in �F) considered in the design basis of ASME B31.3?
-",-29 to 120,"The ASME B31.3 standard, which covers the rules for the design and construction of in-plant piping within refineries, covers a wide range of applications and conditions. The design basis of the standard considers a standard ambient temperature range of 60 to 100 �F (15.6 to 37.8 �C).
+"What is the standard ambient temperature range (in °F) considered in the design basis of ASME B31.3?
+",-29 to 120,"The ASME B31.3 standard, which covers the rules for the design and construction of in-plant piping within refineries, covers a wide range of applications and conditions. The design basis of the standard considers a standard ambient temperature range of 60 to 100 °F (15.6 to 37.8 °C).
 
 However, it is important to note that the standard also accounts for other temperature ranges and conditions. For instance, the standard includes rules for low-temperature operation, which may be encountered in certain applications or locations. Additionally, the standard accounts for high-temperature operation, which may be necessary for specific processes or materials.
 
-In summary, the standard ambient temperature range considered in the design basis of ASME B31.3 is 60 to 100ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (15.6 to 37.8ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C), but the standard also accounts for other temperature ranges and conditions as needed for specific applications and environments.
-","ROUGE 1: (0.0, 0.0)
+In summary, the standard ambient temperature range considered in the design basis of ASME B31.3 is 60 to 100ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°F (15.6 to 37.8ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ°C), but the standard also accounts for other temperature ranges and conditions as needed for specific applications and environments.
+","Cosine similarity: 0.364
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0.0, 0.0)","The ASME B31.3 piping code does not specify a standard ambient temperature range that must be considered in the design basis. Instead, it requires that the designer consider the temperature range that is expected for the specific application and location of the piping system. The code provides guidelines for determining design temperatures based on factors such as fluid temperature, ambient temperature, and solar radiation. Therefore, the ambient temperature range used in the design basis can vary depending on the specific circumstances of the piping system.']","ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)","The ASME B31.3 piping code does not specify a standard ambient temperature range that must be considered in the design basis. Instead, it requires that the designer consider the temperature range that is expected for the specific application and location of the piping system. The code provides guidelines for determining design temperatures based on factors such as fluid temperature, ambient temperature, and solar radiation. Therefore, the ambient temperature range used in the design basis can vary depending on the specific circumstances of the piping system.']","Cosine similarity: 0.123
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0.0, 0.0)",The standard ambient temperature range (in �F) considered in the design basis of ASME B31.3 is from the installation temperature of 21 �C (70 �F) to the maximum design metal temperature at the design pressure of 260 �F (143 �C).,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)",The standard ambient temperature range (in °F) considered in the design basis of ASME B31.3 is from the installation temperature of 21 °C (70 °F) to the maximum design metal temperature at the design pressure of 260 °F (143 °C).,"Cosine similarity: 0.3
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0.0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)",,"Cosine similarity: 0.452
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -81,7 +93,8 @@ Reinforcement Index = (Branch Connection Strength / Main Line Strength) * 100
 When the Reinforcement Index is less than 0.5, it indicates that the branch connection is not adequately reinforced and may require additional reinforcement or special analysis to ensure its safety.
 
 It is important to note that the Reinforcement Index is only one factor to consider when designing branch connections. Other factors, such as pressure, temperature, and material properties, should also be taken into account to ensure the overall safety and integrity of the piping system.
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.145
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -99,15 +112,18 @@ c = the distance from the centerline of the branch pipe to the centerline of the
 
 The formula is subject to the limitations in paragraph 304.3.3(c), which specifies maximum and minimum values for the Reinforcement Index based on the material group of the branch connection. The Reinforcement Index should not be less than 0 or greater than 1.0 for material group 1 and 2, and should not be less than 0.2 for material group 3.
 
-It's important to note that this is just the minimum required reinforcement index for standard branch connections, and that more extensive reinforcement may be required for certain types of connections, such as those with large branch-to-run diameter ratios or for materials with low allowable stresses. In those cases, special design and analysis methods should be used in accordance with the rules of ASME B31.3.""]","ROUGE 1: (1.0, 0.006)
+It's important to note that this is just the minimum required reinforcement index for standard branch connections, and that more extensive reinforcement may be required for certain types of connections, such as those with large branch-to-run diameter ratios or for materials with low allowable stresses. In those cases, special design and analysis methods should be used in accordance with the rules of ASME B31.3.""]","Cosine similarity: 0.26
+ROUGE 1: (1.0, 0.006)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.006)
-ROUGE S: (0, 0.0)",The minimum required Reinforcement Index for branch connections when not subjected to special analysis is 0.9 h2/3.,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",The minimum required Reinforcement Index for branch connections when not subjected to special analysis is 0.9 h2/3.,"Cosine similarity: 0.188
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (1.0, 0.0256)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.471
+ROUGE 1: (1.0, 0.0256)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.0256)
@@ -120,7 +136,8 @@ In the context of the allowable stress increase for short-term occasional loads,
 
 It is important to note that the allowable stress increase for short-term occasional loads is only applicable when the loads are infrequent and do not exceed the specified limits. If the loads become more frequent or exceed the limits, the piping system may need to be redesigned to accommodate the increased stress levels.
 
-In summary, the allowable stress increase for short-term occasional loads according to ASME B31.3 is 10%. This increase is intended to provide additional safety and reliability for piping systems when they are subjected to infrequent and non-repetitive loads.","ROUGE 1: (0.0, 0.0)
+In summary, the allowable stress increase for short-term occasional loads according to ASME B31.3 is 10%. This increase is intended to provide additional safety and reliability for piping systems when they are subjected to infrequent and non-repetitive loads.","Cosine similarity: 0.106
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -130,17 +147,20 @@ However, ASME B31.3 does allow for an increase in allowable stress values for sh
 
 For example, in Appendix D of ASME B31.3, the load factor for occasional loads due to wind or seismic is 1.33, which means that the basic allowable stress can be increased by about 33% for these types of loads.
 
-Therefore, the allowable stress increase for short-term occasional loads in ASME B31.3 depends on the specific load case and the applicable load factor, rather than being a fixed percentage increase.""]","ROUGE 1: (1.0, 0.0083)
+Therefore, the allowable stress increase for short-term occasional loads in ASME B31.3 depends on the specific load case and the applicable load factor, rather than being a fixed percentage increase.""]","Cosine similarity: 0.074
+ROUGE 1: (1.0, 0.0083)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.0083)
 ROUGE S: (0, 0.0)","The allowable stress increase (in percent) for short-term occasional loads is 25% for unlisted components and 0.9*H2/3 for listed components.
 
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.207
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.398
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -150,24 +170,28 @@ ROUGE S: (0, 0.0)",
 The longitudinal weld joint efficiency factor is a factor that is used to account for the reduction in strength of a piping component due to the presence of a weld. The efficiency factor is applied to the nominal strength of the piping component to determine the allowable working pressure.
 
 In the case of seamless piping, there are no welds present, so the maximum allowable efficiency factor is 1.0, meaning that the full strength of the piping component can be utilized. This is in contrast to welded piping, where the efficiency factor may be less than 1.0 due to the presence of welds.
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.197
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)","According to ASME B31.3, the maximum allowable longitudinal weld joint efficiency factor for seamless piping is 1.00. This value can be found in the table you provided, under the ""Carbon Steel"" section, in the row for ""Seamless pipe"" under the ""Spec. No."" column, and in the column for ""Ej"" (Efficiency Factor).","ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)","According to ASME B31.3, the maximum allowable longitudinal weld joint efficiency factor for seamless piping is 1.00. This value can be found in the table you provided, under the ""Carbon Steel"" section, in the row for ""Seamless pipe"" under the ""Spec. No."" column, and in the column for ""Ej"" (Efficiency Factor).","Cosine similarity: 0.063
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",The maximum allowable longitudinal weld joint efficiency factor for seamless piping is 1.00.,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",The maximum allowable longitudinal weld joint efficiency factor for seamless piping is 1.00.,"Cosine similarity: 0.222
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (1.0, 0.0256)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.471
+ROUGE 1: (1.0, 0.0256)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.0256)
 ROUGE S: (0, 0.0)",
-"Under ASME B31.3, what is the minimum post-weld heat treatment temperature (in  �F) for carbon steel?",1100,"The minimum post-weld heat treatment temperature for carbon steel in ASME B31.3 is 1000 �F (538 �C).
+"Under ASME B31.3, what is the minimum post-weld heat treatment temperature (in  °F) for carbon steel?",1100,"The minimum post-weld heat treatment temperature for carbon steel in ASME B31.3 is 1000 °F (538 °C).
 
 What is the purpose of post-weld heat treatment?
 
@@ -200,19 +224,23 @@ The choice of post-weld heat treatment is affected by several factors, including
 4. Service conditions: The operating conditions of the welded component, such as temperature, pressure, and corrosiveness, will also affect the choice of post-weld heat treatment. Components subjected to more severe service conditions may require more extensive heat treatment to ensure their long-term performance.
 
 5. Manufacturing constraints: The availability of equipment and resources for post-weld heat treatment will also affect the choice of process. Some heat treatment processes may be more suitable for a particular facility or budget than others.
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.241
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)", According to ASME B31.3-2,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)", According to ASME B31.3-2,"Cosine similarity: 0.302
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)","The minimum post-weld heat treatment temperature (in  �F) for carbon steel is the following table: -20 �F (-29 �C) for P-No. 1, Group No. 1 and 2, P-No. 5B, Group No. 1, P-No. 15E, Group No. 1, and P-No. 62. For P-No. 3, Group Nos. 1 and 2, P-No. 4, Group Nos. 1 and 2, P-No. 10H, Group No. 1, and P-No. 11A, the minimum post-weld heat treatment temperature (in  �F) for seamless piping is 150. For P-No. 10I, Group No. 1, the minimum post-weld heat treatment temperature (in  �F) for seamless piping is 200.","ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)","The minimum post-weld heat treatment temperature (in  °F) for carbon steel is the following table: -20 °F (-29 °C) for P-No. 1, Group No. 1 and 2, P-No. 5B, Group No. 1, P-No. 15E, Group No. 1, and P-No. 62. For P-No. 3, Group Nos. 1 and 2, P-No. 4, Group Nos. 1 and 2, P-No. 10H, Group No. 1, and P-No. 11A, the minimum post-weld heat treatment temperature (in  °F) for seamless piping is 150. For P-No. 10I, Group No. 1, the minimum post-weld heat treatment temperature (in  °F) for seamless piping is 200.","Cosine similarity: 0.336
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.362
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -221,26 +249,30 @@ What is the minimum required impact test energy (in ft-lbf) at the minimum desig
 
 To determine the minimum required impact test energy, you need to refer to Table 320.1(B)(1) in ASME B31.3. This table provides the minimum required impact test energy for various materials and temperature ranges.
 
-For Category D fluid service, the minimum design metal temperature is typically -40 �F (-40 �C) or lower. In this case, you would look for the corresponding minimum required impact test energy in the table.
+For Category D fluid service, the minimum design metal temperature is typically -40 °F (-40 °C) or lower. In this case, you would look for the corresponding minimum required impact test energy in the table.
 
-For example, if the material is carbon steel, the minimum required impact test energy at -40 �F (-40 �C) is 30 ft-lbf.
+For example, if the material is carbon steel, the minimum required impact test energy at -40 °F (-40 °C) is 30 ft-lbf.
 
 It is important to note that the minimum required impact test energy may vary depending on the specific material and temperature range. Always consult the latest edition of ASME B31.3 for the most accurate information.
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.093
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
 ROUGE S: (0, 0.0)","Based on the given information, for a carbon steel material used in Category D fluid service under ASME B31.3, the minimum required impact test energy at the minimum design metal temperature is not explicitly provided in the context. The figure and notes you provided discuss the minimum temperatures without impact testing for carbon steel materials and the use of certain materials according to different curves (A, B, D). However, they do not specify the required impact test energy values.
 
-To find the required impact test energy values, you should refer to Table A-1 for the designated curve for the listed material and Table 323.2.2A for tabular values, as mentioned in the figure's notes. Alternatively, you may consult the ASME B31.3-2014 codebook for more detailed information.""]","ROUGE 1: (0.0, 0.0)
+To find the required impact test energy values, you should refer to Table A-1 for the designated curve for the listed material and Table 323.2.2A for tabular values, as mentioned in the figure's notes. Alternatively, you may consult the ASME B31.3-2014 codebook for more detailed information.""]","Cosine similarity: 0.073
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",The minimum required impact test energy (in ft-lbf) at the minimum design metal temperature for a material in Category D fluid service under ASME B31.3 is 25 ft-lbf.,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",The minimum required impact test energy (in ft-lbf) at the minimum design metal temperature for a material in Category D fluid service under ASME B31.3 is 25 ft-lbf.,"Cosine similarity: 0.006
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.384
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -253,21 +285,25 @@ In corrosive service environments, where the piping is exposed to substances tha
 
 The 5-year maximum inspection and test interval for thickness measurements in corrosive service is a balance between the need for frequent monitoring to ensure safety and the practical considerations of conducting inspections and tests. This interval is based on the assumption that the piping system is adequately designed, installed, and maintained, and that any necessary repairs or replacements are carried out in a timely manner.
 
-It is important to note that the 5-year maximum interval is not a guarantee that the piping will remain safe for that entire period. The actual inspection and test interval may be shorter if there are indications of corrosion or other damage, or if the piping is subjected to more severe conditions than initially anticipated. Regular monitoring and maintenance are essential to ensure the continued safety and reliability of power piping systems in corrosive service environments.","ROUGE 1: (1.0, 0.0062)
+It is important to note that the 5-year maximum interval is not a guarantee that the piping will remain safe for that entire period. The actual inspection and test interval may be shorter if there are indications of corrosion or other damage, or if the piping is subjected to more severe conditions than initially anticipated. Regular monitoring and maintenance are essential to ensure the continued safety and reliability of power piping systems in corrosive service environments.","Cosine similarity: 0.208
+ROUGE 1: (1.0, 0.0062)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.0062)
-ROUGE S: (0, 0.0)"," According to ASME B31.3, the maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service is not explicitly specified in the code. The frequency of inspections and thickness measurements for piping in corrosive service is determined based on the specific corrosion rate and the remaining wall thickness of the piping component. Paragraph 345.2.2 of ASME B31.3 states that ""the need for inspection and the frequency of inspection shall be determined by the owner based on the nature of the fluid, the operating conditions, the materials, the previous history of the piping, and the potential for damage to the piping or to other property."" Therefore, the maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service should be determined on a case-by-case basis, taking into account the specific factors mentioned in the code.","ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)"," According to ASME B31.3, the maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service is not explicitly specified in the code. The frequency of inspections and thickness measurements for piping in corrosive service is determined based on the specific corrosion rate and the remaining wall thickness of the piping component. Paragraph 345.2.2 of ASME B31.3 states that ""the need for inspection and the frequency of inspection shall be determined by the owner based on the nature of the fluid, the operating conditions, the materials, the previous history of the piping, and the potential for damage to the piping or to other property."" Therefore, the maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service should be determined on a case-by-case basis, taking into account the specific factors mentioned in the code.","Cosine similarity: 0.108
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
 ROUGE S: (0, 0.0)","The maximum Inspection and Test Interval (in years) for thickness measurements of piping in Corrosive Service is 50% of the service life.
 
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.15
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.479
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -283,7 +319,8 @@ The use of a 1.5 times the maximum design pressure multiplier is based on the pr
 
 It is important to note that the hydrostatic test pressure multiplier may vary depending on the specific requirements of the project or the recommendations of the piping system designer or engineer. In some cases, a higher test pressure multiplier may be required to account for factors such as temperature variations, material properties, or the presence of corrosive fluids.
 
-In summary, the standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3 is 1.5 times the maximum design pressure. This multiplier ensures that the piping system is tested at a pressure greater than its maximum operating pressure, verifying its safety and reliability for operation.","ROUGE 1: (1.0, 0.0048)
+In summary, the standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3 is 1.5 times the maximum design pressure. This multiplier ensures that the piping system is tested at a pressure greater than its maximum operating pressure, verifying its safety and reliability for operation.","Cosine similarity: 0.161
+ROUGE 1: (1.0, 0.0048)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.0048)
@@ -297,21 +334,24 @@ PTF = 1.5 for PD ? 0.5 MPa (72.5 psi)
 PTF = 1.3 for 0.5 MPa (72.5 psi) < PD ? 1.0 MPa (145 psi)
 PTF = 1.1 for PD > 1.0 MPa (145 psi)
 
-Therefore, it is not a fixed multiplier and depends on the design pressure (PD) of the piping system.","ROUGE 1: (1.0, 0.0109)
+Therefore, it is not a fixed multiplier and depends on the design pressure (PD) of the piping system.","Cosine similarity: 0.361
+ROUGE 1: (1.0, 0.0109)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.0109)
-ROUGE S: (0, 0.0)",The standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3 is 1.5 times the design pressure.,"ROUGE 1: (1.0, 0.0667)
+ROUGE S: (0, 0.0)",The standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3 is 1.5 times the design pressure.,"Cosine similarity: 0.262
+ROUGE 1: (1.0, 0.0667)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (1.0, 0.0667)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0, 0.0)",,"Cosine similarity: 0.452
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
 ROUGE S: (0, 0.0)",
 "According to ASME B31.3, for materials subject to Charpy impact testing, what is the minimum design metal temperature without additional impact testing?
-", -20 �F,"The minimum design metal temperature (MDMT) without additional impact testing is -40 �F (-40 �C).
+", -20 °F,"The minimum design metal temperature (MDMT) without additional impact testing is -40 °F (-40 °C).
 
 However, it is important to note that the MDMT may be higher for certain materials and services. The MDMT is determined based on the specific material and service conditions, as well as the results of Charpy impact tests.
 
@@ -320,25 +360,29 @@ ASME B31.3 is a standard for the design and installation of in-service piping sy
 Charpy impact testing is a method used to determine the toughness of a material at various temperatures. It involves striking a notched specimen of the material with a hammer, and the energy absorbed by the specimen during fracture is measured. This test is used to ensure that a material will not fail due to brittle fracture at the service temperature.
 
 When designing piping systems, it is essential to consider the MDMT to ensure that the material will have adequate toughness at the lowest temperature it will be exposed to during operation. This helps to prevent brittle fractures and failures, which can lead to catastrophic consequences in piping systems.
-","ROUGE 1: (0.0, 0.0)
-ROUGE 2: (0, 0.0)
+","Cosine similarity: 0.157
+ROUGE 1: (0.5, 0.007)
+ROUGE 2: (0.0, 0.0)
+ROUGE 3: (0, 0.0)
+ROUGE L: (0.5, 0.007)
+ROUGE S: (0.0, 0.0)", Based on the provided information from ASME B31.3-2,"Cosine similarity: 0.294
+ROUGE 1: (0.0, 0.0)
+ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)", Based on the provided information from ASME B31.3-2,"ROUGE 1: (0.0, 0.0)
-ROUGE 2: (0, 0.0)
+ROUGE S: (0.0, 0.0)","The minimum design metal temperature without additional impact testing is as specified in para. 323.2.2(d)(1) of the document.
+","Cosine similarity: 0.278
+ROUGE 1: (0.0, 0.0)
+ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)","The minimum design metal temperature without additional impact testing is as specified in para. 323.2.2(d)(1) of the document.
-","ROUGE 1: (0.0, 0.0)
-ROUGE 2: (0, 0.0)
+ROUGE S: (0.0, 0.0)",,"Cosine similarity: 0.547
+ROUGE 1: (0.0, 0.0)
+ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",,"ROUGE 1: (0.0, 0.0)
-ROUGE 2: (0, 0.0)
-ROUGE 3: (0, 0.0)
-ROUGE L: (0, 0)
-ROUGE S: (0, 0.0)",
-What is the ASME B31.3 requirement for the examination of butt welds in Category D fluid service?, Visual examination,"The ASME B31.3 Code for Process Piping outlines the requirements for the examination of butt welds in Category D fluid service. Category D fluid service includes those services where the fluid is at a temperature above 399 �F (204 �C) and has a pressure above 150 psi (1034 kPa) or where the fluid is at a temperature above 700 �F (371 �C) and has a pressure above 10 psi (69 kPa).
+ROUGE S: (0.0, 0.0)",
+What is the ASME B31.3 requirement for the examination of butt welds in Category D fluid service?, Visual examination,"The ASME B31.3 Code for Process Piping outlines the requirements for the examination of butt welds in Category D fluid service. Category D fluid service includes those services where the fluid is at a temperature above 399 °F (204 °C) and has a pressure above 150 psi (1034 kPa) or where the fluid is at a temperature above 700 °F (371 °C) and has a pressure above 10 psi (69 kPa).
 
 For butt welds in Category D fluid service, the ASME B31.3 requires the following examination procedures:
 
@@ -355,26 +399,30 @@ For butt welds in Category D fluid service, the ASME B31.3 requires the followin
 6. Post-Weld Heat Treatment: If required by the code, post-weld heat treatment shall be performed to ensure that the weld meets the requirements of the code. Post-weld heat treatment is a process that involves heating the weld and the surrounding material to a specific temperature to relieve stresses and improve the mechanical properties of the weld.
 
 In conclusion, the ASME B31.3 requires a combination of visual, radiographic, ultrasonic, magnetic particle, and liquid penetrant examinations, as well as post-weld heat treatment if required, to ensure that butt welds in Category D fluid service meet the code's requirements.
-","ROUGE 1: (1.0, 0.0064)
+","Cosine similarity: 0.388
+ROUGE 1: (1.0, 0.0063)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
-ROUGE L: (1.0, 0.0064)
+ROUGE L: (1.0, 0.0063)
 ROUGE S: (1.0, 0.0)","Based on the provided ASME B31.3 code excerpt, the examination requirements for butt welds in Category D fluid service are as follows:
 
 1. In-process examination: Joints must undergo in-process examination in accordance with paragraph 344.7. The selection of joints should ensure that the work of each welder making the production welds is included.
 2. Examination of certifications, records, and other evidence: The examiner must confirm that the materials and components are of the specified grades and that they have received the required heat treatment, examination, and testing.
 3. Examiner's certification: The examiner is responsible for providing the Inspector with a certification that all the quality control requirements of the Code and of the engineering design have been carried out.
 
-It is essential to review the entire B31.3 code and any relevant supplementary materials to ensure a comprehensive understanding of the examination requirements for butt welds in Category D fluid service.","ROUGE 1: (0.5, 0.0097)
+It is essential to review the entire B31.3 code and any relevant supplementary materials to ensure a comprehensive understanding of the examination requirements for butt welds in Category D fluid service.","Cosine similarity: 0.376
+ROUGE 1: (0.5, 0.0097)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0.5, 0.0097)
 ROUGE S: (0.0, 0.0)","Butt welds in Category D fluid service shall be examined to the extent specified in ASME B31.3-2014 or to any greater extent specified in the engineering design.
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.366
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0.0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)",,"Cosine similarity: 0.214
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -390,7 +438,8 @@ ROUGE S: (0.0, 0.0)",
 The actual inspection and test interval should be determined based on the specific corrosive service conditions, material selection, and the piping system's history of corrosion and thickness loss. It is important to consult with a qualified corrosion engineer or materials specialist to establish an appropriate inspection and test interval for the specific piping system.
 
 Additionally, the owner or operator of the piping system should establish a corrosion monitoring program to track the corrosion rate and thickness loss, which can help in determining the appropriate inspection and test interval. This program should include regular visual inspections, ultrasonic thickness measurements, and any necessary material testing to ensure the piping system's integrity and compliance with the applicable codes and standards.
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.306
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -398,15 +447,18 @@ ROUGE S: (0.0, 0.0)"," Based on my understanding of the ASME B31.3 piping code, 
 
 However, Appendix E of ASME B31.3 provides recommendations for the development of a piping integrity management program, which includes inspection, testing, and monitoring of piping systems in corrosive service. The appendix suggests that the inspection and test interval should be based on the risk assessment of the piping system, taking into account factors such as the likelihood and consequences of failure, the materials of construction, the operating conditions, and the inspection and test history.
 
-Therefore, the maximum inspection and test interval for thickness measurements of piping in corrosive service under ASME B31.3 would depend on the specific risk assessment and piping integrity management program established for the piping system. It is recommended to consult with a qualified piping engineer or inspector to determine the appropriate interval for a particular piping system.","ROUGE 1: (0.0, 0.0)
+Therefore, the maximum inspection and test interval for thickness measurements of piping in corrosive service under ASME B31.3 would depend on the specific risk assessment and piping integrity management program established for the piping system. It is recommended to consult with a qualified piping engineer or inspector to determine the appropriate interval for a particular piping system.","Cosine similarity: 0.084
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0.0, 0.0)","The maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service under ASME B31.3 is based on the type of joint, the sensitivity of the indicator, and the rate of corrosion.","ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)","The maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service under ASME B31.3 is based on the type of joint, the sensitivity of the indicator, and the rate of corrosion.","Cosine similarity: 0.065
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0.0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)",,"Cosine similarity: 0.303
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0, 0.0)
 ROUGE L: (0, 0)
@@ -414,20 +466,24 @@ ROUGE S: (0.0, 0.0)",
 "Under ASME B31.3, for what pipe size (NPS) is a hot tap operation not recommended without specific design considerations and analysis?",NPS 12 and larger,"The ASME B31.3 code does not provide a specific pipe size (NPS) where a hot tap operation is not recommended without specific design considerations and analysis. However, it is generally not recommended to perform hot taps on piping systems with a diameter of 2 inches (50 mm) or less, as the required equipment and procedures may not be practical or feasible for such small-diameter piping.
 
 It is important to note that the suitability of a hot tap operation depends on various factors, such as the type of piping material, pressure and temperature conditions, and the specific requirements of the project. Therefore, it is always advisable to consult with a qualified engineer or piping specialist to determine the feasibility and appropriateness of a hot tap operation for a specific piping system.
-","ROUGE 1: (0.3333, 0.0114)
+","Cosine similarity: 0.301
+ROUGE 1: (0.3333, 0.0114)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.3333, 0.0114)
-ROUGE S: (0.0, 0.0)","Based on my knowledge of ASME B31.3 piping code, there is no specific pipe size (NPS) mentioned in the code where a hot tap operation is not recommended without specific design considerations and analysis. The code does not provide a direct answer to this question. However, it does emphasize that hot taps and line stops are complex operations that require careful planning, design, and execution, regardless of pipe size. Therefore, it is recommended to consult the appropriate industry standards, codes, and standards organizations for guidance on hot tapping procedures and specific design considerations for different pipe sizes.","ROUGE 1: (0.3333, 0.0133)
+ROUGE S: (0.0, 0.0)","Based on my knowledge of ASME B31.3 piping code, there is no specific pipe size (NPS) mentioned in the code where a hot tap operation is not recommended without specific design considerations and analysis. The code does not provide a direct answer to this question. However, it does emphasize that hot taps and line stops are complex operations that require careful planning, design, and execution, regardless of pipe size. Therefore, it is recommended to consult the appropriate industry standards, codes, and standards organizations for guidance on hot tapping procedures and specific design considerations for different pipe sizes.","Cosine similarity: 0.177
+ROUGE 1: (0.3333, 0.0133)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.3333, 0.0133)
 ROUGE S: (0.0, 0.0)","The use of hot tap operation is not recommended for NPS sizes less than DN 50 (NPS 2) without specific design considerations and analysis.
-","ROUGE 1: (0.3333, 0.05)
+","Cosine similarity: 0.391
+ROUGE 1: (0.3333, 0.05)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.3333, 0.05)
-ROUGE S: (0.0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)",,"Cosine similarity: 0.306
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0, 0)
@@ -448,7 +504,8 @@ A severe cyclic condition can be caused by a variety of factors, such as:
 To account for the effects of severe cyclic conditions, the ASME B31.3 code requires that piping systems be designed and analyzed using appropriate methods, such as stress analysis, fatigue analysis, and thermal stress analysis. This ensures that the piping system is able to withstand the expected stresses and strains without failing or suffering significant damage.
 
 In summary, a severe cyclic condition in the ASME B31.3 code refers to a situation where the pressure and temperature of a fluid in a piping system vary significantly over a short period of time, potentially leading to stresses and strains that may cause damage or failure if not properly accounted for in the design and analysis of the piping system.
-","ROUGE 1: (0.2857, 0.0088)
+","Cosine similarity: 0.488
+ROUGE 1: (0.2857, 0.0088)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.2857, 0.0088)
@@ -456,16 +513,19 @@ ROUGE S: (0.0476, 0.0)","According to ASME B31.3 piping code, a severe cyclic co
 
 The code provides requirements and recommendations for designing and manufacturing piping systems that can withstand severe cyclic conditions in Chapter II, Parts 3 and 4, as well as in paragraphs 323.4.2 and 241.4.3. These requirements cover factors such as material selection, wall thickness, flexibility analysis, and fatigue analysis.
 
-Therefore, a severe cyclic condition in ASME B31.3 piping code is a general term used to describe any piping condition that is subject to significant and potentially damaging fluctuations in stress or temperature. It is up to the designer or engineer to determine whether a particular piping application falls under this category and to apply the appropriate design and analysis methods accordingly.","ROUGE 1: (0.4286, 0.0263)
+Therefore, a severe cyclic condition in ASME B31.3 piping code is a general term used to describe any piping condition that is subject to significant and potentially damaging fluctuations in stress or temperature. It is up to the designer or engineer to determine whether a particular piping application falls under this category and to apply the appropriate design and analysis methods accordingly.","Cosine similarity: 0.512
+ROUGE 1: (0.4286, 0.0263)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.4286, 0.0263)
 ROUGE S: (0.1429, 0.0005)","ASME B31.3 defines a severe cyclic condition as one that requires the use of special materials and construction methods.
-","ROUGE 1: (0.0, 0.0)
+","Cosine similarity: 0.563
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0, 0)
-ROUGE S: (0.0, 0.0)",,"ROUGE 1: (0.0, 0.0)
+ROUGE S: (0.0, 0.0)",,"Cosine similarity: 0.057
+ROUGE 1: (0.0, 0.0)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0, 0)
@@ -480,19 +540,23 @@ In addition, the use of non-specified materials for temporary repairs may introd
 
 Therefore, it is generally recommended to use materials that are specified in the ASME B31.3 code or that have been qualified through appropriate testing and evaluation for temporary repairs. If non-specified materials are used, it is important to perform a thorough engineering evaluation to ensure that the repair is safe and reliable for the intended service conditions.
 
-In all cases, temporary repairs should be properly documented and reviewed by a qualified engineer to ensure that they comply with the applicable code requirements and do not compromise the safety or integrity of the piping system.","ROUGE 1: (0.4848, 0.0941)
+In all cases, temporary repairs should be properly documented and reviewed by a qualified engineer to ensure that they comply with the applicable code requirements and do not compromise the safety or integrity of the piping system.","Cosine similarity: 0.884
+ROUGE 1: (0.4848, 0.0941)
 ROUGE 2: (0.375, 0.071)
 ROUGE 3: (0.1935, 0.0357)
 ROUGE L: (0.6061, 0.1176)
-ROUGE S: (0.464, 0.0171)","No, it is not acceptable to use non-specified materials for temporary repairs in ASME B31.3 process piping, according to the code's language in F323 (a). The code recommends specifying or selecting suitable materials for piping and associated facilities that affect the safety of the piping. This includes considering temperature and pressure effects, properties of reaction or decomposition products, and hazards from instability of contained fluids. Furthermore, the code suggests considering the use of cladding, lining, or other protective materials to reduce the effects of corrosion, erosion, and abrasion. Therefore, any repairs made to the piping should use materials that meet these considerations, even if they are only temporary. Using non-specified materials could compromise the safety and integrity of the piping system.","ROUGE 1: (0.3636, 0.1304)
+ROUGE S: (0.464, 0.0171)","No, it is not acceptable to use non-specified materials for temporary repairs in ASME B31.3 process piping, according to the code's language in F323 (a). The code recommends specifying or selecting suitable materials for piping and associated facilities that affect the safety of the piping. This includes considering temperature and pressure effects, properties of reaction or decomposition products, and hazards from instability of contained fluids. Furthermore, the code suggests considering the use of cladding, lining, or other protective materials to reduce the effects of corrosion, erosion, and abrasion. Therefore, any repairs made to the piping should use materials that meet these considerations, even if they are only temporary. Using non-specified materials could compromise the safety and integrity of the piping system.","Cosine similarity: 0.831
+ROUGE 1: (0.3636, 0.1304)
 ROUGE 2: (0.3125, 0.1099)
 ROUGE 3: (0.1935, 0.0667)
 ROUGE L: (0.4545, 0.163)
-ROUGE S: (0.3087, 0.0389)","Yes, it is acceptable to use non-specified materials for temporary repairs in ASME B31.3 process piping.","ROUGE 1: (0.2727, 0.6923)
+ROUGE S: (0.3087, 0.0389)","Yes, it is acceptable to use non-specified materials for temporary repairs in ASME B31.3 process piping.","Cosine similarity: 0.757
+ROUGE 1: (0.2727, 0.6923)
 ROUGE 2: (0.2188, 0.5833)
 ROUGE 3: (0.1613, 0.4545)
 ROUGE L: (0.303, 0.7692)
-ROUGE S: (0.2008, 1.359)",,"ROUGE 1: (0.0303, 0.0256)
+ROUGE S: (0.2008, 1.359)",,"Cosine similarity: -0.052
+ROUGE 1: (0.0303, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1515, 0.1282)
@@ -511,20 +575,24 @@ It is important to note that welding on in-service piping can introduce signific
 
 In addition, it is recommended to perform a risk assessment and to develop a written welding procedure that addresses the specific hazards and risks associated with the welding operation. The procedure should be reviewed and approved by a qualified engineer and should be followed by all personnel involved in the welding operation.
 
-In summary, welding on in-service piping systems is permitted under ASME B31.3, but only under certain conditions and with appropriate precautions. It is important to follow the requirements of Section 302.3.6 and to perform a risk assessment and develop a written welding procedure to ensure the safety of personnel and the integrity of the piping system.","ROUGE 1: (0.5294, 0.0814)
+In summary, welding on in-service piping systems is permitted under ASME B31.3, but only under certain conditions and with appropriate precautions. It is important to follow the requirements of Section 302.3.6 and to perform a risk assessment and develop a written welding procedure to ensure the safety of personnel and the integrity of the piping system.","Cosine similarity: 0.844
+ROUGE 1: (0.5294, 0.0814)
 ROUGE 2: (0.2424, 0.0364)
 ROUGE 3: (0.1562, 0.0228)
 ROUGE L: (0.5, 0.0769)
-ROUGE S: (0.4367, 0.0101)","No, welding on in-service piping is not generally acceptable under ASME B31.3. According to the code, welding on in-service piping should be avoided if possible. If welding is necessary, it should be performed in accordance with the requirements of Appendix R, ""In-Service Welding and Hot Tapping,"" of ASME B31.3. These requirements include obtaining permission from the owner, preparing the pipe for welding, and performing the welding under the supervision of a qualified welding supervisor. Additionally, the piping system should be fully assessed for the impact of the welding on the overall system, including the potential for thermal shock or other adverse effects. It is important to note that in-service welding is only allowed under specific circumstances and with the proper precautions in place.","ROUGE 1: (0.3235, 0.1325)
+ROUGE S: (0.4367, 0.0101)","No, welding on in-service piping is not generally acceptable under ASME B31.3. According to the code, welding on in-service piping should be avoided if possible. If welding is necessary, it should be performed in accordance with the requirements of Appendix R, ""In-Service Welding and Hot Tapping,"" of ASME B31.3. These requirements include obtaining permission from the owner, preparing the pipe for welding, and performing the welding under the supervision of a qualified welding supervisor. Additionally, the piping system should be fully assessed for the impact of the welding on the overall system, including the potential for thermal shock or other adverse effects. It is important to note that in-service welding is only allowed under specific circumstances and with the proper precautions in place.","Cosine similarity: 0.855
+ROUGE 1: (0.3235, 0.1325)
 ROUGE 2: (0.1818, 0.0732)
 ROUGE 3: (0.125, 0.0494)
 ROUGE L: (0.3529, 0.1446)
 ROUGE S: (0.2103, 0.0347)","No, it is not acceptable to perform welding on in-service piping systems under ASME B31.3.
-","ROUGE 1: (0.2353, 0.8)
+","Cosine similarity: 0.653
+ROUGE 1: (0.2353, 0.8)
 ROUGE 2: (0.1818, 0.6667)
 ROUGE 3: (0.0938, 0.375)
 ROUGE L: (0.2353, 0.8)
-ROUGE S: (0.1301, 1.6222)",,"ROUGE 1: (0.0294, 0.0256)
+ROUGE S: (0.1301, 1.6222)",,"Cosine similarity: 0.063
+ROUGE 1: (0.0294, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1765, 0.1538)
@@ -541,7 +609,8 @@ If the piping system is subjected to conditions that may result in stresses exce
 
 In addition, it is recommended to establish a monitoring and inspection program to regularly assess the condition of the piping system and to identify any signs of stress or damage that may indicate that the maximum allowable stress values are being exceeded.
 
-In summary, exceeding the maximum allowable stress values specified in ASME B31.3 during operation is not acceptable, as it can compromise the integrity and safety of the piping system. It is important to ensure that the piping system is designed, installed, and operated in accordance with the requirements of the code and to establish a monitoring and inspection program to regularly assess the condition of the system.","ROUGE 1: (0.6071, 0.0798)
+In summary, exceeding the maximum allowable stress values specified in ASME B31.3 during operation is not acceptable, as it can compromise the integrity and safety of the piping system. It is important to ensure that the piping system is designed, installed, and operated in accordance with the requirements of the code and to establish a monitoring and inspection program to regularly assess the condition of the system.","Cosine similarity: 0.87
+ROUGE 1: (0.6071, 0.0798)
 ROUGE 2: (0.6296, 0.0802)
 ROUGE 3: (0.5385, 0.0664)
 ROUGE L: (0.8571, 0.1127)
@@ -550,16 +619,19 @@ ROUGE S: (0.7302, 0.0122)","Yes, it is acceptable to exceed the maximum allowabl
 * 33% for no more than 10 hours at any one time and no more than 100 hours per year
 * 20% for no more than 50 hours at any one time and no more than 500 hours per year
 
-Furthermore, the effects of such variations shall be determined by the designer to be safe over the service life of the piping system by methods acceptable to the owner. Therefore, any exceedance of the maximum allowable stress values must be calculated and justified by the designer, and the owner must approve such exceedance.","ROUGE 1: (0.4643, 0.1238)
+Furthermore, the effects of such variations shall be determined by the designer to be safe over the service life of the piping system by methods acceptable to the owner. Therefore, any exceedance of the maximum allowable stress values must be calculated and justified by the designer, and the owner must approve such exceedance.","Cosine similarity: 0.68
+ROUGE 1: (0.4643, 0.1238)
 ROUGE 2: (0.4815, 0.125)
 ROUGE 3: (0.4231, 0.1068)
 ROUGE L: (0.6071, 0.1619)
 ROUGE S: (0.4524, 0.0313)","No, it is not acceptable to exceed the maximum allowable stress values specified in ASME B31.3 during operation.
-","ROUGE 1: (0.3929, 0.9167)
+","Cosine similarity: 0.744
+ROUGE 1: (0.3929, 0.9167)
 ROUGE 2: (0.4074, 1.0)
 ROUGE 3: (0.3846, 1.0)
 ROUGE L: (0.4286, 1.0)
-ROUGE S: (0.2725, 1.5606)",,"ROUGE 1: (0.0357, 0.0256)
+ROUGE S: (0.2725, 1.5606)",,"Cosine similarity: 0.032
+ROUGE 1: (0.0357, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1429, 0.1026)
@@ -579,20 +651,24 @@ It is important to note that radiography is a volumetric inspection method that 
 
 Therefore, it is essential to perform a thorough engineering evaluation to determine the suitability of radiography as an alternative to hydrostatic testing for the specific piping system and service conditions.
 
-In summary, radiography may be used in lieu of hydrostatic testing for final inspection of welded joints in ASME B31.3, but only under certain conditions and with appropriate precautions. It is important to follow the requirements of Section 345.4.2 and to perform a thorough engineering evaluation to ensure the safety and reliability of the piping system.","ROUGE 1: (0.4419, 0.0823)
+In summary, radiography may be used in lieu of hydrostatic testing for final inspection of welded joints in ASME B31.3, but only under certain conditions and with appropriate precautions. It is important to follow the requirements of Section 345.4.2 and to perform a thorough engineering evaluation to ensure the safety and reliability of the piping system.","Cosine similarity: 0.823
+ROUGE 1: (0.4419, 0.0823)
 ROUGE 2: (0.4286, 0.0783)
 ROUGE 3: (0.2683, 0.048)
 ROUGE L: (0.6047, 0.1126)
-ROUGE S: (0.3887, 0.0132)","No, according to ASME B31.3-2014(14) Table 341.3.2, radiography is not listed as an acceptable alternative to hydrostatic testing for the final inspection of welded joints. The table only provides acceptance criteria for required visual and radiographic examination of welds, but it does not mention the use of radiography in lieu of hydrostatic testing. Additionally, paragraph 345.9 only mentions that an alternative leak test is allowed for certain welds, but it does not specify radiography as this alternative. Therefore, in general, hydrostatic testing is still required for the final inspection of welded joints in ASME B31.3.","ROUGE 1: (0.3953, 0.2464)
+ROUGE S: (0.3887, 0.0132)","No, according to ASME B31.3-2014(14) Table 341.3.2, radiography is not listed as an acceptable alternative to hydrostatic testing for the final inspection of welded joints. The table only provides acceptance criteria for required visual and radiographic examination of welds, but it does not mention the use of radiography in lieu of hydrostatic testing. Additionally, paragraph 345.9 only mentions that an alternative leak test is allowed for certain welds, but it does not specify radiography as this alternative. Therefore, in general, hydrostatic testing is still required for the final inspection of welded joints in ASME B31.3.","Cosine similarity: 0.812
+ROUGE 1: (0.3953, 0.2464)
 ROUGE 2: (0.2619, 0.1618)
 ROUGE 3: (0.1707, 0.1045)
 ROUGE L: (0.3953, 0.2464)
 ROUGE S: (0.2879, 0.1108)","No, it is not acceptable to use radiography in lieu of hydrostatic testing for final inspection of welded joints in ASME B31.3.
-","ROUGE 1: (0.2558, 0.7857)
+","Cosine similarity: 0.694
+ROUGE 1: (0.2558, 0.7857)
 ROUGE 2: (0.1905, 0.6154)
 ROUGE 3: (0.1463, 0.5)
 ROUGE L: (0.2791, 0.8571)
-ROUGE S: (0.1484, 1.4725)",,"ROUGE 1: (0.0698, 0.0769)
+ROUGE S: (0.1484, 1.4725)",,"Cosine similarity: 0.128
+ROUGE 1: (0.0698, 0.0769)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.186, 0.2051)
@@ -613,7 +689,8 @@ It is important to note that even minor surface defects can compromise the integ
 
 Therefore, it is essential to perform a thorough evaluation of all surface imperfections, regardless of their size or depth, to ensure the safety and reliability of the piping system.
 
-In summary, it is not acceptable to ignore minor surface defects on pipe exteriors, even if they do not penetrate the wall thickness, according to ASME B31.3. All surface imperfections shall be evaluated to determine their potential impact on the integrity and safety of the piping system, and appropriate actions shall be taken based on the results of the evaluation.","ROUGE 1: (0.6129, 0.0913)
+In summary, it is not acceptable to ignore minor surface defects on pipe exteriors, even if they do not penetrate the wall thickness, according to ASME B31.3. All surface imperfections shall be evaluated to determine their potential impact on the integrity and safety of the piping system, and appropriate actions shall be taken based on the results of the evaluation.","Cosine similarity: 0.731
+ROUGE 1: (0.6129, 0.0913)
 ROUGE 2: (0.2333, 0.0338)
 ROUGE 3: (0.1034, 0.0146)
 ROUGE L: (0.5484, 0.0817)
@@ -621,15 +698,18 @@ ROUGE S: (0.5355, 0.0116)","Yes, it is acceptable to ignore minor surface defect
 
 Paragraph 341.2 of ASME B31.3-2012 states: ""The Inspector may accept surfaces that contain shallow imperfections, such as scratches, tool marks, and slight discoloration, if they are judged not to significantly affect the long-term integrity of the pressure boundary.""
 
-However, it is important to note that the acceptance of such defects should be based on engineering judgment and the specific service conditions of the piping system. Additionally, any repair of these defects should be in accordance with the applicable provisions of the code.","ROUGE 1: (0.5484, 0.2361)
+However, it is important to note that the acceptance of such defects should be based on engineering judgment and the specific service conditions of the piping system. Additionally, any repair of these defects should be in accordance with the applicable provisions of the code.","Cosine similarity: 0.739
+ROUGE 1: (0.5484, 0.2361)
 ROUGE 2: (0.2667, 0.1127)
 ROUGE 3: (0.1379, 0.0571)
 ROUGE L: (0.5161, 0.2222)
-ROUGE S: (0.4043, 0.0736)","No, it is not acceptable to ignore minor surface defects on pipe exteriors if they do not penetrate the wall thickness according to ASME B31.3.","ROUGE 1: (0.3548, 0.7333)
+ROUGE S: (0.4043, 0.0736)","No, it is not acceptable to ignore minor surface defects on pipe exteriors if they do not penetrate the wall thickness according to ASME B31.3.","Cosine similarity: 0.739
+ROUGE 1: (0.3548, 0.7333)
 ROUGE 2: (0.2, 0.4286)
 ROUGE 3: (0.1034, 0.2308)
 ROUGE L: (0.3226, 0.6667)
-ROUGE S: (0.1828, 0.8095)",,"ROUGE 1: (0.0323, 0.0256)
+ROUGE S: (0.1828, 0.8095)",,"Cosine similarity: -0.122
+ROUGE 1: (0.0323, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.129, 0.1026)
@@ -644,20 +724,24 @@ It is also important to document and verify the calculations to ensure their acc
 
 While manual calculations are acceptable, the use of computer software tools can simplify the calculation process and reduce the potential for errors. However, it is important to ensure that the software tools are appropriate for the specific piping system and service conditions and that the calculations are performed in accordance with the requirements of the code.
 
-In summary, it is acceptable to manually calculate stress and strain without software tools according to ASME B31.3, provided that the calculations are performed in accordance with the requirements of the code and are documented and verified appropriately. However, the use of computer software tools can simplify the calculation process and reduce the potential for errors, provided that the tools are appropriate for the specific piping system and service conditions.","ROUGE 1: (0.5484, 0.0909)
+In summary, it is acceptable to manually calculate stress and strain without software tools according to ASME B31.3, provided that the calculations are performed in accordance with the requirements of the code and are documented and verified appropriately. However, the use of computer software tools can simplify the calculation process and reduce the potential for errors, provided that the tools are appropriate for the specific piping system and service conditions.","Cosine similarity: 0.836
+ROUGE 1: (0.5484, 0.0909)
 ROUGE 2: (0.3, 0.0484)
 ROUGE 3: (0.1379, 0.0216)
 ROUGE L: (0.5806, 0.0963)
-ROUGE S: (0.5376, 0.0144)","Yes, it is acceptable to manually calculate stress and strain without the use of software tools according to ASME B31.3. The code permits the use of methods such as detailed stress analysis (e.g., finite element method) and hand calculations for the evaluation of piping stresses. However, the results of these calculations must be evaluated as described in Section VIII, Division 3, Article KD-2 of the code, with applicable modifications as specified in paragraph K302.3.6(a) and Table K-1. Additionally, interpolations are supported for the given stress and strain calculations.","ROUGE 1: (0.3548, 0.1549)
+ROUGE S: (0.5376, 0.0144)","Yes, it is acceptable to manually calculate stress and strain without the use of software tools according to ASME B31.3. The code permits the use of methods such as detailed stress analysis (e.g., finite element method) and hand calculations for the evaluation of piping stresses. However, the results of these calculations must be evaluated as described in Section VIII, Division 3, Article KD-2 of the code, with applicable modifications as specified in paragraph K302.3.6(a) and Table K-1. Additionally, interpolations are supported for the given stress and strain calculations.","Cosine similarity: 0.68
+ROUGE 1: (0.3548, 0.1549)
 ROUGE 2: (0.2, 0.0857)
 ROUGE 3: (0.069, 0.029)
 ROUGE L: (0.4194, 0.1831)
 ROUGE S: (0.2323, 0.0435)","No, it is not acceptable to manually calculate stress and strain without software tools according to ASME B31.3.
-","ROUGE 1: (0.2581, 0.6154)
+","Cosine similarity: 0.64
+ROUGE 1: (0.2581, 0.6154)
 ROUGE 2: (0.1333, 0.3333)
 ROUGE 3: (0.069, 0.1818)
 ROUGE L: (0.2258, 0.5385)
-ROUGE S: (0.1032, 0.6154)",,"ROUGE 1: (0.0323, 0.0256)
+ROUGE S: (0.1032, 0.6154)",,"Cosine similarity: 0.022
+ROUGE 1: (0.0323, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.129, 0.1026)
@@ -676,7 +760,8 @@ It is important to note that field-applied cold insulation can be particularly s
 
 Therefore, it is essential to perform a thorough evaluation of the potential for CUI and to incorporate appropriate measures to mitigate the risk in the design and installation of field-applied cold insulation.
 
-In summary, it is not acceptable to apply field-applied cold insulation without considering its impact on CUI according to ASME B31.3. The potential for CUI shall be evaluated and addressed in the design and installation of insulated piping systems, and appropriate measures shall be taken to mitigate the risk of CUI.","ROUGE 1: (0.5357, 0.0806)
+In summary, it is not acceptable to apply field-applied cold insulation without considering its impact on CUI according to ASME B31.3. The potential for CUI shall be evaluated and addressed in the design and installation of insulated piping systems, and appropriate measures shall be taken to mitigate the risk of CUI.","Cosine similarity: 0.861
+ROUGE 1: (0.5357, 0.0806)
 ROUGE 2: (0.4444, 0.0649)
 ROUGE 3: (0.3846, 0.0543)
 ROUGE L: (0.6429, 0.0968)
@@ -686,17 +771,20 @@ Corrosion under insulation (CUI) is a significant concern in many industrial app
 
 However, ASME B31.3 does provide general guidance on material selection, design, and fabrication to ensure the safety and reliability of piping systems. Proper insulation selection and installation are crucial to prevent CUI and other forms of corrosion. Therefore, it is essential to consider the potential impact of insulation on CUI during the design, fabrication, and installation stages of a piping system, even if it is not explicitly mentioned in the code snippet you provided.
 
-In summary, while the ASME B31.3 code snippet you provided does not directly address the acceptability of applying field-applied cold insulation without considering its impact on CUI, it is still essential to consider CUI prevention measures during the design, fabrication, and installation stages of a piping system to ensure its long-term reliability and safety.","ROUGE 1: (0.3571, 0.0629)
+In summary, while the ASME B31.3 code snippet you provided does not directly address the acceptability of applying field-applied cold insulation without considering its impact on CUI, it is still essential to consider CUI prevention measures during the design, fabrication, and installation stages of a piping system to ensure its long-term reliability and safety.","Cosine similarity: 0.86
+ROUGE 1: (0.3571, 0.0629)
 ROUGE 2: (0.3333, 0.057)
 ROUGE 3: (0.2692, 0.0446)
 ROUGE L: (0.5357, 0.0943)
 ROUGE S: (0.2778, 0.0084)","No, it is not acceptable to apply field-applied cold insulation without considering its impact on corrosion under insulation (CUI) according to ASME B31.3.
 
-","ROUGE 1: (0.4286, 0.6667)
+","Cosine similarity: 0.817
+ROUGE 1: (0.4286, 0.6667)
 ROUGE 2: (0.3333, 0.5294)
 ROUGE 3: (0.3077, 0.5)
 ROUGE L: (0.4643, 0.7222)
-ROUGE S: (0.3201, 0.7908)",,"ROUGE 1: (0.0357, 0.0256)
+ROUGE S: (0.3201, 0.7908)",,"Cosine similarity: 0.053
+ROUGE 1: (0.0357, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1429, 0.1026)
@@ -711,7 +799,8 @@ While the pressure-temperature ratings of flanges and fittings may be the same f
 
 Therefore, it is important to select flanges and fittings based on both their pressure-temperature ratings and their material grades, and to ensure that the materials are suitable for the intended service conditions.
 
-In summary, it is not acceptable to interchange flanges and fittings of different material grades as long as pressure ratings match according to ASME B31.3. The materials of flanges and fittings shall be suitable for the service conditions and shall be selected based on both their pressure-temperature ratings and their material grades.","ROUGE 1: (0.5161, 0.087)
+In summary, it is not acceptable to interchange flanges and fittings of different material grades as long as pressure ratings match according to ASME B31.3. The materials of flanges and fittings shall be suitable for the service conditions and shall be selected based on both their pressure-temperature ratings and their material grades.","Cosine similarity: 0.761
+ROUGE 1: (0.5161, 0.087)
 ROUGE 2: (0.2667, 0.0437)
 ROUGE 3: (0.1379, 0.022)
 ROUGE L: (0.5484, 0.0924)
@@ -723,16 +812,19 @@ Interpretation 24-19 indicates that a valve manufactured from a material not lis
 
 Interpretation 23-14, which was referred to in response to Question 1 of Interpretation 24-19, discusses the requirements for leak testing of components listed in Table 326.1. However, it does not address the interchangeability of components of different material grades.
 
-Therefore, to ensure compliance with the ASME B31.3 code and to maintain the integrity of the piping system, it is advisable to use flanges and fittings of the same material grade or those that have been specifically approved for interchangeability by the piping designer or engineer.","ROUGE 1: (0.4194, 0.1024)
+Therefore, to ensure compliance with the ASME B31.3 code and to maintain the integrity of the piping system, it is advisable to use flanges and fittings of the same material grade or those that have been specifically approved for interchangeability by the piping designer or engineer.","Cosine similarity: 0.725
+ROUGE 1: (0.4194, 0.1024)
 ROUGE 2: (0.3, 0.0714)
 ROUGE 3: (0.2414, 0.056)
 ROUGE L: (0.5484, 0.1339)
 ROUGE S: (0.2925, 0.017)","No, it is not acceptable to interchange flanges and fittings of different material grades as long as pressure ratings match according to ASME B31.3.
-","ROUGE 1: (0.3548, 0.6875)
+","Cosine similarity: 0.724
+ROUGE 1: (0.3548, 0.6875)
 ROUGE 2: (0.2333, 0.4667)
 ROUGE 3: (0.1379, 0.2857)
 ROUGE L: (0.3548, 0.6875)
-ROUGE S: (0.2043, 0.7917)",,"ROUGE 1: (0.0323, 0.0256)
+ROUGE S: (0.2043, 0.7917)",,"Cosine similarity: 0.102
+ROUGE 1: (0.0323, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1613, 0.1282)
@@ -749,7 +841,8 @@ In addition, the code provides requirements for the design of bolted flange conn
 
 It is important to note that the design and installation of bolted flange connections in high-temperature service applications can be complex and may require specialized knowledge and expertise. Therefore, it is essential to follow the requirements of the code and to consult with experienced designers and installers to ensure the safety and reliability of the piping system.
 
-In summary, it is acceptable to use bolted connections in high-temperature service applications according to ASME B31.3, provided that the bolting materials and design are suitable for the service conditions and that the requirements of the code are followed. The design and installation of bolted flange connections in high-temperature service applications may require specialized knowledge and expertise, and it is important to consult with experienced designers and installers to ensure the safety and reliability of the piping system.","ROUGE 1: (0.5357, 0.0667)
+In summary, it is acceptable to use bolted connections in high-temperature service applications according to ASME B31.3, provided that the bolting materials and design are suitable for the service conditions and that the requirements of the code are followed. The design and installation of bolted flange connections in high-temperature service applications may require specialized knowledge and expertise, and it is important to consult with experienced designers and installers to ensure the safety and reliability of the piping system.","Cosine similarity: 0.748
+ROUGE 1: (0.5357, 0.0667)
 ROUGE 2: (0.3333, 0.0402)
 ROUGE 3: (0.0769, 0.009)
 ROUGE L: (0.6786, 0.0844)
@@ -763,16 +856,19 @@ In particular, Section 309.2.1 of ASME B31.3 states that bolting having a specif
 
 Therefore, it is crucial to carefully select the bolting and gasket materials and ensure that they are suitable for the high-temperature service conditions. Additionally, it may be necessary to perform calculations or testing to ensure that the bolted connection can maintain joint tightness under the design conditions.
 
-In summary, while bolted connections can be used in high-temperature service applications according to ASME B31.3, it is essential to carefully consider the material selection, design, and testing requirements to ensure the integrity of the bolted connection.","ROUGE 1: (0.5714, 0.0958)
+In summary, while bolted connections can be used in high-temperature service applications according to ASME B31.3, it is essential to carefully consider the material selection, design, and testing requirements to ensure the integrity of the bolted connection.","Cosine similarity: 0.753
+ROUGE 1: (0.5714, 0.0958)
 ROUGE 2: (0.3704, 0.0602)
 ROUGE 3: (0.2308, 0.0364)
 ROUGE L: (0.7143, 0.1198)
 ROUGE S: (0.6085, 0.0166)","Yes, it is acceptable to use bolted connections in high-temperature service applications according to ASME B31.3.
-","ROUGE 1: (0.3214, 0.6923)
+","Cosine similarity: 0.492
+ROUGE 1: (0.3214, 0.6923)
 ROUGE 2: (0.1852, 0.4167)
 ROUGE 3: (0.0385, 0.0909)
 ROUGE L: (0.3571, 0.7692)
-ROUGE S: (0.2725, 1.3205)",,"ROUGE 1: (0.0357, 0.0256)
+ROUGE S: (0.2725, 1.3205)",,"Cosine similarity: 0.017
+ROUGE 1: (0.0357, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.2143, 0.1538)
@@ -787,21 +883,25 @@ In addition, the code allows for alternative methods to PWHT, such as normalizin
 
 It is important to note that the exemptions and alternative methods provided by the code are based on extensive testing and research and are intended to ensure the safety and reliability of the piping system. Therefore, it is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate PWHT requirements for the specific piping system.
 
-In summary, it is acceptable to forgo post-weld heat treatment (PWHT) for some materials under ASME B31.3, provided that the materials are exempted from PWHT by the code or that the code allows an alternative to PWHT. The exemptions and alternative methods provided by the code are based on extensive testing and research and are intended to ensure the safety and reliability of the piping system. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate PWHT requirements for the specific piping system.","ROUGE 1: (0.4, 0.0606)
+In summary, it is acceptable to forgo post-weld heat treatment (PWHT) for some materials under ASME B31.3, provided that the materials are exempted from PWHT by the code or that the code allows an alternative to PWHT. The exemptions and alternative methods provided by the code are based on extensive testing and research and are intended to ensure the safety and reliability of the piping system. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate PWHT requirements for the specific piping system.","Cosine similarity: 0.886
+ROUGE 1: (0.4, 0.0606)
 ROUGE 2: (0.2069, 0.0305)
 ROUGE 3: (0.0714, 0.0102)
 ROUGE L: (0.4667, 0.0707)
-ROUGE S: (0.3517, 0.0078)","Yes, it is acceptable to forgo post-weld heat treatment (PWHT) for some materials under ASME B31.3, provided that the conditions specified in Table 331.1.3 are met. This table outlines certain exemptions to mandatory PWHT based on the P-Number, Group Number, nominal material thickness, type of weld, and other factors. It's important to note that these exemptions may require specific preheating, carbon content limits, and welding techniques to be followed in order to ensure the integrity of the weld and the safety of the system. Always consult the code and relevant standards when making decisions regarding PWHT.","ROUGE 1: (0.4333, 0.1733)
+ROUGE S: (0.3517, 0.0078)","Yes, it is acceptable to forgo post-weld heat treatment (PWHT) for some materials under ASME B31.3, provided that the conditions specified in Table 331.1.3 are met. This table outlines certain exemptions to mandatory PWHT based on the P-Number, Group Number, nominal material thickness, type of weld, and other factors. It's important to note that these exemptions may require specific preheating, carbon content limits, and welding techniques to be followed in order to ensure the integrity of the weld and the safety of the system. Always consult the code and relevant standards when making decisions regarding PWHT.","Cosine similarity: 0.87
+ROUGE 1: (0.4333, 0.1733)
 ROUGE 2: (0.1379, 0.0541)
 ROUGE 3: (0.0357, 0.0137)
 ROUGE L: (0.4333, 0.1733)
 ROUGE S: (0.3517, 0.0551)","No, it is not acceptable to forgo PWHT for all materials under ASME B31.3.
 
-","ROUGE 1: (0.2, 0.75)
+","Cosine similarity: 0.594
+ROUGE 1: (0.2, 0.75)
 ROUGE 2: (0.069, 0.2857)
 ROUGE 3: (0.0357, 0.1667)
 ROUGE L: (0.2, 0.75)
-ROUGE S: (0.1057, 1.6429)",,"ROUGE 1: (0.0333, 0.0256)
+ROUGE S: (0.1057, 1.6429)",,"Cosine similarity: 0.035
+ROUGE 1: (0.0333, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1667, 0.1282)
@@ -816,20 +916,24 @@ If space constraints exist and it is not feasible to install supports at the rec
 
 It is important to note that inadequate support spacing can result in excessive stresses and deflections in the piping system, which can lead to premature failure and safety hazards. Therefore, it is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate support spacing for the specific piping system.
 
-In summary, it is not acceptable to install piping supports closer than the spacing recommended by ASME B31.3 if space constraints exist, unless a detailed stress analysis is performed to ensure the adequacy of the support spacing. The code provides recommended support spacing for various pipe sizes and service conditions, but these recommendations may not be suitable for all piping systems. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate support spacing for the specific piping system.","ROUGE 1: (0.4286, 0.0743)
+In summary, it is not acceptable to install piping supports closer than the spacing recommended by ASME B31.3 if space constraints exist, unless a detailed stress analysis is performed to ensure the adequacy of the support spacing. The code provides recommended support spacing for various pipe sizes and service conditions, but these recommendations may not be suitable for all piping systems. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate support spacing for the specific piping system.","Cosine similarity: 0.84
+ROUGE 1: (0.4286, 0.0743)
 ROUGE 2: (0.2647, 0.0448)
 ROUGE 3: (0.0909, 0.015)
 ROUGE L: (0.6, 0.104)
-ROUGE S: (0.3882, 0.0114)","No, it is not acceptable to install piping supports closer than the spacing recommended by ASME B31.3 even if space constraints exist. The code provides specific guidance on supports spacing to avoid excessive sag or deformation, consider decreases in modulus of elasticity with increasing temperature and creep of material with time, and to consider the coefficient of thermal expansion in the design and location of supports. Deviating from the recommended spacing could lead to damage to the piping, excessive loads, or other issues that could compromise the safety and reliability of the piping system. If space constraints are an issue, it is recommended to consult with a piping engineer or professional to find an alternative solution that complies with the code.","ROUGE 1: (0.3714, 0.1667)
+ROUGE S: (0.3882, 0.0114)","No, it is not acceptable to install piping supports closer than the spacing recommended by ASME B31.3 even if space constraints exist. The code provides specific guidance on supports spacing to avoid excessive sag or deformation, consider decreases in modulus of elasticity with increasing temperature and creep of material with time, and to consider the coefficient of thermal expansion in the design and location of supports. Deviating from the recommended spacing could lead to damage to the piping, excessive loads, or other issues that could compromise the safety and reliability of the piping system. If space constraints are an issue, it is recommended to consult with a piping engineer or professional to find an alternative solution that complies with the code.","Cosine similarity: 0.782
+ROUGE 1: (0.3714, 0.1667)
 ROUGE 2: (0.2353, 0.1039)
 ROUGE 3: (0.0909, 0.0395)
 ROUGE L: (0.4286, 0.1923)
 ROUGE S: (0.2756, 0.0546)","Yes, it is acceptable to install piping supports closer than the spacing recommended by ASME B31.3 if space constraints exist.
-","ROUGE 1: (0.3143, 0.7333)
+","Cosine similarity: 0.656
+ROUGE 1: (0.3143, 0.7333)
 ROUGE 2: (0.1765, 0.4286)
 ROUGE 3: (0.0909, 0.2308)
 ROUGE L: (0.2857, 0.6667)
-ROUGE S: (0.1664, 0.9429)",,"ROUGE 1: (0.0286, 0.0256)
+ROUGE S: (0.1664, 0.9429)",,"Cosine similarity: -0.027
+ROUGE 1: (0.0286, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1143, 0.1026)
@@ -842,21 +946,25 @@ If thread-o-lets are used for branch connections in high-pressure service, they 
 
 It is important to note that threaded branch connections can be susceptible to leakage and failure if not properly designed and installed. Therefore, it is essential to follow the requirements of the code and to consult with experienced designers and installers to ensure the safety and reliability of the piping system.
 
-In summary, it is acceptable under ASME B31.3 to use thread-o-lets for making branch connections in high-pressure service, provided that the design and installation of the thread-o-let meet the requirements of the code. The code provides specific requirements for the design and installation of threaded branch connections, including the use of reinforcing pads, the calculation of allowable stresses, and the requirements for hydrostatic testing. It is essential to follow the requirements of the code and to consult with experienced designers and installers to ensure the safety and reliability of the piping system.","ROUGE 1: (0.6786, 0.1022)
+In summary, it is acceptable under ASME B31.3 to use thread-o-lets for making branch connections in high-pressure service, provided that the design and installation of the thread-o-let meet the requirements of the code. The code provides specific requirements for the design and installation of threaded branch connections, including the use of reinforcing pads, the calculation of allowable stresses, and the requirements for hydrostatic testing. It is essential to follow the requirements of the code and to consult with experienced designers and installers to ensure the safety and reliability of the piping system.","Cosine similarity: 0.833
+ROUGE 1: (0.6786, 0.1022)
 ROUGE 2: (0.4074, 0.0595)
 ROUGE 3: (0.2308, 0.0326)
 ROUGE L: (0.6786, 0.1022)
 ROUGE S: (0.7302, 0.016)","Based on the information provided in ASME B31.3-2014, it is not explicitly stated whether thread-o-lets are acceptable for making branch connections in high-pressure service. However, it is mentioned in section 306.5.1 that fabricated branch connections made and verified for pressure design in accordance with para. 304.3 and welded in accordance with para. 311.1 are suitable for use in Normal Fluid Service. For severe cyclic conditions, section 306.5.2 requires welded fabricated branch connections that conform to specific weldings and fabrication requirements.
 
-Therefore, it can be inferred that thread-o-lets may not be acceptable for high-pressure service or severe cyclic conditions, as they are not mentioned as an option and the code emphasizes welded fabricated branch connections. However, it is important to consult the specific code edition and consult with a qualified piping engineer to determine the suitability of thread-o-lets for a specific application.","ROUGE 1: (0.5357, 0.1515)
+Therefore, it can be inferred that thread-o-lets may not be acceptable for high-pressure service or severe cyclic conditions, as they are not mentioned as an option and the code emphasizes welded fabricated branch connections. However, it is important to consult the specific code edition and consult with a qualified piping engineer to determine the suitability of thread-o-lets for a specific application.","Cosine similarity: 0.782
+ROUGE 1: (0.5357, 0.1515)
 ROUGE 2: (0.1852, 0.051)
 ROUGE 3: (0.1154, 0.0309)
 ROUGE L: (0.5357, 0.1515)
-ROUGE S: (0.4524, 0.0353)","No, it is not acceptable under ASME B31.3 to use thread-o-lets for making branch connections in high-pressure service.","ROUGE 1: (0.3571, 0.8333)
+ROUGE S: (0.4524, 0.0353)","No, it is not acceptable under ASME B31.3 to use thread-o-lets for making branch connections in high-pressure service.","Cosine similarity: 0.819
+ROUGE 1: (0.3571, 0.8333)
 ROUGE 2: (0.2593, 0.6364)
 ROUGE 3: (0.1923, 0.5)
 ROUGE L: (0.2857, 0.6667)
-ROUGE S: (0.2143, 1.2273)",,"ROUGE 1: (0.0357, 0.0256)
+ROUGE S: (0.2143, 1.2273)",,"Cosine similarity: 0.246
+ROUGE 1: (0.0357, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1786, 0.1282)
@@ -871,19 +979,23 @@ It is important to note that leak testing is essential to ensure the safety and 
 
 Therefore, it is essential to follow the requirements of the code and to perform leak testing for all piping systems, regardless of the service conditions. It is also important to consult with experienced designers and installers to determine the appropriate leak testing method and acceptance criteria for the specific piping system.
 
-In summary, it is not acceptable to omit leak testing for low-pressure, non-hazardous service piping under ASME B31.3. The code requires that all piping systems be leak tested, regardless of the service conditions. It is essential to follow the requirements of the code and to perform leak testing for all piping systems to ensure the safety and reliability of the piping system.","ROUGE 1: (0.5333, 0.08)
+In summary, it is not acceptable to omit leak testing for low-pressure, non-hazardous service piping under ASME B31.3. The code requires that all piping systems be leak tested, regardless of the service conditions. It is essential to follow the requirements of the code and to perform leak testing for all piping systems to ensure the safety and reliability of the piping system.","Cosine similarity: 0.903
+ROUGE 1: (0.5333, 0.08)
 ROUGE 2: (0.5517, 0.0804)
 ROUGE 3: (0.4643, 0.0657)
 ROUGE L: (0.7667, 0.115)
-ROUGE S: (0.6897, 0.0151)","No, it is not acceptable to omit leak testing for low-pressure, non-hazardous service piping under ASME B31.3. According to paragraph 345 of ASME B31.3, leak testing is required for all piping systems, regardless of pressure or service. However, the method of leak testing may vary depending on the specific circumstances and system design. The use of helium mass spectrometer leak tests performed under vacuum conditions can be a substitute for the leak test requirements specified in ASME B31.3, para. 345, under certain conditions, as described in ASME B31 Case 185. It's important to consult the code and any relevant cases or interpretations when determining the appropriate leak testing method for a particular piping system.","ROUGE 1: (0.5, 0.1705)
+ROUGE S: (0.6897, 0.0151)","No, it is not acceptable to omit leak testing for low-pressure, non-hazardous service piping under ASME B31.3. According to paragraph 345 of ASME B31.3, leak testing is required for all piping systems, regardless of pressure or service. However, the method of leak testing may vary depending on the specific circumstances and system design. The use of helium mass spectrometer leak tests performed under vacuum conditions can be a substitute for the leak test requirements specified in ASME B31.3, para. 345, under certain conditions, as described in ASME B31 Case 185. It's important to consult the code and any relevant cases or interpretations when determining the appropriate leak testing method for a particular piping system.","Cosine similarity: 0.896
+ROUGE 1: (0.5, 0.1705)
 ROUGE 2: (0.4138, 0.1379)
 ROUGE 3: (0.2857, 0.093)
 ROUGE L: (0.7, 0.2386)
-ROUGE S: (0.6115, 0.0695)","No, it is not acceptable to omit leak testing for low-pressure, non-hazardous service piping under ASME B31.3.","ROUGE 1: (0.3333, 0.7692)
+ROUGE S: (0.6115, 0.0695)","No, it is not acceptable to omit leak testing for low-pressure, non-hazardous service piping under ASME B31.3.","Cosine similarity: 0.868
+ROUGE 1: (0.3333, 0.7692)
 ROUGE 2: (0.2759, 0.6667)
 ROUGE 3: (0.2143, 0.5455)
 ROUGE L: (0.3667, 0.8462)
-ROUGE S: (0.3103, 1.7308)",,"ROUGE 1: (0.0333, 0.0256)
+ROUGE S: (0.3103, 1.7308)",,"Cosine similarity: 0.048
+ROUGE 1: (0.0333, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.2, 0.1538)
@@ -900,20 +1012,24 @@ It is important to note that the use of second-hand or reclaimed materials may r
 
 It is also important to ensure that the materials are properly identified and documented to ensure traceability and to maintain compliance with the code. Section 304.3.4 provides requirements for material identification and documentation.
 
-In summary, it is acceptable to use second-hand or reclaimed materials in ASME B31.3 piping systems, provided that the materials meet the requirements of the code and are in good condition. The code provides specific requirements for the examination and testing of materials, including used materials, to ensure that they are suitable for the intended service. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate examination and testing requirements for the specific piping system.","ROUGE 1: (0.5625, 0.0896)
+In summary, it is acceptable to use second-hand or reclaimed materials in ASME B31.3 piping systems, provided that the materials meet the requirements of the code and are in good condition. The code provides specific requirements for the examination and testing of materials, including used materials, to ensure that they are suitable for the intended service. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate examination and testing requirements for the specific piping system.","Cosine similarity: 0.709
+ROUGE 1: (0.5625, 0.0896)
 ROUGE 2: (0.3871, 0.06)
 ROUGE 3: (0.2333, 0.0352)
 ROUGE L: (0.6875, 0.1095)
-ROUGE S: (0.5565, 0.0137)","Yes, it is acceptable to use second-hand or reclaimed materials in ASME B31.3 piping systems, provided they meet certain conditions. According to the code, reclaimed pipe and other piping components may be used if they are properly identified as conforming to a listed or published specification, and meet all other requirements of the Code. Additionally, sufficient cleaning and inspection must be performed to determine minimum wall thickness and freedom from imperfections that would be unacceptable in the intended service. Therefore, it is possible to use second-hand or reclaimed materials in ASME B31.3 piping systems, but it is important to ensure that they meet all relevant code requirements and are properly inspected and cleaned before use.","ROUGE 1: (0.5312, 0.2179)
+ROUGE S: (0.5565, 0.0137)","Yes, it is acceptable to use second-hand or reclaimed materials in ASME B31.3 piping systems, provided they meet certain conditions. According to the code, reclaimed pipe and other piping components may be used if they are properly identified as conforming to a listed or published specification, and meet all other requirements of the Code. Additionally, sufficient cleaning and inspection must be performed to determine minimum wall thickness and freedom from imperfections that would be unacceptable in the intended service. Therefore, it is possible to use second-hand or reclaimed materials in ASME B31.3 piping systems, but it is important to ensure that they meet all relevant code requirements and are properly inspected and cleaned before use.","Cosine similarity: 0.8
+ROUGE 1: (0.5312, 0.2179)
 ROUGE 2: (0.3548, 0.1429)
 ROUGE 3: (0.2, 0.0789)
 ROUGE L: (0.5938, 0.2436)
 ROUGE S: (0.4859, 0.0803)","Yes, it is acceptable to use second-hand or reclaimed materials in ASME B31.3 piping systems.
-","ROUGE 1: (0.3125, 0.8333)
+","Cosine similarity: 0.595
+ROUGE 1: (0.3125, 0.8333)
 ROUGE 2: (0.2581, 0.7273)
 ROUGE 3: (0.1667, 0.5)
 ROUGE L: (0.3125, 0.8333)
-ROUGE S: (0.2157, 1.6212)",,"ROUGE 1: (0.0312, 0.0256)
+ROUGE S: (0.2157, 1.6212)",,"Cosine similarity: -0.03
+ROUGE 1: (0.0312, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1875, 0.1538)
@@ -928,7 +1044,8 @@ Exceeding the recommended velocity limits can result in excessive erosion, vibra
 
 It is also important to note that the code provides specific requirements for the design and installation of piping systems to minimize erosion, vibration, and noise. These requirements include the use of appropriate piping materials, the proper support and anchoring of piping, and the use of flow conditioning devices such as flow straighteners and flow meters.
 
-In summary, it is not acceptable to exceed the code's recommended velocity limits for fluids in ASME B31.3 piping systems. The code provides specific recommendations for fluid velocities based on the service conditions and the type of fluid being transported. It is essential to follow the requirements of the code and to calculate the fluid velocity based on the service conditions and to ensure that it does not exceed the recommended limits. It is also important to follow the requirements of the code for the design and installation of piping systems to minimize erosion, vibration, and noise.","ROUGE 1: (0.5556, 0.093)
+In summary, it is not acceptable to exceed the code's recommended velocity limits for fluids in ASME B31.3 piping systems. The code provides specific recommendations for fluid velocities based on the service conditions and the type of fluid being transported. It is essential to follow the requirements of the code and to calculate the fluid velocity based on the service conditions and to ensure that it does not exceed the recommended limits. It is also important to follow the requirements of the code for the design and installation of piping systems to minimize erosion, vibration, and noise.","Cosine similarity: 0.855
+ROUGE 1: (0.5556, 0.093)
 ROUGE 2: (0.5143, 0.0841)
 ROUGE 3: (0.4412, 0.0704)
 ROUGE L: (0.7778, 0.1302)
@@ -936,16 +1053,19 @@ ROUGE S: (0.6413, 0.0176)","Based on the information provided in ASME B31.3-2014
 
 However, Appendix D of ASME B31.3 provides guidelines for fluid velocity limits in various piping systems, depending on the type of fluid and the piping material. Exceeding these limits could potentially lead to erosion, vibration, or other problems that may compromise the integrity of the piping system.
 
-Therefore, it is not generally advisable or acceptable to exceed the code's recommended velocity limits for fluids in ASME B31.3 piping systems without proper justification and analysis, which should be reviewed and approved by the owner or the appropriate authority.","ROUGE 1: (0.5833, 0.2234)
+Therefore, it is not generally advisable or acceptable to exceed the code's recommended velocity limits for fluids in ASME B31.3 piping systems without proper justification and analysis, which should be reviewed and approved by the owner or the appropriate authority.","Cosine similarity: 0.825
+ROUGE 1: (0.5833, 0.2234)
 ROUGE 2: (0.5714, 0.2151)
 ROUGE 3: (0.5, 0.1848)
 ROUGE L: (0.5278, 0.2021)
 ROUGE S: (0.6175, 0.089)","Yes, it is acceptable to exceed the code's recommended velocity limits for fluids in ASME B31.3 piping systems, provided that the fluid service meets certain requirements and the fluid temperature is within a safe range.
-","ROUGE 1: (0.3611, 0.4815)
+","Cosine similarity: 0.777
+ROUGE 1: (0.3611, 0.4815)
 ROUGE 2: (0.3429, 0.4615)
 ROUGE 3: (0.3235, 0.44)
 ROUGE L: (0.4167, 0.5556)
-ROUGE S: (0.3016, 0.5413)",,"ROUGE 1: (0.0278, 0.0256)
+ROUGE S: (0.3016, 0.5413)",,"Cosine similarity: 0.094
+ROUGE 1: (0.0278, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1667, 0.1538)
@@ -960,20 +1080,24 @@ Reducing the safety factor below the values specified in the code can compromise
 
 It is important to note that the code provides specific requirements for the design and installation of piping systems to ensure their safety and reliability. These requirements include the use of appropriate piping materials, the proper support and anchoring of piping, and the use of appropriate stress analysis methods.
 
-In summary, it is not acceptable to apply a lower safety factor than specified in ASME B31.3 when designing piping systems. The safety factors provided in the code are based on extensive research and testing and are intended to ensure the safety and reliability of the piping system. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate safety factors and stress analysis methods for the specific piping system.","ROUGE 1: (0.5161, 0.0792)
+In summary, it is not acceptable to apply a lower safety factor than specified in ASME B31.3 when designing piping systems. The safety factors provided in the code are based on extensive research and testing and are intended to ensure the safety and reliability of the piping system. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate safety factors and stress analysis methods for the specific piping system.","Cosine similarity: 0.842
+ROUGE 1: (0.5161, 0.0792)
 ROUGE 2: (0.3667, 0.0547)
 ROUGE 3: (0.2759, 0.04)
 ROUGE L: (0.6129, 0.0941)
-ROUGE S: (0.4086, 0.0094)","No, it is not acceptable to apply a lower safety factor than specified in ASME B31.3 when designing piping systems. The safety factors in ASME B31.3 are established based on a comprehensive evaluation of the potential hazards, risks, and consequences associated with piping system failures. Reducing the safety factor below the specified value could compromise the integrity and reliability of the piping system, potentially leading to catastrophic failures, personal injuries, and environmental damage. Therefore, it is essential to adhere to the safety factors and other requirements specified in ASME B31.3 when designing piping systems.","ROUGE 1: (0.4516, 0.2029)
+ROUGE S: (0.4086, 0.0094)","No, it is not acceptable to apply a lower safety factor than specified in ASME B31.3 when designing piping systems. The safety factors in ASME B31.3 are established based on a comprehensive evaluation of the potential hazards, risks, and consequences associated with piping system failures. Reducing the safety factor below the specified value could compromise the integrity and reliability of the piping system, potentially leading to catastrophic failures, personal injuries, and environmental damage. Therefore, it is essential to adhere to the safety factors and other requirements specified in ASME B31.3 when designing piping systems.","Cosine similarity: 0.813
+ROUGE 1: (0.4516, 0.2029)
 ROUGE 2: (0.3667, 0.1618)
 ROUGE 3: (0.2759, 0.1194)
 ROUGE L: (0.5484, 0.2464)
 ROUGE S: (0.3097, 0.0614)","No, it is not acceptable to apply a lower safety factor than specified in ASME B31.3 when designing piping systems.
-","ROUGE 1: (0.3548, 0.8462)
+","Cosine similarity: 0.765
+ROUGE 1: (0.3548, 0.8462)
 ROUGE 2: (0.3, 0.75)
 ROUGE 3: (0.2414, 0.6364)
 ROUGE L: (0.3548, 0.8462)
-ROUGE S: (0.1634, 0.9744)",,"ROUGE 1: (0.0323, 0.0256)
+ROUGE S: (0.1634, 0.9744)",,"Cosine similarity: -0.089
+ROUGE 1: (0.0323, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.0968, 0.0769)
@@ -988,7 +1112,8 @@ It is important to note that the use of non-standard fittings may require additi
 
 It is also important to ensure that the non-standard fittings are properly identified and documented to ensure traceability and to maintain compliance with the code. Section 304.3.4 provides requirements for material identification and documentation.
 
-In summary, it is acceptable to use non-standard fittings in ASME B31.3 piping systems if they are not available commercially, provided that the fittings meet the requirements of the code and are approved by the designer and the owner. The code provides specific requirements for the design, construction, and testing of non-standard fittings. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate engineering analysis and testing methods for the specific piping system.","ROUGE 1: (0.4, 0.08)
+In summary, it is acceptable to use non-standard fittings in ASME B31.3 piping systems if they are not available commercially, provided that the fittings meet the requirements of the code and are approved by the designer and the owner. The code provides specific requirements for the design, construction, and testing of non-standard fittings. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate engineering analysis and testing methods for the specific piping system.","Cosine similarity: 0.731
+ROUGE 1: (0.4, 0.08)
 ROUGE 2: (0.2941, 0.0575)
 ROUGE 3: (0.1515, 0.0289)
 ROUGE L: (0.6286, 0.1257)
@@ -996,16 +1121,19 @@ ROUGE S: (0.4555, 0.0178)","Based on my knowledge of ASME B31.3 piping code, the
 
 It is important to note that the designer or manufacturer of the non-standard fitting is responsible for demonstrating its suitability and compliance with the code requirements. The designer should consider factors such as pressure, temperature, material compatibility, and any potential adverse effects on the overall system when evaluating the use of non-standard fittings.
 
-In the specific editions of ASME B31.3 mentioned in the context, there are no explicit changes or provisions related to the use of non-standard fittings. Therefore, the general principles and guidelines for the use of non-standard components in ASME B31.3 piping systems should be followed.","ROUGE 1: (0.4, 0.1273)
+In the specific editions of ASME B31.3 mentioned in the context, there are no explicit changes or provisions related to the use of non-standard fittings. Therefore, the general principles and guidelines for the use of non-standard components in ASME B31.3 piping systems should be followed.","Cosine similarity: 0.812
+ROUGE 1: (0.4, 0.1273)
 ROUGE 2: (0.2059, 0.0642)
 ROUGE 3: (0.1212, 0.037)
 ROUGE L: (0.4, 0.1273)
 ROUGE S: (0.3983, 0.0395)","Yes, it is acceptable to use non-standard fittings in ASME B31.3 piping systems if they are not available commercially, provided that the type of fitting selected is adequate for the design pressure, other loadings, and the design temperature, and does not rely on friction to restrain the axial load.
-","ROUGE 1: (0.2571, 0.2812)
+","Cosine similarity: 0.794
+ROUGE 1: (0.2571, 0.2812)
 ROUGE 2: (0.1765, 0.1935)
 ROUGE 3: (0.1212, 0.1333)
 ROUGE L: (0.3714, 0.4062)
-ROUGE S: (0.1933, 0.2319)",,"ROUGE 1: (0.0286, 0.0256)
+ROUGE S: (0.1933, 0.2319)",,"Cosine similarity: -0.099
+ROUGE 1: (0.0286, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1714, 0.1538)
@@ -1020,7 +1148,8 @@ Reducing the frequency of inspections below the intervals specified in the code 
 
 It is important to note that the code provides specific requirements for the inspection and testing of piping systems to ensure their continued safe operation. These requirements include the use of appropriate inspection methods, the proper documentation of inspection results, and the use of appropriate repair and replacement methods.
 
-In summary, it is not acceptable under ASME B31.3 to reduce the frequency of mandatory inspections for low-risk piping systems. The code requires that all piping systems be inspected at regular intervals to ensure their continued safe operation. It is essential to follow the requirements of the code and to consult with experienced inspectors and installers to determine the appropriate inspection intervals and methods for the specific piping system.","ROUGE 1: (0.3889, 0.08)
+In summary, it is not acceptable under ASME B31.3 to reduce the frequency of mandatory inspections for low-risk piping systems. The code requires that all piping systems be inspected at regular intervals to ensure their continued safe operation. It is essential to follow the requirements of the code and to consult with experienced inspectors and installers to determine the appropriate inspection intervals and methods for the specific piping system.","Cosine similarity: 0.857
+ROUGE 1: (0.3889, 0.08)
 ROUGE 2: (0.2857, 0.0575)
 ROUGE 3: (0.1765, 0.0347)
 ROUGE L: (0.5278, 0.1086)
@@ -1028,15 +1157,18 @@ ROUGE S: (0.3016, 0.0125)","ASME B31.3 does not explicitly address the frequency
 
 That being said, ASME B31.3 does allow for the use of risk-based inspection methods, provided that they are in accordance with recognized industry standards and practices, such as API 580, RBI Technology. When using risk-based inspection methods, it is important to consider the specific risks associated with the piping system in question and to establish an appropriate inspection frequency based on those risks.
 
-Therefore, it may be acceptable to reduce the frequency of mandatory inspections for low-risk piping systems, but only if it can be demonstrated that such a reduction is consistent with recognized industry standards and practices for risk-based inspection. It is recommended to consult with a qualified piping engineer or inspector to determine the appropriate inspection frequency for a specific piping system based on its risk level.","ROUGE 1: (0.5, 0.1429)
+Therefore, it may be acceptable to reduce the frequency of mandatory inspections for low-risk piping systems, but only if it can be demonstrated that such a reduction is consistent with recognized industry standards and practices for risk-based inspection. It is recommended to consult with a qualified piping engineer or inspector to determine the appropriate inspection frequency for a specific piping system based on its risk level.","Cosine similarity: 0.905
+ROUGE 1: (0.5, 0.1429)
 ROUGE 2: (0.4286, 0.12)
 ROUGE 3: (0.3235, 0.0887)
 ROUGE L: (0.5, 0.1429)
-ROUGE S: (0.3921, 0.0314)","No, it is not acceptable under ASME B31.3 to reduce the frequency of mandatory inspections for low-risk piping systems.","ROUGE 1: (0.3056, 0.9167)
+ROUGE S: (0.3921, 0.0314)","No, it is not acceptable under ASME B31.3 to reduce the frequency of mandatory inspections for low-risk piping systems.","Cosine similarity: 0.789
+ROUGE 1: (0.3056, 0.9167)
 ROUGE 2: (0.2286, 0.7273)
 ROUGE 3: (0.1765, 0.6)
 ROUGE L: (0.3056, 0.9167)
-ROUGE S: (0.2048, 1.9545)",,"ROUGE 1: (0.0278, 0.0256)
+ROUGE S: (0.2048, 1.9545)",,"Cosine similarity: 0.039
+ROUGE 1: (0.0278, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1667, 0.1538)
@@ -1051,21 +1183,25 @@ Adhesive bonding is not recognized as a suitable joining method in the code beca
 
 It is important to note that the code provides specific requirements for the design, construction, and testing of piping systems to ensure their safety and reliability. These requirements include the use of appropriate materials, the proper support and anchoring of piping, and the use of appropriate stress analysis methods.
 
-In summary, it is not acceptable to use adhesive bonding for joining components in ASME B31.3 piping systems. The code does not recognize adhesive bonding as a suitable joining method for piping systems. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate joining methods for the specific piping system.","ROUGE 1: (0.5667, 0.1)
+In summary, it is not acceptable to use adhesive bonding for joining components in ASME B31.3 piping systems. The code does not recognize adhesive bonding as a suitable joining method for piping systems. It is essential to follow the requirements of the code and to consult with experienced designers and installers to determine the appropriate joining methods for the specific piping system.","Cosine similarity: 0.862
+ROUGE 1: (0.5667, 0.1)
 ROUGE 2: (0.3793, 0.0651)
 ROUGE 3: (0.25, 0.0417)
 ROUGE L: (0.6333, 0.1118)
-ROUGE S: (0.4805, 0.0145)","Based on the provided excerpt from ASME B31.3-2014, there is no mention of adhesive bonding as an acceptable method for joining components in the specified piping system. The code only mentions fillet bonds and seal bonds in A311.2, but these are to be used in conjunction with hot gas welding procedures and to prevent leakage of threaded joints, respectively. Additionally, A314.1 states that threaded joints are suitable for use in Normal Fluid Service, but it does not mention adhesive bonding as an acceptable method. Therefore, it is not clear if adhesive bonding is an acceptable method according to ASME B31.3 piping code. It is recommended to consult the code in its entirety or consult with a piping code expert to determine if adhesive bonding is a permitted method for a specific application.","ROUGE 1: (0.4, 0.1412)
+ROUGE S: (0.4805, 0.0145)","Based on the provided excerpt from ASME B31.3-2014, there is no mention of adhesive bonding as an acceptable method for joining components in the specified piping system. The code only mentions fillet bonds and seal bonds in A311.2, but these are to be used in conjunction with hot gas welding procedures and to prevent leakage of threaded joints, respectively. Additionally, A314.1 states that threaded joints are suitable for use in Normal Fluid Service, but it does not mention adhesive bonding as an acceptable method. Therefore, it is not clear if adhesive bonding is an acceptable method according to ASME B31.3 piping code. It is recommended to consult the code in its entirety or consult with a piping code expert to determine if adhesive bonding is a permitted method for a specific application.","Cosine similarity: 0.834
+ROUGE 1: (0.4, 0.1412)
 ROUGE 2: (0.1379, 0.0476)
 ROUGE 3: (0.0357, 0.012)
 ROUGE L: (0.4, 0.1412)
 ROUGE S: (0.2483, 0.0303)","No, it is not acceptable to use adhesive bonding for joining components in ASME B31.3 piping systems.
 
-","ROUGE 1: (0.3333, 0.8333)
+","Cosine similarity: 0.7
+ROUGE 1: (0.3333, 0.8333)
 ROUGE 2: (0.2759, 0.7273)
 ROUGE 3: (0.2143, 0.6)
 ROUGE L: (0.3333, 0.8333)
-ROUGE S: (0.1563, 1.0303)",,"ROUGE 1: (0.0333, 0.0256)
+ROUGE S: (0.1563, 1.0303)",,"Cosine similarity: 0.088
+ROUGE 1: (0.0333, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1, 0.0769)
@@ -1080,7 +1216,8 @@ If non-critical repairs are identified during an inspection, they shall be docum
 
 It is important to note that the code provides specific requirements for the documentation and tracking of repairs. This includes the use of appropriate repair procedures, the proper documentation of repair results, and the use of appropriate testing and inspection methods.
 
-In summary, it is acceptable to defer non-critical repairs identified during ASME B31.3 piping system inspections, provided that the repairs are documented and scheduled for completion within a specified time frame. It is essential to follow the requirements of the code and to consult with experienced inspectors and installers to determine the appropriate repair procedures and time frames for the specific piping system.","ROUGE 1: (0.5, 0.0856)
+In summary, it is acceptable to defer non-critical repairs identified during ASME B31.3 piping system inspections, provided that the repairs are documented and scheduled for completion within a specified time frame. It is essential to follow the requirements of the code and to consult with experienced inspectors and installers to determine the appropriate repair procedures and time frames for the specific piping system.","Cosine similarity: 0.853
+ROUGE 1: (0.5, 0.0856)
 ROUGE 2: (0.3548, 0.0591)
 ROUGE 3: (0.2, 0.0324)
 ROUGE L: (0.5312, 0.0909)
@@ -1088,16 +1225,19 @@ ROUGE S: (0.4133, 0.0118)","The ASME B31.3 piping code does not explicitly prohi
 
 However, the code does require that any repairs necessary to maintain the integrity of the piping system be performed in a timely manner. Therefore, deferring non-critical repairs should only be done with caution and under controlled conditions, with a plan in place to monitor the affected piping and ensure that the repair is performed when it becomes critical or before the end of the deferral period, whichever comes first.
 
-It is recommended to consult with a qualified piping engineer or inspector to evaluate the specific situation and make a determination based on the particulars of the piping system and the nature of the repair.","ROUGE 1: (0.5312, 0.1717)
+It is recommended to consult with a qualified piping engineer or inspector to evaluate the specific situation and make a determination based on the particulars of the piping system and the nature of the repair.","Cosine similarity: 0.855
+ROUGE 1: (0.5312, 0.1717)
 ROUGE 2: (0.3871, 0.1224)
 ROUGE 3: (0.2, 0.0619)
 ROUGE L: (0.4375, 0.1414)
 ROUGE S: (0.4476, 0.0458)","Non-critical repairs may be deferred until the next inspection cycle.
-","ROUGE 1: (0.0625, 0.25)
+","Cosine similarity: 0.642
+ROUGE 1: (0.0625, 0.25)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.0625, 0.25)
-ROUGE S: (0.0081, 0.1429)",,"ROUGE 1: (0.0312, 0.0256)
+ROUGE S: (0.0081, 0.1429)",,"Cosine similarity: 0.021
+ROUGE 1: (0.0312, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.125, 0.1026)
@@ -1112,19 +1252,23 @@ NDE methods are used to detect defects and flaws that may not be visible during 
 
 It is important to note that the code provides specific requirements for the qualification and certification of NDE personnel. This includes the use of appropriate training, experience, and certification programs.
 
-In summary, it is not acceptable to perform visual inspection only, without supplementary non-destructive examination (NDE), for ASME B31.3 piping systems in normal fluid service. The code requires that piping systems be inspected using appropriate NDE methods in addition to visual inspection to ensure their continued safe operation. It is essential to follow the requirements of the code and to consult with experienced inspectors and installers to determine the appropriate NDE methods and inspection intervals for the specific piping system.","ROUGE 1: (0.45, 0.09)
+In summary, it is not acceptable to perform visual inspection only, without supplementary non-destructive examination (NDE), for ASME B31.3 piping systems in normal fluid service. The code requires that piping systems be inspected using appropriate NDE methods in addition to visual inspection to ensure their continued safe operation. It is essential to follow the requirements of the code and to consult with experienced inspectors and installers to determine the appropriate NDE methods and inspection intervals for the specific piping system.","Cosine similarity: 0.859
+ROUGE 1: (0.45, 0.09)
 ROUGE 2: (0.3077, 0.0603)
 ROUGE 3: (0.1842, 0.0354)
 ROUGE L: (0.575, 0.115)
-ROUGE S: (0.4128, 0.0162)","Yes, it is acceptable to perform visual inspection only, without supplementary non-destructive examination (NDE), for ASME B31.3 piping systems in normal fluid service, provided that the piping meets all the applicable requirements of the code, including the material and design requirements, fabrication and examination requirements for the manufacturing process, and leak testing requirements. The requirement for additional NDE methods such as radiography, ultrasonic testing, or liquid penetrant testing would depend on the specific service conditions, the materials used, and the specific requirements of the applicable jurisdiction or industry codes.","ROUGE 1: (0.425, 0.2329)
+ROUGE S: (0.4128, 0.0162)","Yes, it is acceptable to perform visual inspection only, without supplementary non-destructive examination (NDE), for ASME B31.3 piping systems in normal fluid service, provided that the piping meets all the applicable requirements of the code, including the material and design requirements, fabrication and examination requirements for the manufacturing process, and leak testing requirements. The requirement for additional NDE methods such as radiography, ultrasonic testing, or liquid penetrant testing would depend on the specific service conditions, the materials used, and the specific requirements of the applicable jurisdiction or industry codes.","Cosine similarity: 0.766
+ROUGE 1: (0.425, 0.2329)
 ROUGE 2: (0.3077, 0.1667)
 ROUGE 3: (0.1842, 0.0986)
 ROUGE L: (0.45, 0.2466)
-ROUGE S: (0.3308, 0.0982)","No, it is not acceptable to perform visual inspection only, without supplementary non-destructive examination (NDE), for ASME B31.3 piping systems in normal fluid service.","ROUGE 1: (0.3, 0.5455)
+ROUGE S: (0.3308, 0.0982)","No, it is not acceptable to perform visual inspection only, without supplementary non-destructive examination (NDE), for ASME B31.3 piping systems in normal fluid service.","Cosine similarity: 0.655
+ROUGE 1: (0.3, 0.5455)
 ROUGE 2: (0.2308, 0.4286)
 ROUGE 3: (0.1842, 0.35)
 ROUGE L: (0.225, 0.4091)
-ROUGE S: (0.1808, 0.6104)",,"ROUGE 1: (0.025, 0.0256)
+ROUGE S: (0.1808, 0.6104)",,"Cosine similarity: -0.064
+ROUGE 1: (0.025, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.125, 0.1282)
@@ -1139,19 +1283,23 @@ The code provides specific requirements for the repair of leaks in piping system
 
 It is important to note that the code provides specific requirements for the documentation and tracking of repairs. This includes the use of appropriate repair procedures, the proper documentation of repair results, and the use of appropriate testing and inspection methods.
 
-In summary, it is not acceptable under ASME B31.3 to use pipe clamps as a permanent solution for repairing leaks. The code requires that repairs be performed using appropriate methods that provide a permanent and leak-tight connection. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate repair methods for the specific piping system.","ROUGE 1: (0.5455, 0.0989)
+In summary, it is not acceptable under ASME B31.3 to use pipe clamps as a permanent solution for repairing leaks. The code requires that repairs be performed using appropriate methods that provide a permanent and leak-tight connection. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate repair methods for the specific piping system.","Cosine similarity: 0.867
+ROUGE 1: (0.5455, 0.0989)
 ROUGE 2: (0.3438, 0.0608)
 ROUGE 3: (0.1613, 0.0278)
 ROUGE L: (0.5152, 0.0934)
-ROUGE S: (0.4754, 0.0152)","No, according to the ASME B31.3 piping code, using pipe clamps as a permanent solution for repairing leaks is not an acceptable method. The code specifies that repairs shall be made in accordance with approved procedures and that the repaired section shall be equally as strong as the original pipe. Pipe clamps may be used as a temporary measure to stop a leak, but a permanent repair should be made as soon as possible. The permanent repair may involve replacing the section of pipe, re-welding, or other methods that restore the pipe to its original strength and integrity. It is important to follow the specific requirements and guidelines outlined in the ASME B31.3 code when making any repairs to piping systems.","ROUGE 1: (0.6667, 0.2785)
+ROUGE S: (0.4754, 0.0152)","No, according to the ASME B31.3 piping code, using pipe clamps as a permanent solution for repairing leaks is not an acceptable method. The code specifies that repairs shall be made in accordance with approved procedures and that the repaired section shall be equally as strong as the original pipe. Pipe clamps may be used as a temporary measure to stop a leak, but a permanent repair should be made as soon as possible. The permanent repair may involve replacing the section of pipe, re-welding, or other methods that restore the pipe to its original strength and integrity. It is important to follow the specific requirements and guidelines outlined in the ASME B31.3 code when making any repairs to piping systems.","Cosine similarity: 0.897
+ROUGE 1: (0.6667, 0.2785)
 ROUGE 2: (0.3438, 0.141)
 ROUGE 3: (0.2258, 0.0909)
 ROUGE L: (0.5758, 0.2405)
-ROUGE S: (0.6439, 0.1104)","No, it is not acceptable under ASME B31.3 to use pipe clamps as a permanent solution for repairing leaks.","ROUGE 1: (0.303, 0.8333)
+ROUGE S: (0.6439, 0.1104)","No, it is not acceptable under ASME B31.3 to use pipe clamps as a permanent solution for repairing leaks.","Cosine similarity: 0.792
+ROUGE 1: (0.303, 0.8333)
 ROUGE 2: (0.2188, 0.6364)
 ROUGE 3: (0.1613, 0.5)
 ROUGE L: (0.2424, 0.6667)
-ROUGE S: (0.125, 1.0)",,"ROUGE 1: (0.0303, 0.0256)
+ROUGE S: (0.125, 1.0)",,"Cosine similarity: -0.036
+ROUGE 1: (0.0303, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1212, 0.1026)
@@ -1166,21 +1314,25 @@ Successful past performance is not a valid basis for bypassing the PWHT requirem
 
 It is important to note that the code provides specific exemptions from PWHT for certain alloys and service conditions. These exemptions are based on extensive research and testing and are provided in the code.
 
-In summary, it is not acceptable to bypass the post-weld heat treatment (PWHT) requirement for certain alloys, as specified in ASME B31.3, based on successful past performance. The code requires that PWHT be performed for certain alloys to ensure their long-term performance and safety. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate PWHT procedures for the specific piping system.","ROUGE 1: (0.4359, 0.0909)
+In summary, it is not acceptable to bypass the post-weld heat treatment (PWHT) requirement for certain alloys, as specified in ASME B31.3, based on successful past performance. The code requires that PWHT be performed for certain alloys to ensure their long-term performance and safety. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate PWHT procedures for the specific piping system.","Cosine similarity: 0.865
+ROUGE 1: (0.4359, 0.0909)
 ROUGE 2: (0.2632, 0.0538)
 ROUGE 3: (0.1081, 0.0216)
 ROUGE L: (0.5641, 0.1176)
 ROUGE S: (0.4049, 0.0173)","No, it is not acceptable to bypass the post-weld heat treatment (PWHT) requirement for certain alloys based on successful past performance, according to ASME B31.3. The code requires that PWHT shall be in accordance with the material groupings and ranges specified in Table 331.1.1, and the P-Numbers and Group Numbers are defined in ASME BPV Code, Section IX, Table QW/QB-422. The PWHT to be used after production welding shall be specified in the WPS and shall be used in qualifying the welding procedure. The engineering design shall specify the examination and/or other production quality control (not less than the requirements of this Code) to ensure that the final welds are of adequate quality.
 
-There is no allowance in the code for bypassing the PWHT requirement based on successful past performance. The code is based on the principle of ensuring safety and reliability of the piping system, and it does not allow for any deviations from the specified requirements without proper justification and approval.","ROUGE 1: (0.359, 0.1296)
+There is no allowance in the code for bypassing the PWHT requirement based on successful past performance. The code is based on the principle of ensuring safety and reliability of the piping system, and it does not allow for any deviations from the specified requirements without proper justification and approval.","Cosine similarity: 0.878
+ROUGE 1: (0.359, 0.1296)
 ROUGE 2: (0.1842, 0.0654)
 ROUGE 3: (0.1081, 0.0377)
 ROUGE L: (0.5128, 0.1852)
-ROUGE S: (0.309, 0.0396)","Yes, it is acceptable to bypass the PWHT requirement for certain alloys, as specified in ASME B31.3, based on successful past performance.","ROUGE 1: (0.2564, 0.5556)
+ROUGE S: (0.309, 0.0396)","Yes, it is acceptable to bypass the PWHT requirement for certain alloys, as specified in ASME B31.3, based on successful past performance.","Cosine similarity: 0.707
+ROUGE 1: (0.2564, 0.5556)
 ROUGE 2: (0.1842, 0.4118)
 ROUGE 3: (0.1351, 0.3125)
 ROUGE L: (0.2564, 0.5556)
-ROUGE S: (0.1579, 0.7647)",,"ROUGE 1: (0.0256, 0.0256)
+ROUGE S: (0.1579, 0.7647)",,"Cosine similarity: 0.018
+ROUGE 1: (0.0256, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1538, 0.1538)
@@ -1193,19 +1345,23 @@ Using higher grade materials than those specified in the code may increase the a
 
 It is important to note that the code provides specific requirements for the selection of materials based on the service conditions and the type of piping system. These requirements are based on extensive research and testing to ensure the safety and reliability of the piping system.
 
-In summary, it is not acceptable to use higher grade materials than those specified in ASME B31.3 without recalculating design pressures. The code requires that the design pressures be calculated based on the actual materials used in the piping system, taking into account the service conditions and the allowable stress values for the materials. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate design pressures for the specific piping system.","ROUGE 1: (0.3571, 0.0824)
+In summary, it is not acceptable to use higher grade materials than those specified in ASME B31.3 without recalculating design pressures. The code requires that the design pressures be calculated based on the actual materials used in the piping system, taking into account the service conditions and the allowable stress values for the materials. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate design pressures for the specific piping system.","Cosine similarity: 0.806
+ROUGE 1: (0.3571, 0.0824)
 ROUGE 2: (0.2439, 0.0552)
 ROUGE 3: (0.175, 0.0389)
 ROUGE L: (0.5476, 0.1264)
-ROUGE S: (0.3206, 0.0168)","Yes, it is acceptable to use higher grade materials than those specified in ASME B31.3 for a piping system without recalculating design pressures, as long as the material upgrade does not result in a higher design pressure or temperature than the original design basis. However, the use of higher grade materials should be approved by the owner and the designer must ensure that the material properties and construction requirements comply with the relevant code requirements and standards. Additionally, the designer should consider any potential impact on other aspects of the design, such as thermal expansion and support forces, which could be affected by the use of a higher strength material.","ROUGE 1: (0.4286, 0.2535)
+ROUGE S: (0.3206, 0.0168)","Yes, it is acceptable to use higher grade materials than those specified in ASME B31.3 for a piping system without recalculating design pressures, as long as the material upgrade does not result in a higher design pressure or temperature than the original design basis. However, the use of higher grade materials should be approved by the owner and the designer must ensure that the material properties and construction requirements comply with the relevant code requirements and standards. Additionally, the designer should consider any potential impact on other aspects of the design, such as thermal expansion and support forces, which could be affected by the use of a higher strength material.","Cosine similarity: 0.866
+ROUGE 1: (0.4286, 0.2535)
 ROUGE 2: (0.3171, 0.1857)
 ROUGE 3: (0.225, 0.1304)
 ROUGE L: (0.5238, 0.3099)
-ROUGE S: (0.4181, 0.1449)","No, it is not acceptable to use higher grade materials than those specified in ASME B31.3 without recalculating design pressures.","ROUGE 1: (0.2857, 0.8571)
+ROUGE S: (0.4181, 0.1449)","No, it is not acceptable to use higher grade materials than those specified in ASME B31.3 without recalculating design pressures.","Cosine similarity: 0.718
+ROUGE 1: (0.2857, 0.8571)
 ROUGE 2: (0.2195, 0.6923)
 ROUGE 3: (0.175, 0.5833)
 ROUGE L: (0.2857, 0.8571)
-ROUGE S: (0.1916, 1.8132)",,"ROUGE 1: (0.0238, 0.0256)
+ROUGE S: (0.1916, 1.8132)",,"Cosine similarity: -0.171
+ROUGE 1: (0.0238, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1429, 0.1538)
@@ -1220,7 +1376,8 @@ The fabricator's quality history may be considered as a factor in determining th
 
 It is important to note that the code provides specific requirements for the qualification and certification of NDE personnel. These requirements are based on extensive research and testing to ensure the competence and reliability of the personnel performing the NDE.
 
-In summary, it is not acceptable under ASME B31.3 to reduce the extent of required non-destructive examination (NDE) based on the fabricator's quality history. The code requires that NDE be performed in accordance with its requirements and the applicable examination procedures to ensure the quality and integrity of the piping system. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate extent of NDE for the specific piping system.","ROUGE 1: (0.5556, 0.1)
+In summary, it is not acceptable under ASME B31.3 to reduce the extent of required non-destructive examination (NDE) based on the fabricator's quality history. The code requires that NDE be performed in accordance with its requirements and the applicable examination procedures to ensure the quality and integrity of the piping system. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate extent of NDE for the specific piping system.","Cosine similarity: 0.906
+ROUGE 1: (0.5556, 0.1)
 ROUGE 2: (0.3714, 0.0653)
 ROUGE 3: (0.1765, 0.0303)
 ROUGE L: (0.6111, 0.11)
@@ -1228,15 +1385,18 @@ ROUGE S: (0.5111, 0.0162)","No, ASME B31.3-2012 does not allow for a reduction i
 
 It is important to note that, although not explicitly stated in the code, the use of a fabricator's quality history can be used to justify an alternative examination scheme, but this would require a formal engineering assessment and would need to be documented and justified per the code's requirements for ""Alternative Examination Schemes"" in the Mandatory Appendix XX.
 
-Additionally, it's worth noting that other codes or standards, such as API or ASME Section IX, might have provisions for reducing the extent of NDE based on a fabricator's quality history. However, for the specific case of ASME B31.3-2012, the answer is no, it does not allow for a reduction in the required NDE based on a fabricator's quality history.","ROUGE 1: (0.4722, 0.1339)
+Additionally, it's worth noting that other codes or standards, such as API or ASME Section IX, might have provisions for reducing the extent of NDE based on a fabricator's quality history. However, for the specific case of ASME B31.3-2012, the answer is no, it does not allow for a reduction in the required NDE based on a fabricator's quality history.","Cosine similarity: 0.892
+ROUGE 1: (0.4722, 0.1339)
 ROUGE 2: (0.2857, 0.0794)
 ROUGE 3: (0.1765, 0.048)
 ROUGE L: (0.4444, 0.126)
-ROUGE S: (0.3873, 0.0305)","Yes, it is acceptable under ASME B31.3 to reduce the extent of required NDE based on the fabricator's quality history.","ROUGE 1: (0.3611, 0.8667)
+ROUGE S: (0.3873, 0.0305)","Yes, it is acceptable under ASME B31.3 to reduce the extent of required NDE based on the fabricator's quality history.","Cosine similarity: 0.822
+ROUGE 1: (0.3611, 0.8667)
 ROUGE 2: (0.3143, 0.7857)
 ROUGE 3: (0.2353, 0.6154)
 ROUGE L: (0.3333, 0.8)
-ROUGE S: (0.1984, 1.1905)",,"ROUGE 1: (0.0278, 0.0256)
+ROUGE S: (0.1984, 1.1905)",,"Cosine similarity: 0.079
+ROUGE 1: (0.0278, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1111, 0.1026)
@@ -1253,7 +1413,8 @@ The code provides specific requirements for the validation of CFD simulations in
 
 It is important to note that the use of CFD simulations to justify deviations from the velocity limits specified in the code requires careful consideration and analysis. The simulations must be performed by qualified personnel and must be based on accurate and reliable data.
 
-In summary, it is acceptable to use computational fluid dynamics (CFD) simulations to justify deviations from ASME B31.3 fluid velocity limits, provided that the simulations are performed in accordance with the requirements of the code and are validated through appropriate testing. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate use of CFD simulations for the specific piping system.","ROUGE 1: (0.4865, 0.0826)
+In summary, it is acceptable to use computational fluid dynamics (CFD) simulations to justify deviations from ASME B31.3 fluid velocity limits, provided that the simulations are performed in accordance with the requirements of the code and are validated through appropriate testing. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate use of CFD simulations for the specific piping system.","Cosine similarity: 0.795
+ROUGE 1: (0.4865, 0.0826)
 ROUGE 2: (0.3333, 0.0553)
 ROUGE 3: (0.2286, 0.037)
 ROUGE L: (0.5676, 0.0963)
@@ -1261,17 +1422,20 @@ ROUGE S: (0.3769, 0.0106)","ASME B31.3 piping code does not explicitly mention t
 
 However, the code does allow for the use of alternative methods to demonstrate compliance with the code, provided that the methods are acceptable to the authority having jurisdiction and are based on sound engineering principles. Therefore, it may be possible to use CFD simulations to justify deviations from the velocity limits, but this would require prior approval from the authority having jurisdiction and a rigorous engineering analysis to demonstrate the safety and reliability of the proposed design.
 
-It is important to note that the use of CFD simulations to justify deviations from the code requirements should be approached with caution, and should only be done by experienced and qualified engineers who are familiar with the limitations and uncertainties associated with CFD simulations. Additionally, any deviations from the code requirements should be carefully documented and justified, and the resulting design should be subject to thorough testing and inspection to ensure its safety and reliability.","ROUGE 1: (0.4324, 0.1212)
+It is important to note that the use of CFD simulations to justify deviations from the code requirements should be approached with caution, and should only be done by experienced and qualified engineers who are familiar with the limitations and uncertainties associated with CFD simulations. Additionally, any deviations from the code requirements should be carefully documented and justified, and the resulting design should be subject to thorough testing and inspection to ensure its safety and reliability.","Cosine similarity: 0.862
+ROUGE 1: (0.4324, 0.1212)
 ROUGE 2: (0.1944, 0.0534)
 ROUGE 3: (0.0857, 0.0231)
 ROUGE L: (0.3784, 0.1061)
 ROUGE S: (0.2823, 0.0217)","Yes, it is acceptable to use CFD simulations to justify deviations from ASME B31.3 fluid velocity limits if the deviations are within the range of temperatures and pressures for which stresses can be computed using the equations in ASME B31.3.
 
-","ROUGE 1: (0.3514, 0.52)
+","Cosine similarity: 0.668
+ROUGE 1: (0.3514, 0.52)
 ROUGE 2: (0.2778, 0.4167)
 ROUGE 3: (0.2, 0.3043)
 ROUGE L: (0.3243, 0.48)
-ROUGE S: (0.1637, 0.3633)",,"ROUGE 1: (0.027, 0.0256)
+ROUGE S: (0.1637, 0.3633)",,"Cosine similarity: -0.153
+ROUGE 1: (0.027, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1081, 0.1026)
@@ -1286,19 +1450,23 @@ Cathodic protection shall be provided in accordance with the requirements of the
 
 It is important to note that the code provides specific requirements for the design, installation, and testing of cathodic protection systems. These requirements are based on extensive research and testing to ensure the safety and reliability of the piping system.
 
-In summary, it is not acceptable to apply external coatings as the sole means of corrosion protection for buried piping under ASME B31.3. The code requires that buried piping be protected from corrosion by a combination of external coatings and cathodic protection. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate corrosion control methods for the specific piping system.","ROUGE 1: (0.4878, 0.1099)
+In summary, it is not acceptable to apply external coatings as the sole means of corrosion protection for buried piping under ASME B31.3. The code requires that buried piping be protected from corrosion by a combination of external coatings and cathodic protection. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate corrosion control methods for the specific piping system.","Cosine similarity: 0.849
+ROUGE 1: (0.4878, 0.1099)
 ROUGE 2: (0.325, 0.0718)
 ROUGE 3: (0.1795, 0.0389)
 ROUGE L: (0.5854, 0.1319)
-ROUGE S: (0.4878, 0.0243)","No, according to ASME B31.3, it is not acceptable to apply external coatings as the sole means of corrosion protection for buried piping. The code states that suitable materials should be specified or selected for use in piping and associated facilities, considering factors such as temperature, pressure effects, properties of reaction or decomposition products, and hazards from instability of contained fluids. It is also suggested to consider the use of cladding, lining, or other protective materials to reduce the effects of corrosion, erosion, and abrasion. Therefore, additional corrosion protection measures, such as cathodic protection, should be considered for buried piping in addition to the application of external coatings.","ROUGE 1: (0.3415, 0.175)
+ROUGE S: (0.4878, 0.0243)","No, according to ASME B31.3, it is not acceptable to apply external coatings as the sole means of corrosion protection for buried piping. The code states that suitable materials should be specified or selected for use in piping and associated facilities, considering factors such as temperature, pressure effects, properties of reaction or decomposition products, and hazards from instability of contained fluids. It is also suggested to consider the use of cladding, lining, or other protective materials to reduce the effects of corrosion, erosion, and abrasion. Therefore, additional corrosion protection measures, such as cathodic protection, should be considered for buried piping in addition to the application of external coatings.","Cosine similarity: 0.866
+ROUGE 1: (0.3415, 0.175)
 ROUGE 2: (0.275, 0.1392)
 ROUGE 3: (0.1282, 0.0641)
 ROUGE L: (0.4634, 0.2375)
-ROUGE S: (0.2854, 0.0741)","No, it is not acceptable to apply external coatings as the sole means of corrosion protection for buried piping under ASME B31.3.","ROUGE 1: (0.2683, 0.7857)
+ROUGE S: (0.2854, 0.0741)","No, it is not acceptable to apply external coatings as the sole means of corrosion protection for buried piping under ASME B31.3.","Cosine similarity: 0.819
+ROUGE 1: (0.2683, 0.7857)
 ROUGE 2: (0.2, 0.6154)
 ROUGE 3: (0.1538, 0.5)
 ROUGE L: (0.2683, 0.7857)
-ROUGE S: (0.1976, 1.7802)",,"ROUGE 1: (0.0244, 0.0256)
+ROUGE S: (0.1976, 1.7802)",,"Cosine similarity: -0.002
+ROUGE 1: (0.0244, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1707, 0.1795)
@@ -1313,19 +1481,23 @@ Non-code-compliant components may not meet these requirements and may compromise
 
 It is important to note that the code provides specific procedures for the evaluation of non-standard components in Section 304.7. According to this section, non-standard components may be used in piping systems if they are evaluated in accordance with the requirements of the code and are approved by the responsible engineering authority.
 
-In summary, it is not acceptable to use non-code-compliant components in ASME B31.3 piping systems if they are deemed 'equivalent' by engineering analysis. The code requires that all components used in piping systems be designed, fabricated, and installed in accordance with its requirements. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate components for the specific piping system.","ROUGE 1: (0.5, 0.0824)
+In summary, it is not acceptable to use non-code-compliant components in ASME B31.3 piping systems if they are deemed 'equivalent' by engineering analysis. The code requires that all components used in piping systems be designed, fabricated, and installed in accordance with its requirements. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate components for the specific piping system.","Cosine similarity: 0.84
+ROUGE 1: (0.5, 0.0824)
 ROUGE 2: (0.2759, 0.0442)
 ROUGE 3: (0.1786, 0.0278)
 ROUGE L: (0.5667, 0.0934)
-ROUGE S: (0.4184, 0.011)","No, it is not acceptable to use non-code-compliant components in ASME B31.3 piping systems even if they are deemed 'equivalent' by engineering analysis. The code strictly prohibits the use of materials that do not conform to a published specification (para. 323.1.3). Reclaimed pipe and other piping components may be used provided they are properly identified as conforming to a listed or published specification and meet the requirements of this Code (para. 323.1.4). Any engineering analysis that deems a non-code-compliant component as equivalent must consider all relevant aspects of the component and its intended service, and must demonstrate that the component meets or exceeds the requirements of the Code. However, it is ultimately the responsibility of the Designer, Owner, and Inspector to ensure that all components comply with the Code.","ROUGE 1: (0.4333, 0.1477)
+ROUGE S: (0.4184, 0.011)","No, it is not acceptable to use non-code-compliant components in ASME B31.3 piping systems even if they are deemed 'equivalent' by engineering analysis. The code strictly prohibits the use of materials that do not conform to a published specification (para. 323.1.3). Reclaimed pipe and other piping components may be used provided they are properly identified as conforming to a listed or published specification and meet the requirements of this Code (para. 323.1.4). Any engineering analysis that deems a non-code-compliant component as equivalent must consider all relevant aspects of the component and its intended service, and must demonstrate that the component meets or exceeds the requirements of the Code. However, it is ultimately the responsibility of the Designer, Owner, and Inspector to ensure that all components comply with the Code.","Cosine similarity: 0.83
+ROUGE 1: (0.4333, 0.1477)
 ROUGE 2: (0.2069, 0.069)
 ROUGE 3: (0.1429, 0.0465)
 ROUGE L: (0.4667, 0.1591)
-ROUGE S: (0.3356, 0.0381)",Non-code-compliant components may be used in ASME B31.3 piping systems if they meet the requirements of para. 302.2.3 and are qualified as required by para. 304.7.2.,"ROUGE 1: (0.2667, 0.4211)
+ROUGE S: (0.3356, 0.0381)",Non-code-compliant components may be used in ASME B31.3 piping systems if they meet the requirements of para. 302.2.3 and are qualified as required by para. 304.7.2.,"Cosine similarity: 0.675
+ROUGE 1: (0.2667, 0.4211)
 ROUGE 2: (0.1034, 0.1667)
 ROUGE 3: (0.0714, 0.1176)
 ROUGE L: (0.2667, 0.4211)
-ROUGE S: (0.1195, 0.3041)",,"ROUGE 1: (0.0333, 0.0256)
+ROUGE S: (0.1195, 0.3041)",,"Cosine similarity: 0.092
+ROUGE 1: (0.0333, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.1333, 0.1026)
@@ -1340,19 +1512,23 @@ Extending the interval between mandatory inspections beyond what the code specif
 
 It is important to note that the code provides specific procedures for the evaluation of piping systems that have been out of service for an extended period of time. According to Section 341.2, piping systems that have been out of service for more than five years shall be evaluated in accordance with the requirements of the code before being returned to service.
 
-In summary, it is not acceptable to extend the interval between mandatory inspections for ASME B31.3 piping systems beyond what the code specifies. The code specifies the maximum interval between inspections based on various factors to ensure the safety and reliability of the piping system. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate inspection interval for the specific piping system.","ROUGE 1: (0.5, 0.0895)
+In summary, it is not acceptable to extend the interval between mandatory inspections for ASME B31.3 piping systems beyond what the code specifies. The code specifies the maximum interval between inspections based on various factors to ensure the safety and reliability of the piping system. It is essential to follow the requirements of the code and to consult with experienced installers and inspectors to determine the appropriate inspection interval for the specific piping system.","Cosine similarity: 0.831
+ROUGE 1: (0.5, 0.0895)
 ROUGE 2: (0.3333, 0.0582)
 ROUGE 3: (0.3125, 0.0532)
 ROUGE L: (0.5, 0.0895)
-ROUGE S: (0.3387, 0.0106)","No, it is not acceptable to extend the interval between mandatory inspections for ASME B31.3 piping systems beyond what the code specifies. The code specifies the maximum intervals between inspections, and these intervals should be strictly adhered to ensure the continued safety and integrity of the piping system. Any changes to the specified inspection intervals would require a formal engineering evaluation and approval by the authority having jurisdiction.","ROUGE 1: (0.4412, 0.3488)
+ROUGE S: (0.3387, 0.0106)","No, it is not acceptable to extend the interval between mandatory inspections for ASME B31.3 piping systems beyond what the code specifies. The code specifies the maximum intervals between inspections, and these intervals should be strictly adhered to ensure the continued safety and integrity of the piping system. Any changes to the specified inspection intervals would require a formal engineering evaluation and approval by the authority having jurisdiction.","Cosine similarity: 0.802
+ROUGE 1: (0.4412, 0.3488)
 ROUGE 2: (0.2727, 0.2143)
 ROUGE 3: (0.25, 0.1951)
 ROUGE L: (0.4118, 0.3256)
-ROUGE S: (0.2317, 0.144)","No, it is not acceptable to extend the interval between mandatory inspections for ASME B31.3 piping systems beyond what the code specifies.","ROUGE 1: (0.3529, 0.8571)
+ROUGE S: (0.2317, 0.144)","No, it is not acceptable to extend the interval between mandatory inspections for ASME B31.3 piping systems beyond what the code specifies.","Cosine similarity: 0.695
+ROUGE 1: (0.3529, 0.8571)
 ROUGE 2: (0.2727, 0.6923)
 ROUGE 3: (0.25, 0.6667)
 ROUGE L: (0.3235, 0.7857)
-ROUGE S: (0.1515, 0.9341)",,"ROUGE 1: (0.0294, 0.0256)
+ROUGE S: (0.1515, 0.9341)",,"Cosine similarity: 0.118
+ROUGE 1: (0.0294, 0.0256)
 ROUGE 2: (0.0, 0.0)
 ROUGE 3: (0.0, 0.0)
 ROUGE L: (0.0882, 0.0769)
