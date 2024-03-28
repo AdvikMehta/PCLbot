@@ -67,7 +67,7 @@ class Benchmark:
         outputs = []
         for qa_pair in qa_pairs:
             q, ref_a = qa_pair
-            context = self.vectordb.similarity_search(q)[0][0]
+            context = self.vectordb.similarity_search(q)
             output = chain.invoke({"context": context, "question": q})
             outputs.append(output.content)
 
@@ -92,7 +92,7 @@ class Benchmark:
         outputs = []
         for qa_pair in qa_pairs:
             q, ref_a = qa_pair
-            context = self.vectordb.similarity_search(q)[0][0]
+            context = self.vectordb.similarity_search(q)
             res = invoke({"context": context, "question": q})
             try:
                 output = res['choices'][0]['message']['content'].strip()
