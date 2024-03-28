@@ -36,9 +36,6 @@ class ASMEKnowledgeStore:
         """
         Performs a similarity search on the Vector Database and returns the top match
         """
-        # docs = self.vectordb.similarity_search(query, k, search_filter)
-        # top_docs = [(doc.page_content, doc.metadata) for doc in docs]
-        # return docs[0].page_content
         docs = self.vectordb.similarity_search(query, k, search_filter)[0][0]
         top_docs = [(doc.page_content, doc.metadata) for doc in docs]
         return top_docs  # Changed from docs[0].page_content to top_docs

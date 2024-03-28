@@ -6,50 +6,6 @@ from db.ASMEKnowledgeStore import ASMEKnowledgeStore
 
 load_dotenv()
 
-# def get_response(question):
-#     context = ""
-#     res = invoke({"question": question, "context": context})
-#     try:
-#         output = res['choices'][0]['message']['content'].strip()
-#         return output
-#     except Exception as e:
-#         print(f"Failed to get response: {e}")
-#         return "None"
-
-# def get_response_and_reference(question):
-#     # This is a placeholder for the integration of the similarity search that returns response and metadata
-#     # The actual implementation will depend on how the similarity_search method is updated
-#     response = "This is the response from the chatbot"
-#     reference = "Reference material from ASME B31.3, Section XYZ, Page 123"
-#     return response, reference
-#     def get_response(question):
-#     context = ""
-#     res = invoke({"question": question, "context": context})
-#     try:
-#         output = res['choices'][0]['message']['content'].strip()
-#         return output
-#     except Exception as e:
-#         print(f"Failed to get response: {e}")
-#         return "None"
-
-# def get_response_and_reference(question):
-#     # This is a placeholder for the integration of the similarity search that returns response and metadata
-#     # The actual implementation will depend on how the similarity_search method is updated
-#     response = "This is the response from the chatbot"
-#     reference = "Reference material from ASME B31.3, Section XYZ, Page 123"
-#     return response, reference
-#
-#     def get_response(question):
-#         context = ""
-#
-#     res = invoke({"question": question, "context": context})
-#     try:
-#         output = res['choices'][0]['message']['content'].strip()
-#         return output
-#     except Exception as e:
-#         print(f"Failed to get response: {e}")
-#         return "None"
-
 def get_response_and_reference(question):
     # Create an instance of ASMEKnowledgeStore or use an existing one if you have it in scope
     knowledge_store = ASMEKnowledgeStore(index_name="asme-bot-knowledge")
