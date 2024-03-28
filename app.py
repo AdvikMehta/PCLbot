@@ -12,7 +12,7 @@ def get_response_and_reference(question):
 
     # Use the similarity_search method to get the response and reference
     try:
-        search_results = knowledge_store.similarity_search(question)
+        search_results = knowledge_store.similarity_search(question)[0][0]
         context = search_results[0][0]  # This is the page_content of the top document
         print(f"Context results: {search_results}")
         try:

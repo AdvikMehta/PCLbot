@@ -12,7 +12,7 @@ vectordb = ASMEKnowledgeStore("asme-bot-knowledge")
 question = "According to ASME B31.3, what is the minimum design metal temperature (in °F) for carbon steel without impact testing?"
 # messages = [HumanMessage(content="knock knock")]
 # print(chat.invoke(messages))
-context = vectordb.similarity_search(question)
+context = vectordb.similarity_search(question)[0][0]
 print(f"Context: {context}")
 
 prompt_template = """
