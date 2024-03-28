@@ -1,0 +1,5 @@
+.env
+.idea/
+db/__pycache__/
+.venv/
+benchmark/__pychache__/
