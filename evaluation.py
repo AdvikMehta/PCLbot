@@ -20,12 +20,14 @@ precision = number_of_overlapping_words / total_words_in_system_summary
 from typing import List, Tuple
 import argparse
 import os, sys
+
 import pandas as pd
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plt
 current_path = os.path.realpath(__file__)
+
 
 
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
@@ -40,7 +42,11 @@ def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     for ref_string in ref_strings:
         if ref_string in system_strings:
             common_strings.append(ref_string)
+
     return list(set(common_strings))
+
+    return common_strings
+
 
 
 def n_split_answer(answer: str, n: int) -> List[str]:
@@ -48,6 +54,7 @@ def n_split_answer(answer: str, n: int) -> List[str]:
     Splits the answer string into sub-strings of length n in order
     """
     n_size_strings = []
+
     if answer:
         answer_string = answer.split()
         answer_string_size = len(answer_string)
@@ -57,6 +64,16 @@ def n_split_answer(answer: str, n: int) -> List[str]:
                 for j in range(n):
                     n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
                 n_size_strings.append(n_size_string.strip())
+
+    answer_string = answer.split()
+    answer_string_size = len(answer_string)
+    for i in range(answer_string_size):
+        if i + n <= answer_string_size:
+            n_size_string = ""
+            for j in range(n):
+                n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
+            n_size_strings.append(n_size_string.strip())
+
     return n_size_strings
 
 
@@ -97,6 +114,7 @@ def skip_words(answer: str) -> List[str]:
     Returns a list of 2 words from answer by allowing words separated by one-or-more other words
     """
     words_with_gaps = []
+
     if answer:
         answer_string = answer.split()
         answer_string_size = len(answer_string)
@@ -106,6 +124,16 @@ def skip_words(answer: str) -> List[str]:
                     if j < answer_string_size:
                         string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
                         words_with_gaps.append(string_to_add.strip())
+
+    answer_string = answer.split()
+    answer_string_size = len(answer_string)
+    for i in range(answer_string_size):
+        current_string = answer_string[i]
+        for j in range(i+1, answer_string_size):
+                if j < answer_string_size:
+                    string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
+                    words_with_gaps.append(string_to_add.strip())
+
     return words_with_gaps
 
 
@@ -321,6 +349,7 @@ def main():
     model_answer = remove_stopwords(model_answer)
     ref_answer = remove_stopwords(ref_answer)
 
+
     # Calculate all the Rouge scores
     print("\n----------------------------------")
     print("ROUGE scores (recall, precision):")
@@ -339,6 +368,10 @@ def main():
     
 
 if __name__ == "__main__":
+
     #main()
     # comment main and uncomment below function to update csv with scores
     add_scores_to_csv()
+
+    main()
+
