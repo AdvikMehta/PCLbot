@@ -12,7 +12,7 @@ def get_response_and_reference(question):
 
     # Use the similarity_search method to get the response and reference
     try:
-        search_results = knowledge_store.similarity_search(question)[0][0]
+        search_results = knowledge_store.similarity_search(question)
         context = search_results[0][0]  # This is the page_content of the top document
         try:
             res = invoke({"question": question, "context": context})
@@ -31,6 +31,33 @@ st.title("ASME B31.3 Piping Code Assistant")
 
 user_question = st.text_input("Enter your question:", "")
 
+def create_smiley_rating():
+    # Emojis for different ratings
+    smiley_emojis = ['☹️', '🙁', '😐', '🙂', '😄']
+    # Columns for the smiley buttons
+    cols = st.columns(5, gap="small")
+    # Use a session state to store the rating
+    if 'rating' not in st.session_state:
+        st.session_state['rating'] = None
+
+    # Create a button in each column
+    for idx, col in enumerate(cols):
+        with col:
+            if st.button(smiley_emojis[idx]):
+                st.session_state['rating'] = idx + 1  # Store rating from 1 to 5
+                # You can display a message or perform an action based on the rating
+                st.info(f'You rated: {st.session_state["rating"]}', key=f'info_{idx}')
+
+def collect_feedback():
+    # Feedback text input
+    feedback = st.text_input("Feedback:", placeholder="Your feedback is valuable to us!", key='feedback', max_chars=200)
+    # Submit button
+    if st.button("Submit"):
+        # Here you can perform an action with the feedback
+        st.success("Thank you for your feedback!")
+        # For example, display the feedback and rating (for now, as we're not storing it)
+        st.write("Feedback:", feedback)
+        st.write("Rating:", st.session_state.get('rating', 'No rating given'))
 
 if user_question:
     with st.spinner('Getting response...'):
@@ -38,20 +65,5 @@ if user_question:
     st.text_area("Response:", value=response, height=300)
     st.text_area("Reference:", value=reference, height=150)
 
-    st.write("Rate the response:")
-    col1, col2, col3, col4, col5 = st.columns(5)
-    with col1:
-        if st.button('⭐', key='1'):
-            st.write("You rated this response 1 star")
-    with col2:
-        if st.button('⭐⭐', key='2'):
-            st.write("You rated this response 2 stars")
-    with col3:
-        if st.button('⭐⭐⭐', key='3'):
-            st.write("You rated this response 3 stars")
-    with col4:
-        if st.button('⭐⭐⭐⭐', key='4'):
-            st.write("You rated this response 4 stars")
-    with col5:
-        if st.button('⭐⭐⭐⭐⭐', key='5'):
-            st.write("You rated this response 5 stars")
+    create_smiley_rating()
+    collect_feedback()
