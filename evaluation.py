@@ -20,6 +20,12 @@ precision = number_of_overlapping_words / total_words_in_system_summary
 from typing import List, Tuple
 import argparse
 import os, sys
+import pandas as pd
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+import matplotlib.pyplot as plt
+current_path = os.path.realpath(__file__)
 
 
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
@@ -34,7 +40,7 @@ def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     for ref_string in ref_strings:
         if ref_string in system_strings:
             common_strings.append(ref_string)
-    return common_strings
+    return list(set(common_strings))
 
 
 def n_split_answer(answer: str, n: int) -> List[str]:
@@ -42,14 +48,15 @@ def n_split_answer(answer: str, n: int) -> List[str]:
     Splits the answer string into sub-strings of length n in order
     """
     n_size_strings = []
-    answer_string = answer.split()
-    answer_string_size = len(answer_string)
-    for i in range(answer_string_size):
-        if i + n <= answer_string_size:
-            n_size_string = ""
-            for j in range(n):
-                n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
-            n_size_strings.append(n_size_string.strip())
+    if answer:
+        answer_string = answer.split()
+        answer_string_size = len(answer_string)
+        for i in range(answer_string_size):
+            if i + n <= answer_string_size:
+                n_size_string = ""
+                for j in range(n):
+                    n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
+                n_size_strings.append(n_size_string.strip())
     return n_size_strings
 
 
@@ -90,14 +97,15 @@ def skip_words(answer: str) -> List[str]:
     Returns a list of 2 words from answer by allowing words separated by one-or-more other words
     """
     words_with_gaps = []
-    answer_string = answer.split()
-    answer_string_size = len(answer_string)
-    for i in range(answer_string_size):
-        current_string = answer_string[i]
-        for j in range(i+1, answer_string_size):
-                if j < answer_string_size:
-                    string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
-                    words_with_gaps.append(string_to_add.strip())
+    if answer:
+        answer_string = answer.split()
+        answer_string_size = len(answer_string)
+        for i in range(answer_string_size):
+            current_string = answer_string[i]
+            for j in range(i+1, answer_string_size):
+                    if j < answer_string_size:
+                        string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
+                        words_with_gaps.append(string_to_add.strip())
     return words_with_gaps
 
 
@@ -158,6 +166,133 @@ def rouge_s(system_answer: str, ref_answer: str) -> Tuple[float, float]:
     return (round(recall, 4), round(precision, 4))
 
 
+def calculate_f_value(recall: float, precision: float) -> float:
+    """
+    Calculate and return f value provided recall and precision
+    """
+    f_value = 0.0
+    if recall and precision:
+        beta = precision / recall
+        beta_square = beta**2 
+        f_numerator = (1 + beta_square) * recall * precision
+        f_denominator = recall + beta_square*precision
+        f_value = f_numerator / f_denominator
+    return f_value
+
+
+def remove_stopwords(answer: str) -> str:
+    """
+    Removes stopwords from the input answer using nltk library
+    """
+    # Download stopwords if you haven't already
+    #nltk.download('stopwords')
+    #nltk.download('punkt')
+
+    # Tokenize the answer sentence
+    words = word_tokenize(answer)
+    # Get the English stopwords
+    english_stopwords = set(stopwords.words('english'))
+    # Remove stopwords
+    filtered_words = [word for word in words if word.lower() not in english_stopwords]
+    filtered_sentence = ' '.join(filtered_words)
+
+    return filtered_sentence
+
+
+def get_score_string(system_answer: str, ref_answer: str) -> str:
+    """
+    Calculates ROUGE N (1, 2, 3), L, S using functions defined and returns score string to add to the csv
+    """
+    # remove stopwords
+    system_answer = remove_stopwords(system_answer)
+    ref_answer = remove_stopwords(ref_answer)
+
+    score_string = ""
+    # Rouge_n, mainly 1, 2, 3
+    for n in range(1, 4):
+        rouge_n_score = rouge_n(system_answer, ref_answer, n)
+        score_string += f"ROUGE {n}: {rouge_n_score}\n"
+    # Rouge_l
+    rouge_l_score = rouge_l(system_answer, ref_answer)
+    score_string += f"ROUGE L: {rouge_l_score}\n"
+    # Rouge_s
+    rouge_s_score = rouge_s(system_answer, ref_answer)
+    score_string += f"ROUGE S: {rouge_s_score}"
+
+    return score_string
+
+
+def get_f_score(system_answer: str, ref_answer: str) -> float:
+    """
+    Calculates and returns final f value using ROUGE N (1, 2, 3), L, S
+    f = [ f(rouge1) + f(rouge2) + f(rouge3) + f(rougeL) + f(rougeS) ] / 5 
+    """
+    # remove stopwords
+    system_answer = remove_stopwords(system_answer)
+    ref_answer = remove_stopwords(ref_answer)
+
+    f_score = 0.0
+    # Rouge_n, mainly 1, 2, 3
+    for n in range(1, 4):
+        rouge_n_score = rouge_n(system_answer, ref_answer, n)
+        f_score += 0.2 * calculate_f_value(rouge_n_score[0], rouge_n_score[1])
+    # Rouge_l
+    rouge_l_score = rouge_l(system_answer, ref_answer)
+    f_score += 0.2 * calculate_f_value(rouge_l_score[0], rouge_l_score[1])
+    # Rouge_s
+    rouge_s_score = rouge_s(system_answer, ref_answer)
+    f_score += 0.2 * calculate_f_value(rouge_s_score[0], rouge_s_score[1])
+
+    return f_score
+
+
+def add_scores_to_csv() -> None:
+    """
+    Add similarity scores (ROUGE N (1, 2, 3), L, S) to InnovAItors Q&A - Sheet1.csv
+    Add f values to bar_plots.csv and draw the bar graph
+    """
+    # read qa dataframe from the csv
+    qa_csv_path = f"{current_path}\../test/InnovAItors Q&A - Sheet1.csv"
+    qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False, encoding='unicode_escape')
+    plot_csv_path = f"{current_path}\../test/bar_plots.csv"
+    plot_df = pd.read_csv(plot_csv_path, dtype=str, na_filter=False, encoding='unicode_escape')
+
+    # Mistral model scores
+    qa_df['Mistral scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral'], row['DE answer']), axis=1)
+    # Mistral + RAG scores
+    qa_df['Mistral + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral + RAG'], row['DE answer']), axis=1)
+    # Mistral Fine-Tuned scores
+    qa_df['Mistral Fine-Tuned scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
+    # Mistral Fine-Tuned + RAG scores
+    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
+    # write updated dataframe with ROUGE scores to csv
+    qa_df.to_csv(qa_csv_path, index=False)
+
+    # Mistral f scores
+    plot_df['Mistral f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral'], row['DE answer']), axis=1)
+    # Mistral + RAG f scores
+    plot_df['Mistral + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral + RAG'], row['DE answer']), axis=1)
+    # Mistral Fine-Tuned f scores
+    plot_df['Mistral fine-tuned f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
+    # Mistral Fine-Tuned + RAG f scores
+    plot_df['Mistral Fine-Tuned + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
+    # write updated dataframe with f scores to bas_plot.csv
+    plot_df.to_csv(plot_csv_path, index=False)
+
+    # create a bar plot
+    graph_data = plot_df.iloc[:, :4].values
+    plt.figure(figsize=(10, 6))  # Set the figure size
+    num_columns = len(plot_df.columns[:4])
+    bar_width = 0.2
+    for i, column_name in enumerate(plot_df.columns[:4]):
+        plt.bar([x + i * bar_width for x in range(len(graph_data))], graph_data[:, i], width=bar_width, align='center', label=column_name)
+    plt.xlabel('question number')
+    plt.ylabel('F value')
+    plt.title('F scores for different models')
+    plt.legend()
+    plt.show()
+
+
 def process_arguments() -> argparse.Namespace:
     """
     Processes the input path arguments to the scripts
@@ -182,6 +317,10 @@ def main():
     model_answer = open(model_ans_path, "r").read()
     ref_answer = open(ref_ans_path, "r").read()
 
+    # remove stopwords
+    model_answer = remove_stopwords(model_answer)
+    ref_answer = remove_stopwords(ref_answer)
+
     # Calculate all the Rouge scores
     print("\n----------------------------------")
     print("ROUGE scores (recall, precision):")
@@ -200,4 +339,6 @@ def main():
     
 
 if __name__ == "__main__":
-    main()
+    #main()
+    # comment main and uncomment below function to update csv with scores
+    add_scores_to_csv()
