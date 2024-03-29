@@ -1,5 +1,8 @@
 from db.ASMEKnowledgeStore import ASMEKnowledgeStore
 
+pdf_path_1 = "../test/data/marvel_prop_auction.pdf"
+pdf_path_2 = "../test/data/golf_guidebook.pdf"
+
 asme_pdf = "../test/data/2014_ASME_B31.3.pdf"
 
 index_name = "asme-bot-knowledge"

@@ -1,5 +1,10 @@
+
 import pandas as pd
 from benchmark.benchmark import Benchmark
+
+from benchmark.benchmark import Benchmark
+import pandas as pd
+
 
 def read_csv(file_path):
     df = pd.read_csv(file_path)
@@ -53,4 +58,15 @@ for mode in modes:
     outputs = benchmark.run(qa_pairs)
     print(f"Saving {mode} results")
     add_column_to_csv(csv_file_path, mode, outputs)
+
+benchmark = Benchmark("ftrag")
+qa_pairs = read_csv("qa_pairs_with_mode_outputs.csv")[0:5]
+print(qa_pairs)
+
+outputs = benchmark.run(qa_pairs)
+print(outputs)
+
+# add_column_to_csv("qa_pairs_with_mode_outputs.csv", "base", outputs_base)
+# add_column_to_csv("qa_pairs_with_mode_outputs.csv", "baserag", outputs_baserag)
+
 

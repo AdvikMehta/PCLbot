@@ -32,6 +32,7 @@ class Benchmark:
             return self.run_baserag(qa_pairs)
         elif self.mode == "ft":
             return self.run_ft(qa_pairs)
+            return self.run_ft()
         elif self.mode == "ftrag":
             return self.run_ftrag(qa_pairs)
 
@@ -84,6 +85,9 @@ class Benchmark:
             outputs.append(output)
         return outputs
 
+    def run_ft(self):
+        raise NotImplementedError("[ft] mode not implemented")
+
     def run_ftrag(self, qa_pairs: list):
         outputs = []
         for qa_pair in qa_pairs:
@@ -96,6 +100,9 @@ class Benchmark:
                 output = f"Failed to get response: {e}"
             outputs.append(output)
         return outputs
+
+    def eval(self, model_output, ref_answer):
+        return 0
 
     def set_mode(self, mode):
         if mode in self.modes:
