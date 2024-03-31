@@ -1,9 +1,8 @@
 import streamlit as st
 from benchmark.helix_ft import invoke
-from dotenv import load_dotenv
 import traceback
 from db.ASMEKnowledgeStore import ASMEKnowledgeStore
-
+from dotenv import load_dotenv
 load_dotenv()
 
 
@@ -20,7 +19,8 @@ def get_response_and_reference(question):
             res = invoke({"question": question, "context": context})
             response = res['choices'][0]['message']['content'].strip()
         except Exception as e:
-            return f"Failed to get model response: {e}"
+            print(f"Failed to get model response: {e}. Traceback: {traceback.format_exc()}")
+            return None, None
         reference = search_results[0][1]  # This is the metadata of the top document
         return response, reference
     except Exception as e:
@@ -30,9 +30,7 @@ def get_response_and_reference(question):
 
 # Setting up the Streamlit UI
 st.title("ASME B31.3 Piping Code Assistant")
-
 user_question = st.text_input("Enter your question:", "")
-
 if user_question:
     with st.spinner('Getting response...'):
         response, reference = get_response_and_reference(user_question)
