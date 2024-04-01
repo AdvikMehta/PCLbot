@@ -20,12 +20,18 @@ precision = number_of_overlapping_words / total_words_in_system_summary
 from typing import List, Tuple
 import argparse
 import os, sys
+
 import pandas as pd
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plt
+from math import sqrt
 current_path = os.path.realpath(__file__)
+# Load the English NLP pipeline
+import spacy
+nlp = spacy.load("en_core_web_sm")
+
 
 
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
@@ -40,7 +46,11 @@ def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     for ref_string in ref_strings:
         if ref_string in system_strings:
             common_strings.append(ref_string)
+
     return list(set(common_strings))
+
+    return common_strings
+
 
 
 def n_split_answer(answer: str, n: int) -> List[str]:
@@ -48,6 +58,7 @@ def n_split_answer(answer: str, n: int) -> List[str]:
     Splits the answer string into sub-strings of length n in order
     """
     n_size_strings = []
+
     if answer:
         answer_string = answer.split()
         answer_string_size = len(answer_string)
@@ -57,6 +68,16 @@ def n_split_answer(answer: str, n: int) -> List[str]:
                 for j in range(n):
                     n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
                 n_size_strings.append(n_size_string.strip())
+
+    answer_string = answer.split()
+    answer_string_size = len(answer_string)
+    for i in range(answer_string_size):
+        if i + n <= answer_string_size:
+            n_size_string = ""
+            for j in range(n):
+                n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
+            n_size_strings.append(n_size_string.strip())
+
     return n_size_strings
 
 
@@ -97,6 +118,7 @@ def skip_words(answer: str) -> List[str]:
     Returns a list of 2 words from answer by allowing words separated by one-or-more other words
     """
     words_with_gaps = []
+
     if answer:
         answer_string = answer.split()
         answer_string_size = len(answer_string)
@@ -106,6 +128,16 @@ def skip_words(answer: str) -> List[str]:
                     if j < answer_string_size:
                         string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
                         words_with_gaps.append(string_to_add.strip())
+
+    answer_string = answer.split()
+    answer_string_size = len(answer_string)
+    for i in range(answer_string_size):
+        current_string = answer_string[i]
+        for j in range(i+1, answer_string_size):
+                if j < answer_string_size:
+                    string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
+                    words_with_gaps.append(string_to_add.strip())
+
     return words_with_gaps
 
 
@@ -203,11 +235,14 @@ def get_score_string(system_answer: str, ref_answer: str) -> str:
     """
     Calculates ROUGE N (1, 2, 3), L, S using functions defined and returns score string to add to the csv
     """
+    score_string = ""
+    cos_simi = get_semantic_score(system_answer, ref_answer)
+    score_string += f"Cosine similarity: {cos_simi}\n"
+
     # remove stopwords
     system_answer = remove_stopwords(system_answer)
     ref_answer = remove_stopwords(ref_answer)
 
-    score_string = ""
     # Rouge_n, mainly 1, 2, 3
     for n in range(1, 4):
         rouge_n_score = rouge_n(system_answer, ref_answer, n)
@@ -227,23 +262,46 @@ def get_f_score(system_answer: str, ref_answer: str) -> float:
     Calculates and returns final f value using ROUGE N (1, 2, 3), L, S
     f = [ f(rouge1) + f(rouge2) + f(rouge3) + f(rougeL) + f(rougeS) ] / 5 
     """
+    f_score = 0.0
+    cos_simi = get_semantic_score(system_answer, ref_answer)
+    f_score += 0.25 * cos_simi
+
     # remove stopwords
     system_answer = remove_stopwords(system_answer)
     ref_answer = remove_stopwords(ref_answer)
 
-    f_score = 0.0
     # Rouge_n, mainly 1, 2, 3
     for n in range(1, 4):
         rouge_n_score = rouge_n(system_answer, ref_answer, n)
-        f_score += 0.2 * calculate_f_value(rouge_n_score[0], rouge_n_score[1])
+        f_score += 0.15 * calculate_f_value(rouge_n_score[0], rouge_n_score[1])
     # Rouge_l
     rouge_l_score = rouge_l(system_answer, ref_answer)
-    f_score += 0.2 * calculate_f_value(rouge_l_score[0], rouge_l_score[1])
+    f_score += 0.15 * calculate_f_value(rouge_l_score[0], rouge_l_score[1])
     # Rouge_s
     rouge_s_score = rouge_s(system_answer, ref_answer)
-    f_score += 0.2 * calculate_f_value(rouge_s_score[0], rouge_s_score[1])
+    f_score += 0.15 * calculate_f_value(rouge_s_score[0], rouge_s_score[1])
 
     return f_score
+
+
+def squared_sum(x: List[float]) -> float:
+  """
+  return 3 rounded square rooted value
+  """
+  return round(sqrt(sum([a*a for a in x])),3)
+
+
+def get_semantic_score(system_answer: str, ref_answer: str) -> float:
+    """
+    Returns the cosine similarity between model and reference answer
+    Useful for semantic similarities between the two answers 
+    """
+    system_answer_vector = nlp(system_answer).vector
+    ref_answer_vector = nlp(ref_answer).vector
+    cs_numerator = sum(a*b for a,b in zip(system_answer_vector, ref_answer_vector))
+    cs_denominator = squared_sum(system_answer_vector) * squared_sum(ref_answer_vector)
+    cosine_similarity = round(cs_numerator/float(cs_denominator), 3)
+    return cosine_similarity
 
 
 def add_scores_to_csv() -> None:
