@@ -1,0 +1,253 @@
+Question,DE answer,Mistral,Mistral scores,Mistral + RAG,Mistral + RAG scores,Mistral Fine-Tuned,Mistral Fine-Tuned scores,Mistral Fine-Tuned + RAG,Mistral Fine-Tuned + RAG scores, 
+"According to ASME B31.3, what is the minimum design metal temperature (in degrees F) for carbon steel without impact testing?",The minimum design metal temperature (in degrees F) for carbon steel without impact testing is -20,"According to ASME B31.3, the minimum design metal temperature (MDMT) for carbon steel without impact testing is -20 degrees F. This value is based on the carbon equivalent value of the steel and the nominal pipe size. For pipe sizes larger than 6 inches (150 NPS and larger), the MDMT can be as low as -50 (-46 degrees C) without impact testing. It's important to check the code for the specific circumstances and consult the design standards for the particular project.","Cosine similarity: 0.813
+ROUGE 1: (0.9286, 0.2031)","According to ASME B31.3, the minimum design metal temperature without impact testing for carbon steel materials is -20 degrees F (-29 degrees C), for Category D Fluid Service. This temperature applies to any carbon steel material. Additionally, X Grades of API 5L, and ASTM A381 materials may be used in accordance with Curve B if normalized or quenched and tempered. Also, certain materials such as ASTM A516 plate, ASTM A671 pipe made from A516 plate, and ASTM A672 pipe made from A516 plate may be used in accordance with Curve D if normalized. It is important to note that a welding procedure for the manufacture of pipe or components should include impact testing of welds and heat-affected zone (HAZ) for any design minimum temperature below -20 degrees F (-29 degrees C), except as provided in Table 323.2.2, A-3(b).","Cosine similarity: 0.81
+ROUGE 1: (0.9286, 0.1111)",The minimum design metal temperature (in degrees F) for carbon steel is -29 degrees C (-20 degrees F).,"Cosine similarity: 0.817
+ROUGE 1: (0.7143, 0.5263)",The minimum design metal temperature (in degrees F) for carbon steel is -29 degrees C (-20 degrees F).,"Cosine similarity: 0.817
+ROUGE 1: (0.7143, 0.5263)",
+What is the maximum sulfur content (in weight percent) allowed for carbon steel materials used in sour service under ASME B31.3?,The maximum sulfur content (in weight percent) allowed for carbon steel materials used in sour service under ASME B31.3 is 0.002.,"The ASME B31.3 piping code does not specifically dictate the maximum sulfur content for carbon steel materials used in sour service. Instead, it refers to the material standards (such as ASTM or ASME) that define the permissible sulfur content.
+
+For sour service, the NACE MR0175/ISO 15156 standard is typically used alongside ASME B31.3. NACE MR0175/ISO 15156 has sulfur content limits for various carbon steel material grades.
+
+For example, in NACE MR0175/ISO 15156-2, the maximum sulfur content for grades like L360, L361, L413, L427, and L430 is 0.050 wt%. For grade L452, the limit is 0.035 wt%.
+
+It's essential to consult the appropriate material standard and NACE MR0175/ISO 15156 when designing a system for sour service. Always verify the specific material grade and its sulfur content limit with the appropriate standard.","Cosine similarity: 0.77
+ROUGE 1: (0.6667, 0.1071)","The ASME B31.3 piping code does not provide a maximum sulfur content limit directly in the given excerpt from Table A-1. The table only provides basic allowable stress values for various materials at different temperatures.
+
+However, the sulfur content limit for carbon steel materials used in sour service can be found in ASME B31.3 Appendix E, ""Suggested Rules for the Selection of Materials for Hydrogen Service at Elevated Temperatures and Elevated Pressure.""
+
+According to Appendix E, for sour service, the maximum sulfur content for carbon steel materials should be as follows:
+
+* For temperatures above 250 degrees F (121  degrees C): 0.050% by weight
+* For temperatures below or equal to 250 degrees F (121 degrees C): 0.030% by weight
+
+It is important to note that these limits apply to materials in sour service, which is defined in ASME B31.3 as ""a service involving exposure of a material to a corrosive environment that contains sulfide (H2S), mercaptans, or corrosive organosulfur compounds.""
+
+In the given excerpt from Table A-1, the materials listed are carbon steel pipes and tubes for Grades X60, X65, X70, X80, and Y60, as per the API 5L and ASTM A381 specifications. While the table does not provide the maximum sulfur content for these materials specifically for sour service, ASME B31.3 Appendix E can be consulted for the general sulfur content limits for carbon steel materials in sour service.","Cosine similarity: 0.827
+ROUGE 1: (0.7222, 0.0703)",The maximum sulfur content (in weight percent) allowed for carbon steel materials used in sour service under ASME B31.3 is 0.10.,"Cosine similarity: 0.994
+ROUGE 1: (0.8333, 0.8333)",The maximum sulfur content (in weight percent) allowed for carbon steel materials used in sour service under ASME B31.3 is 0.0125.,"Cosine similarity: 0.995
+ROUGE 1: (0.8333, 0.8333)",
+"What is the standard ambient temperature range (in degrees F) considered in the design basis of ASME B31.3?
+",The standard ambient temperature range (in degrees F) considered in the design basis of ASME B31.3 is -29 to 120.,"The ASME B31.3 piping code considers the standard ambient temperature range to be between 32 degrees F and 100  degrees F (0 degrees C and 38 degrees C) for the purpose of design basis. However, it's important to note that for certain locations or specific applications, the code allows for the use of higher or lower temperature ranges if justified by climate data or process requirements.","Cosine similarity: 0.675
+ROUGE 1: (0.6875, 0.22)","Based on my understanding of the ASME B31.3 piping code, the standard ambient temperature range is not explicitly defined within the provided text. However, it is generally understood that the ambient temperature range considered in the design basis of ASME B31.3 falls between -20 degrees F and 150 degrees F (-29 degrees C and 66 degrees C) for general applicability. It is important to note that specific project or application requirements may necessitate the consideration of temperatures outside of this range. Always refer to the most recent edition of the ASME B31.3 code and consult with a qualified piping engineer for specific applications.","Cosine similarity: 0.782
+ROUGE 1: (0.8125, 0.1757)",The standard ambient temperature range (in degrees F) considered in the design basis of ASME B31.3 is from the installation temperature of 21 degreesC (70 degrees F) to a maximum of 250 degrees F (121 degrees C).,"Cosine similarity: 0.874
+ROUGE 1: (0.75, 0.375)",The standard ambient temperature range (in degrees F) considered in the design basis of ASME B31.3 is from the installation temperature of 21 degrees C (70 degrees F) to a maximum of 288 degrees C (550 degrees F).,"Cosine similarity: 0.865
+ROUGE 1: (0.75, 0.3636)",
+"In ASME B31.3, what is the minimum required Reinforcement Index for branch connections when not subjected to special analysis?",The minimum required Reinforcement Index for branch connections when not subjected to special analysis is 1.,"According to ASME B31.3 Process Piping, the minimum required reinforcement index for branch connections not subjected to special analysis is given by:
+","Cosine similarity: 0.754
+ROUGE 1: (0.7273, 0.4706)","In ASME B31.3, when not subjected to special analysis, the minimum required Reinforcement Index for branch connections is given by the formula in paragraph 304.3.3(b), which is:
+
+Reinforcement Index = (d1/H - 1) \* Tb/c + (bps - dp) \* (Tb - c)/2 \* sin
+
+where:
+
+* d1 is the effective length removed from the pipe at the branch,
+* H is the wall thickness of the pipe,
+* Tb is the wall thickness of the branch,
+* c is the remaining wall thickness at the bottom of the groove,
+* bps is the outside diameter of the branch,
+* dp is the inside diameter of the pipe, and
+*  is the branch angle.
+
+The formula ensures that the branch connection has sufficient strength and leak tightness, and takes into account the geometry and material properties of the pipe and branch. If the calculated Reinforcement Index is less than or equal to 1, no additional reinforcement is required. If it is greater than 1, additional reinforcement must be added to meet the criteria in paragraphs 304.3.3(b) and (c).","Cosine similarity: 0.608
+ROUGE 1: (1.0, 0.078)",The minimum required Reinforcement Index for branch connections when not subjected to special analysis is 0.415.,"Cosine similarity: 0.974
+ROUGE 1: (0.9091, 0.9091)",The minimum required Reinforcement Index for branch connections when not subjected to special analysis is 0.9 h2/3.,"Cosine similarity: 0.95
+ROUGE 1: (0.9091, 0.8333)",
+What is the allowable stress increase (in percent) for short-term occasional loads according to ASME B31.3?,The allowable stress increase (in percent) for short-term occasional loads according to ASME B31.3 is 33.,"Based on my knowledge of ASME B31.3 piping code, the allowable stress increase for short-term occasional loads is 33% of the stress value determined for the corresponding material at the design temperature and pressure. This allowable stress increase is applicable only for loadings of an occasional nature, such as wind, seismic, or water hammer, and for a duration not exceeding 10 hours in any 50-hour period or 100 hours in any 365-day period.","Cosine similarity: 0.797
+ROUGE 1: (0.7143, 0.2)","Based on ASME B31.3-2014, the allowable stress increase for short-term occasional loads is 33% of the values given in Table A-1M, the Basic Allowable Stresses in Tension for Metals. This information can be found in the code's nonmandatory appendix, specifically in Appendix D, ""Alternative Rules for Analyzing the Strength of Piping Components under Occasional Loading."" It is important to note that this appendix is not mandatory and the values may vary depending on the specific edition of the code. Always refer to the most up-to-date version of the code for the most accurate information.","Cosine similarity: 0.757
+ROUGE 1: (0.6429, 0.1406)",The allowable stress increase (in percent) for short-term occasional loads is 28.3% according to ASME B31.3.,"Cosine similarity: 0.969
+ROUGE 1: (0.7857, 0.7333)",The allowable stress increase (in percent) for short-term occasional loads is 16 % according to ASME B31.3.,"Cosine similarity: 0.968
+ROUGE 1: (0.7857, 0.7333)",
+"According to ASME B31.3, what is the maximum allowable longitudinal weld joint efficiency factor for seamless piping?",The maximum allowable longitudinal weld joint efficiency factor for seamless piping is 1.,"According to ASME B31.3 Process Piping, the maximum allowable longitudinal weld joint efficiency factor for seamless piping is 1. This means that the seamless piping does not have any welded joints, and the full nominal wall thickness can be considered for pressure design calculations.","Cosine similarity: 0.836
+ROUGE 1: (1.0, 0.3438)","According to ASME B31.3, the maximum allowable longitudinal weld joint efficiency factor for seamless piping is 1. This value can be found in the table you provided under the ""Carbon Steel"" section for ""Seamless pipe"" entries, such as API 5L, A53 Type S, and A106. The efficiency factor is used in the design of piping systems to account for the strength of welded joints compared to the base material. A value of 1.00 indicates that the welded joint has the same strength as the seamless pipe.","Cosine similarity: 0.72
+ROUGE 1: (1.0, 0.1803)",The maximum allowable longitudinal weld joint efficiency factor for seamless piping is 0.95.,"Cosine similarity: 0.986
+ROUGE 1: (0.9091, 0.9091)",The maximum allowable longitudinal weld joint efficiency factor for seamless piping is 1.,"Cosine similarity: 1.0
+ROUGE 1: (1.0, 1.0)",
+"Under ASME B31.3, what is the minimum post-weld heat treatment temperature (in degrees F) for carbon steel?",The minimum post-weld heat treatment temperature (in degrees F) for carbon steel is 1100.,"The minimum post-weld heat treatment (PWHT) temperature for carbon steel in ASME B31.3 is not explicitly specified in the code. Instead, the code refers to the guidelines provided in the ASME Boiler and Pressure Vessel Code (BPVC) Section IX, Welding and Brazing Qualifications.
+
+According to ASME BPVC Section IX, the PWHT temperature for carbon steel depends on the specified minimum yield strength (SMYS) of the material:
+
+1. For SMYS up to 36,000 psi (248 MPa), the PWHT temperature should be at least 1100 degrees F (593 degrees C).
+2. For SMYS between 36,001 psi and 60,000 psi (248 MPa and 414 MPa), the PWHT temperature should be at least 1150 degrees F (621 degrees C).
+
+Please note that these temperatures are in degrees F and the values in parentheses are the corresponding SMYS values in MPa. Also, ensure that you follow the specific requirements of the ASME B31.3 code and any relevant jurisdictional requirements when designing and constructing piping systems.","Cosine similarity: 0.71
+ROUGE 1: (0.8462, 0.0821)",According to ASME B31.3-2,"Cosine similarity: 0.557
+ROUGE 1: (0.0, 0.0)",The minimum post-weld heat treatment temperature (in degrees F) for carbon steel is the temperature specified in the WPS ranging from 50 degrees C to 400 degrees F (10 degrees C to 200 degrees C).,"Cosine similarity: 0.825
+ROUGE 1: (0.7692, 0.3333)",The minimum post-weld heat treatment temperature (in degrees F) for carbon steel is 150 for material thickness up to or equal to 1 inch and 300 for material thickness greater than 1 inch.,"Cosine similarity: 0.748
+ROUGE 1: (0.7692, 0.4167)",
+What is the minimum required impact test energy (in ft-lbf) at the minimum design metal temperature for a material in Category D fluid service under ASME B31.3?,The minimum required impact test energy (in ft-lbf) at the minimum design metal temperature for a material in Category D fluid service under ASME B31.3 is 15,"According to ASME B31.3, for a material in Category D fluid service, the minimum required impact test energy (Charpy V-notch) at the minimum design metal temperature is not explicitly specified in the code. The code instead provides requirements for impact testing based on the material group, wall thickness, and service temperature.
+
+For materials in Category D fluid service, the code refers to the rules of Section II, Part D of the ASME Boiler and Pressure Vessel Code (BPVC) for impact testing requirements. The specific requirements for impact testing, including the minimum required impact test energy, are provided in the BPVC for each material and material specification.
+
+Therefore, to determine the minimum required impact test energy for a specific material in Category D fluid service, one should refer to the applicable material specification in ASME BPVC, Section II, Part D.","Cosine similarity: 0.887
+ROUGE 1: (0.7895, 0.1351)","According to ASME B31.3-2014, Figure 323.2.2A, any carbon steel material may be used to a minimum temperature of -29 degrees C (-20 degrees F) for Category D Fluid Service, without requiring impact testing. Therefore, there is no minimum required impact test energy (in ft-lbf) at the minimum design metal temperature for a material in Category D fluid service under ASME B31.3, as long as the material is a carbon steel material and the service is Category D fluid service.","Cosine similarity: 0.92
+ROUGE 1: (0.8421, 0.2581)",The minimum required impact test energy (in ft-lbf) at the minimum design metal temperature for a material in Category D fluid service under ASME B31.3 is 25 ft-lbf.,"Cosine similarity: 0.966
+ROUGE 1: (0.8421, 0.7619)",The minimum required impact test energy (in ft-lbf) at the minimum design metal temperature for a material in Category D fluid service under ASME B31.3 is 25 ft-lbf.,"Cosine similarity: 0.966
+ROUGE 1: (0.8421, 0.7619)",
+"According to ASME B31.3, what is the maximum Inspection and Test Interval (in years) for thickness measurements of piping in Corrosive Service?","According to ASME B31.3, the maximum Inspection and Test Interval (in years) for thickness measurements of piping in Corrosive Service is 5","Based on my knowledge of ASME B31.3 piping code, the maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service is typically every 3 years. However, it is important to note that the specific interval can be influenced by various factors such as the material of the piping, the severity of the corrosive environment, and the results of previous inspections. Therefore, it is always recommended to refer to the specific requirements outlined in the most recent edition of ASME B31.3 and consult with a qualified piping engineer or inspector for the particular application in question.","Cosine similarity: 0.746
+ROUGE 1: (0.7647, 0.2097)","According to ASME B31.3, the maximum Inspection and Test Interval for thickness measurements of piping in corrosive service is not explicitly specified in the code. The frequency of inspections and thickness measurements for piping in corrosive service is determined by the owner or user based on a risk assessment and consideration of the specific factors affecting the rate of corrosion. However, the code does provide requirements for the inspection, rating, and repair of corroded piping in paragraph 346 of the code. It is recommended to refer to the specific project or facility specifications, as well as any applicable regulations or standards, for the maximum inspection interval for a specific application.","Cosine similarity: 0.726
+ROUGE 1: (0.6471, 0.1549)",The maximum Inspection and Test Interval (in years) for thickness measurements of piping in Corrosive Service is 625.,"Cosine similarity: 0.945
+ROUGE 1: (0.6471, 0.7857)",The maximum Inspection and Test Interval (in years) for thickness measurements of piping in Corrosive Service is 2.5.,"Cosine similarity: 0.946
+ROUGE 1: (0.6471, 0.7857)",
+What is the standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3?,The standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3 is 1.5.,"The standard hydrostatic test pressure for process piping systems under ASME B31.3 is determined by using a test pressure multiplier of 1.5, as stated in Section 127.1.1 of the code. However, it's important to note that the actual test pressure must be calculated in accordance with the code's requirements and taking into consideration factors such as the design pressure, material strength, and temperature.","Cosine similarity: 0.697
+ROUGE 1: (1.0, 0.2609)","The standard hydrostatic test pressure for process piping systems under ASME B31.3 is typically determined by the formula:
+
+Test Pressure = Pi + (P * S)
+
+Where:
+Pi = design pressure (gauge pressure)
+P = coincident design metal temperature derating factor (a decimal value)
+S = hydrostatic test pressure factor (a constant value)
+
+For carbon steel and low alloy steel materials at ambient temperature, S is equal to 0.5.
+
+Therefore, the standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3 is 1.5 (0.5 x 3 for Pi = 0, which is the minimum design pressure). However, it's important to note that the actual hydrostatic test pressure can vary depending on the specific material, size, and temperature of the piping system, as well as any additional factors that need to be taken into account.","Cosine similarity: 0.8
+ROUGE 1: (1.0, 0.1026)",The standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3 is 1.2.,"Cosine similarity: 0.994
+ROUGE 1: (0.9167, 0.9167)",The standard hydrostatic test pressure multiplier for process piping systems under ASME B31.3 is 1.5.,"Cosine similarity: 1.0
+ROUGE 1: (1.0, 1.0)",
+"According to ASME B31.3, for materials subject to Charpy impact testing, what is the minimum design metal temperature without additional impact testing?","According to ASME B31.3, for materials subject to Charpy impact testing, the minimum design metal temperature without additional impact testing is -20","Based on my knowledge of ASME B31.3 piping code, the minimum design metal temperature (MDMT) for materials subject to Charpy impact testing, without additional impact testing, is determined by the lowest temperature at which the material meets the required impact test values as specified in the code.
+
+For example, according to Section II, Part D of the ASME Boiler and Pressure Vessel Code, which is incorporated by reference in ASME B31.3, the required Charpy impact test values for various materials at various temperatures are provided. The MDMT is typically taken as the lowest temperature at which the material meets the specified impact test requirements.
+
+However, it is important to note that additional impact testing may be required in certain cases, such as when the piping is subject to more severe conditions than those assumed in the code, or when the piping contains welds or joints that are not covered by the code's impact test requirements. In such cases, the MDMT should be determined based on the results of additional impact testing performed in accordance with recognized industry standards.","Cosine similarity: 0.819
+ROUGE 1: (0.7368, 0.1138)","The minimum design metal temperature without additional impact testing for materials subject to Charpy impact testing according to ASME B31.3 is determined by the designated curve for the listed material, as shown in Figure 323.2.2A and Table A-1. For Category D Fluid Service, any carbon steel material may be used to a minimum temperature of -29 degrees C (-20 degrees F) without additional impact testing. For X Grades of API 5L and ASTM A381 materials, Curve B may be used if normalized or quenched and tempered. The materials listed in Note 3(a)-(c) may be used in accordance with Curve D if normalized. However, if the design minimum temperature is below -29 degrees C (-20 degrees F), a welding procedure for the manufacture of pipe or components shall include impact testing of welds and heat-affected zone (HAZ), except as provided in Table 323.2.2, A-3(b).","Cosine similarity: 0.793
+ROUGE 1: (0.7895, 0.121)",The minimum design metal temperature without additional impact testing is as specified in para. 323.2.2(d)(1) for materials tested by the manufacturer.,"Cosine similarity: 0.738
+ROUGE 1: (0.5263, 0.4762)",The minimum design metal temperature for materials subject to Charpy impact testing is as specified in para. 323.2.2(d)(1) of the document.,"Cosine similarity: 0.824
+ROUGE 1: (0.5263, 0.5)",
+What is the ASME B31.3 requirement for the examination of butt welds in Category D fluid service?, The ASME B31.3 requirement for the examination of butt welds in Category D fluid service is Visual examination,"According to ASME B31.3 Process Piping Code, for Category D fluid service, butt welds require 100% visual examination. This examination shall be performed in accordance with the requirements of the welding procedure specification and the applicable provisions of Section V of the ASME Boiler and Pressure Vessel Code. Additionally, for Category D fluid service, it is also recommended to perform volumetric examinations, such as radiography or ultrasonic testing, to ensure the quality of the weld and detect any defects that may not be visible through visual examination alone. However, the code does not mandate volumetric examination for Category D fluid service, and it is left to the discretion of the owner or the jurisdictional authority.","Cosine similarity: 0.774
+ROUGE 1: (0.7273, 0.1)","Based on the provided excerpt from ASME B31.3 piping code, the specific requirement for the examination of butt welds in Category D fluid service is not explicitly stated in the given text. However, it does mention the general requirement for examinations in paragraph 341.4.2, which states that the joints to be examined should be selected to ensure that the work of each welder or welding operator making the production welds is included. Furthermore, paragraph (c) of the same section mentions the examination of certifications, records, and other evidence to ensure that the materials and components are of the specified grades and have received the required heat treatment, examination, and testing.
+
+For a specific requirement for the examination of butt welds in Category D fluid service, we would need to refer to other sections of the code that pertain to welding requirements. According to the code, the examination of butt welds may include visual examination, radiography, ultrasonic testing, or other methods as appropriate, depending on the material, size, and other factors. The specific examination method for butt welds in Category D fluid service would need to be determined based on the results of a risk assessment, the materials used, and the design of the piping system.","Cosine similarity: 0.692
+ROUGE 1: (0.8182, 0.0647)",Butt welds in Category D fluid service shall be examined to the extent specified in ASME B31.3-2014 or to any greater extent specified in the engineering design.,"Cosine similarity: 0.759
+ROUGE 1: (0.4545, 0.2941)","Butt welds in Category D fluid service shall be examined to the extent specified in the engineering design, with acceptance criteria as stated in para. 341.3.2 and in Table 341.3.2, for Normal Fluid Service unless otherwise specified.","Cosine similarity: 0.708
+ROUGE 1: (0.3636, 0.1429)",
+What is the guideline for the maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service under ASME B31.3?,The guideline for the maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service under ASME B31.3 is 5 years.,"Based on my knowledge of ASME B31.3 piping code, the maximum inspection and test interval for thickness measurements of piping in corrosive service are not explicitly specified in the code. The frequency of inspections and tests for corrosion monitoring is typically determined based on the specific service conditions, materials of construction, and operating experience.
+
+However, ASME B31.3 provides some general guidelines for the inspection of piping in corrosive service. For example, Section 345 of ASME B31.3 recommends that piping in corrosive service be inspected internally and externally at intervals not exceeding five years, or more frequently if necessary, based on the results of previous inspections and the severity of the corrosion.
+
+In addition, Appendix E of ASME B31.3 provides guidance on the development of a fitness-for-service (FFS) program, which may include the use of corrosion monitoring and thickness measurements to assess the remaining wall thickness of piping in corrosive service. The FFS program should consider the specific service conditions, materials of construction, and operating experience to determine the appropriate frequency of inspections and tests.
+
+Therefore, while ASME B31.3 does not provide a specific maximum inspection and test interval for thickness measurements of piping in corrosive service, it does provide guidelines for the inspection and monitoring of such piping, which should be tailored to the specific service conditions and operating experience of the piping system.","Cosine similarity: 0.784
+ROUGE 1: (0.5333, 0.051)","According to the ASME B31.3 Code, Section III, Para. 342.2, for piping in corrosive service, the maximum inspection and test interval for thickness measurements should not exceed 1/2 of the calculated remaining life of the piping based on the corrosion rate. This means that the thickness measurements should be taken frequently enough to ensure that the remaining life of the piping is accurately known and that any necessary repairs or replacements can be made before a failure occurs. The calculation of the remaining life and the specific frequency of the thickness measurements should be determined based on the specific corrosion rate and other relevant factors for the particular piping system in question.","Cosine similarity: 0.715
+ROUGE 1: (0.4667, 0.1)","The maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service under ASME B31.3 is based on the type of measurement, the thickness of the piping, and the rate of corrosion.","Cosine similarity: 0.898
+ROUGE 1: (0.8, 0.5714)",The maximum Inspection and Test Interval for thickness measurements of piping in Corrosive Service under ASME B31.3 is 2.5 years for unlimited thicknesses.,"Cosine similarity: 0.972
+ROUGE 1: (0.8667, 0.8125)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",
+,,,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)",,"Cosine similarity: 0.0
+ROUGE 1: (0, 0)", 

@@ -2,10 +2,9 @@ import os
 import streamlit as st
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 from benchmark.helix_ft import invoke
-from dotenv import load_dotenv
 import traceback
 from db.ASMEKnowledgeStore import ASMEKnowledgeStore
-
+from dotenv import load_dotenv
 load_dotenv()
 
 def add_docs(vectordb: ASMEKnowledgeStore, files: list[UploadedFile]):
@@ -45,7 +44,6 @@ if uploaded_files:
     add_docs(knowledge_store, uploaded_files)
 
 user_question = st.text_input("Enter your question:", "")
-
 if user_question:
     with st.spinner('Getting response...'):
         response, reference = get_response_and_reference(knowledge_store, user_question)

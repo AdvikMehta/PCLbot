@@ -20,14 +20,16 @@ precision = number_of_overlapping_words / total_words_in_system_summary
 from typing import List, Tuple
 import argparse
 import os, sys
-
 import pandas as pd
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plt
+from math import sqrt
 current_path = os.path.realpath(__file__)
-
+# Load the English NLP pipeline
+import spacy
+nlp = spacy.load("en_core_web_sm")
 
 
 def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
@@ -42,11 +44,7 @@ def ngram(system_answer: str, ref_answer: str, n: int) -> List[str]:
     for ref_string in ref_strings:
         if ref_string in system_strings:
             common_strings.append(ref_string)
-
     return list(set(common_strings))
-
-    return common_strings
-
 
 
 def n_split_answer(answer: str, n: int) -> List[str]:
@@ -62,17 +60,8 @@ def n_split_answer(answer: str, n: int) -> List[str]:
             if i + n <= answer_string_size:
                 n_size_string = ""
                 for j in range(n):
-                    n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
+                    n_size_string += answer_string[i+j].strip("()!.,;:'\"") + " "
                 n_size_strings.append(n_size_string.strip())
-
-    answer_string = answer.split()
-    answer_string_size = len(answer_string)
-    for i in range(answer_string_size):
-        if i + n <= answer_string_size:
-            n_size_string = ""
-            for j in range(n):
-                n_size_string += answer_string[i+j].strip("!.,;:'\"") + " "
-            n_size_strings.append(n_size_string.strip())
 
     return n_size_strings
 
@@ -122,17 +111,8 @@ def skip_words(answer: str) -> List[str]:
             current_string = answer_string[i]
             for j in range(i+1, answer_string_size):
                     if j < answer_string_size:
-                        string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
+                        string_to_add = current_string + " " + answer_string[j].strip("()!.,;:'\"")
                         words_with_gaps.append(string_to_add.strip())
-
-    answer_string = answer.split()
-    answer_string_size = len(answer_string)
-    for i in range(answer_string_size):
-        current_string = answer_string[i]
-        for j in range(i+1, answer_string_size):
-                if j < answer_string_size:
-                    string_to_add = current_string + " " + answer_string[j].strip("!.,;:'\"")
-                    words_with_gaps.append(string_to_add.strip())
 
     return words_with_gaps
 
@@ -227,51 +207,129 @@ def remove_stopwords(answer: str) -> str:
     return filtered_sentence
 
 
-def get_score_string(system_answer: str, ref_answer: str) -> str:
+def get_score_string(system_answer: str, ref_answer: str, type: str) -> str:
     """
     Calculates ROUGE N (1, 2, 3), L, S using functions defined and returns score string to add to the csv
     """
+    score_string = ""
+    cos_simi = get_semantic_score(system_answer, ref_answer)
+    score_string += f"Cosine similarity: {cos_simi}\n"
+
     # remove stopwords
     system_answer = remove_stopwords(system_answer)
     ref_answer = remove_stopwords(ref_answer)
 
-    score_string = ""
-    # Rouge_n, mainly 1, 2, 3
-    for n in range(1, 4):
-        rouge_n_score = rouge_n(system_answer, ref_answer, n)
-        score_string += f"ROUGE {n}: {rouge_n_score}\n"
-    # Rouge_l
-    rouge_l_score = rouge_l(system_answer, ref_answer)
-    score_string += f"ROUGE L: {rouge_l_score}\n"
-    # Rouge_s
-    rouge_s_score = rouge_s(system_answer, ref_answer)
-    score_string += f"ROUGE S: {rouge_s_score}"
+    if type == "fact":
+        rouge_1_score = rouge_n(system_answer, ref_answer, 1)
+        score_string += f"ROUGE {1}: {rouge_1_score}"
+    elif type == "summary":
+        # Rouge_n, mainly 1, 2, 3
+        for n in range(1, 4):
+            rouge_n_score = rouge_n(system_answer, ref_answer, n)
+            score_string += f"ROUGE {n}: {rouge_n_score}\n"
+        # Rouge_l
+        rouge_l_score = rouge_l(system_answer, ref_answer)
+        score_string += f"ROUGE L: {rouge_l_score}\n"
+        # Rouge_s
+        rouge_s_score = rouge_s(system_answer, ref_answer)
+        score_string += f"ROUGE S: {rouge_s_score}"
 
     return score_string
 
 
-def get_f_score(system_answer: str, ref_answer: str) -> float:
+def get_f_score(system_answer: str, ref_answer: str, type: str) -> float:
     """
     Calculates and returns final f value using ROUGE N (1, 2, 3), L, S
-    f = [ f(rouge1) + f(rouge2) + f(rouge3) + f(rougeL) + f(rougeS) ] / 5 
+    Weights of f scores are decided based on type argument
     """
+    f_score = 0.0
+    cos_simi = get_semantic_score(system_answer, ref_answer)
+
     # remove stopwords
     system_answer = remove_stopwords(system_answer)
     ref_answer = remove_stopwords(ref_answer)
 
-    f_score = 0.0
-    # Rouge_n, mainly 1, 2, 3
-    for n in range(1, 4):
-        rouge_n_score = rouge_n(system_answer, ref_answer, n)
-        f_score += 0.2 * calculate_f_value(rouge_n_score[0], rouge_n_score[1])
-    # Rouge_l
-    rouge_l_score = rouge_l(system_answer, ref_answer)
-    f_score += 0.2 * calculate_f_value(rouge_l_score[0], rouge_l_score[1])
-    # Rouge_s
-    rouge_s_score = rouge_s(system_answer, ref_answer)
-    f_score += 0.2 * calculate_f_value(rouge_s_score[0], rouge_s_score[1])
+    if type == "fact":
+        f_score += 0.5 * cos_simi
+        rouge_1_score = rouge_n(system_answer, ref_answer, 1)
+        f_score += 0.5 * calculate_f_value(rouge_1_score[0], rouge_1_score[1])
+    elif type == "summary":
+        f_score += 0.25 * cos_simi
+        # Rouge_n, mainly 1, 2, 3
+        for n in range(1, 4):
+            rouge_n_score = rouge_n(system_answer, ref_answer, n)
+            f_score += 0.15 * calculate_f_value(rouge_n_score[0], rouge_n_score[1])
+        # Rouge_l
+        rouge_l_score = rouge_l(system_answer, ref_answer)
+        f_score += 0.15 * calculate_f_value(rouge_l_score[0], rouge_l_score[1])
+        # Rouge_s
+        rouge_s_score = rouge_s(system_answer, ref_answer)
+        f_score += 0.15 * calculate_f_value(rouge_s_score[0], rouge_s_score[1])
 
     return f_score
+
+
+def squared_sum(x: List[float]) -> float:
+  """
+  return 3 rounded square rooted value
+  """
+  return round(sqrt(sum([a*a for a in x])),3)
+
+
+def get_semantic_score(system_answer: str, ref_answer: str) -> float:
+    """
+    Returns the cosine similarity between model and reference answer
+    Useful for semantic similarities between the two answers 
+    """
+    cosine_similarity = 0.0
+    system_answer_vector = nlp(system_answer).vector
+    ref_answer_vector = nlp(ref_answer).vector
+    cs_numerator = sum(a*b for a,b in zip(system_answer_vector, ref_answer_vector))
+    cs_denominator = squared_sum(system_answer_vector) * squared_sum(ref_answer_vector)
+    if cs_numerator and cs_denominator:
+        cosine_similarity = round(cs_numerator/float(cs_denominator), 3)
+    return cosine_similarity
+
+
+def add_specific_scores(type: str, qa_csv_path: str) -> None:
+    """
+    Add similarity scores (ROUGE N (1, 2, 3), L, S) to qa_csv_path, based on the type of question
+    """
+    # read qa dataframe from the csv
+    qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False, encoding='unicode_escape', skip_blank_lines=True)
+    
+    # Mistral model scores
+    qa_df['Mistral scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral'], row['DE answer'], type), axis=1)
+    # Mistral + RAG scores
+    qa_df['Mistral + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral + RAG'], row['DE answer'], type), axis=1)
+    # Mistral Fine-Tuned scores
+    qa_df['Mistral Fine-Tuned scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned'], row['DE answer'], type), axis=1)
+    # Mistral Fine-Tuned + RAG scores
+    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned + RAG'], row['DE answer'], type), axis=1)
+   
+    # write updated dataframe with ROUGE scores to csv
+    qa_df.to_csv(qa_csv_path, index=False)
+
+
+def add_specific_f_scores_to_csv(type: str, qa_csv_path: str, f_csv_path: str) -> None:
+    """
+    Add f values to f_csv_path, using the data in qa_csv_path
+    """
+    # read qa dataframe from the csv
+    qa_df = pd.read_csv(qa_csv_path, dtype=str, na_filter=False, encoding='unicode_escape')
+    plot_df = pd.read_csv(f_csv_path, dtype=str, na_filter=False, encoding='unicode_escape')
+
+    # Mistral f scores
+    plot_df['Mistral f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral'], row['DE answer'], type), axis=1)
+    # Mistral + RAG f scores
+    plot_df['Mistral + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral + RAG'], row['DE answer'], type), axis=1)
+    # Mistral Fine-Tuned f scores
+    plot_df['Mistral fine-tuned f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned'], row['DE answer'], type), axis=1)
+    # Mistral Fine-Tuned + RAG f scores
+    plot_df['Mistral Fine-Tuned + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned + RAG'], row['DE answer'], type), axis=1)
+    
+    # write updated dataframe with f scores
+    plot_df.to_csv(f_csv_path, index=False)
 
 
 def add_scores_to_csv() -> None:
@@ -292,7 +350,7 @@ def add_scores_to_csv() -> None:
     # Mistral Fine-Tuned scores
     qa_df['Mistral Fine-Tuned scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
     # Mistral Fine-Tuned + RAG scores
-    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
+    qa_df['Mistral Fine-Tuned + RAG scores'] = qa_df.apply(lambda row: get_score_string(row['Mistral Fine-Tuned + RAG'], row['DE answer']), axis=1)
     # write updated dataframe with ROUGE scores to csv
     qa_df.to_csv(qa_csv_path, index=False)
 
@@ -303,7 +361,7 @@ def add_scores_to_csv() -> None:
     # Mistral Fine-Tuned f scores
     plot_df['Mistral fine-tuned f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned'], row['DE answer']), axis=1)
     # Mistral Fine-Tuned + RAG f scores
-    plot_df['Mistral Fine-Tuned + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned + RAG scores'], row['DE answer']), axis=1)
+    plot_df['Mistral Fine-Tuned + RAG f scores'] = qa_df.apply(lambda row: get_f_score(row['Mistral Fine-Tuned + RAG'], row['DE answer']), axis=1)
     # write updated dataframe with f scores to bas_plot.csv
     plot_df.to_csv(plot_csv_path, index=False)
 
@@ -349,7 +407,6 @@ def main():
     model_answer = remove_stopwords(model_answer)
     ref_answer = remove_stopwords(ref_answer)
 
-
     # Calculate all the Rouge scores
     print("\n----------------------------------")
     print("ROUGE scores (recall, precision):")
@@ -368,10 +425,15 @@ def main():
     
 
 if __name__ == "__main__":
-
-    #main()
-    # comment main and uncomment below function to update csv with scores
-    add_scores_to_csv()
-
     main()
 
+    # comment other lines and uncomment below function to update csv with scores
+    #add_scores_to_csv()
+
+    # comment other lines and uncomment below functions to update fact csvs with all scores
+    #add_specific_scores("fact", f"{current_path}\../test/facts_QA.csv")
+    #add_specific_f_scores_to_csv("fact", f"{current_path}\../test/facts_QA.csv", f"{current_path}\../test/facts_fscores_data.csv")
+
+    # comment other lines and uncomment below functions to update summary csvs with all scores
+    #add_specific_scores("summary", f"{current_path}\../test/summary_QA.csv")
+    #add_specific_f_scores_to_csv("summary", f"{current_path}\../test/summary_QA.csv", f"{current_path}\../test/summary_fscores_data.csv")
