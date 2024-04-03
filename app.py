@@ -4,6 +4,7 @@ from streamlit.runtime.uploaded_file_manager import UploadedFile
 from benchmark.helix_ft import invoke
 import traceback
 from db.ASMEKnowledgeStore import ASMEKnowledgeStore
+from streamlit_feedback import streamlit_feedback
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -51,3 +52,9 @@ if user_question:
         response, reference = get_response_and_reference(knowledge_store, user_question)
     st.text_area("Response:", value=response, height=300)
     st.text_area("Reference:", value=reference, height=150)
+
+# Get feedback from the user
+feedback_result = streamlit_feedback(
+    feedback_type="faces",
+    optional_text_label="[Optional] Please provide an explanation",
+)

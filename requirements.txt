@@ -8,6 +8,7 @@ langchain-mistralai
 requests~=2.31.0
 pandas~=2.2.1
 streamlit~=1.32.2
+streamlit-feedback~=0.1.3
 nltk
 spacy
 pypdf~=4.1.0
