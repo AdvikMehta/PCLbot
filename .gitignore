@@ -3,3 +3,4 @@
 db/__pycache__/
 .venv/
 benchmark/__pycache__/
+test/data/
