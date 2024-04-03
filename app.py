@@ -7,6 +7,8 @@ from db.ASMEKnowledgeStore import ASMEKnowledgeStore
 from dotenv import load_dotenv
 load_dotenv()
 
+conversation_history = []
+
 def add_docs(vectordb: ASMEKnowledgeStore, files: list[UploadedFile]):
     paths = []
     for file in files:
@@ -17,11 +19,11 @@ def add_docs(vectordb: ASMEKnowledgeStore, files: list[UploadedFile]):
     vectordb.add_docs(paths)
 
 def get_response_and_reference(vectordb, question):
-    # Use the similarity_search method to get the response and reference
     try:
         search_results = vectordb.similarity_search(question)
         context = search_results[0][0]  # This is the page_content of the top document
-        print(f"Context results: {search_results}")
+        # print(f"Context results: {search_results}")
+        # print(f"Conversation history: {get_conversation_history()}")
         try:
             model_response = invoke({"question": question, "context": context})
             resp = model_response['choices'][0]['message']['content'].strip()
