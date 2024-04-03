@@ -432,7 +432,7 @@ if __name__ == "__main__":
 
     # comment other lines and uncomment below functions to update fact csvs with all scores
     #add_specific_scores("fact", f"{current_path}\../test/facts_QA.csv")
-    #add_specific_f_scores_to_csv("fact", f"{current_path}\../test/facts_QA.csv", f"{current_path}\../test/bar_plots.csv")
+    #add_specific_f_scores_to_csv("fact", f"{current_path}\../test/facts_QA.csv", f"{current_path}\../test/facts_fscores_data.csv")
 
     # comment other lines and uncomment below functions to update summary csvs with all scores
     #add_specific_scores("summary", f"{current_path}\../test/summary_QA.csv")
