@@ -9,3 +9,4 @@ requests~=2.31.0
 pandas~=2.2.1
 streamlit~=1.32.2
 nltk
+pypdf~=4.1.0
