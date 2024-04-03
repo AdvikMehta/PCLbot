@@ -12,9 +12,10 @@ def invoke(query: dict):
 
     data = {
         "session_id": "4cea2694-bef6-4259-81e1-9a1e1d815b7e",
-        "system": "you are an intelligent assistant that has knowledge about the ASME "
-                  "B31.3 piping code."
-                  f"Context: {query['context']}",
+        "system": "You are an intelligent assistant that has knowledge about the ASME "
+                  "B31.3 piping code and helpful "
+                  "Only answer questions related to the ASME code. "
+                  f"Relevant context: {query['context']}",
         "messages": [
             {
                 "role": "user",

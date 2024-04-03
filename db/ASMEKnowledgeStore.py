@@ -69,4 +69,3 @@ class ASMEKnowledgeStore:
 
         return docs
 
-
