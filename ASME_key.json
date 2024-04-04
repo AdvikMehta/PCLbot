@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "asme-piping-code-assistant",
+  "private_key_id": "d1bb734c372bac15be2b948bcc2c93ad30bbbf14",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQClplH+gKEMK4bC\n1zEpkMe0RS7oyNmpPqqaHq6G7RyafFiHikTkSkQ29QTlNth9hg2u57etLuT3/Y6G\n7KLHxqR0e5VrH0eNjqcqOJyar58qxqGjZjNzoNjNmpyXZaVAPU9SMaCJYHyyVyVi\np6ZOrr2DmGtZxr7x+4ioNFsOlYi+fj50TyCkHEsbNeqD3qwrpAojYaWvM11IH1Fv\nUHIYQeUNE/fAGbPTpsb1hguxwY91C9daBQYHU/z8TB+pXZWHRzzDDflc2vjzQ+7s\n+1mCKdkQng1DuFOe7IVfxZ5sWVII7fxnCdacVLOanqzkzs3Ark5d2sklOmQw/jlC\ndXkro/T5AgMBAAECggEAGD0VDw4tV/A1NjocydM96u/wpEQM2B9WVq+Z+XOlVX76\nc/gp39R01Ncs0d7LoNpxEsskl6Ueq0xL2GG0k/z0wCKmmNfT4C/OiswL25/1Ggzv\nRqSZb22gK72tn4L9F5WhD2A5oxXI8/jyfH7BmWPSUU4ymcljfq8VWQoy2hh2u5Yq\n/9pOpyTVkvUBgx1zceOqnXkMtBifsdBWb3pl7jdPWXaor5w2mE30xUg4frq7Eb5v\n/Hs+vPOiqisCZ4X4yK7ZSDPNAk8DxHRMGsA/s6TlVUjhvV9wr+BnOhOm938c7HAm\nfVEBIHkQuMcTCRQLdg2xmAJEvBQprd5OWJwDq4nv/QKBgQDfdadsQrgKS+pdrxm/\n0swFvFCAFKQoFpaU/WjKThRcp+Rhm8iPkeJsuyqjKfPkWGJc/ed64+u7mNXQnf9v\nkNE+kTcGNF3meMfdrBSZrr44786lP3vtWOXgcS88CaOKnQSEpAkb7WNhMK4PgalD\nbWThR+3O3GPV05g1KNWNwhjXtwKBgQC9xZJ34GnCi8stXXo0pZugrHvlp8zsmx0T\nZ9qk0/WylsSWW22H+iMucO589nMmUP1BXggDI0XPkIhdxBuSFpyqp44lVWzZJqH1\nv0AK0Ov6Q8sQLo+m507qM9/HGC7rn6MFRT7UJZ3LtEGmM5vgI7hqzoKhSmOhRfOR\nLbwIAY64zwJ/dPcgq4pAyyLxihgdYkr0gAwSFvi29ETejR4Xu80i210GLhFc6cly\nu3c82isbfmrFEefVQn4K5icZxBjvm3YyEI3yP00p2XlfJKjuH4NYDnV3tQeF1rax\nnMmh78sbz3Jg6wzxt6yKWFUixvsXnjOkmkcMMzspBsO66Bh3r7vpRQKBgQCTjOaR\nJn+UsDTNlPzLqmgSyYmbyphe70vwJrOtrNBAh1FaxsOnEioAlfYYW1a02AvRo1b/\neZFyDaK5pRz6vXIajiTLilwTiyIqfQVCY6bW85cTgeBXmUmWd7bqijcRJRIPqwNq\n18SU+haBL2dnIt7kzKRs2/YTEtyKaNDmOK/LqQKBgEuU7RuLHaez6jIR1XAjWRyE\nknqxXNBK5KVVGfJmSs4FnDkIRsfrWL3GRQeM3965Gbu8JE3/bzKrbdwuc9p+ZlTG\ns2oPWaMo3N61Cjj/rafieCjZNvVB9h2T+oIUG5khj/mjGkaYwI2/gZ5kDroHYdU/\nXoO1ONvJZeMudKBokcer\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-jg0zx@asme-piping-code-assistant.iam.gserviceaccount.com",
+  "client_id": "103456354206632084367",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-jg0zx%40asme-piping-code-assistant.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
