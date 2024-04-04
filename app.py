@@ -60,60 +60,77 @@ if uploaded_files:
 
 user_question = st.text_input("Enter your question:", "")
 
-def create_smiley_rating():
-    # Emojis for different ratings
-    smiley_emojis = ['☹️', '🙁', '😐', '🙂', '😄']
-    # Columns for the smiley buttons
-    cols = st.columns(5, gap="small")
-    # Use a session state to store the rating
-    if 'rating' not in st.session_state:
-        st.session_state['rating'] = None
+# Check if there's any Firebase app already initialized, if not, initialize one.
+if not firebase_admin._apps:
+    cred = credentials.Certificate('ASME_key.json')
+    firebase_admin.initialize_app(cred)
 
-    # Create a button in each column
-    for idx, col in enumerate(cols):
-        with col:
-            if st.button(smiley_emojis[idx]):
-                selected_index = idx + 1
-                # st.session_state["rating"]
-                # st.session_state['rating'] = idx + 1  # Store rating from 1 to 5
-                # You can display a message or perform an action based on the rating
-                print(f'You rated: {selected_index} / 5')
+db = firestore.client()
 
-# def collect_feedback():
-#     # Feedback text input
-#     feedback = st.text_input("Feedback:", placeholder="Your feedback is valuable to us!", key='feedback', max_chars=200)
-#     # Submit button
-#     if st.button("Submit"):
-#         # Here you can perform an action with the feedback
-#         st.success("Thank you for your feedback!")
-#         # For example, display the feedback and rating (for now, as we're not storing it)
-#         st.write("Feedback:", feedback)
-#         st.write("Rating:", st.session_state.get('rating', 'No rating given'))
+# Define a function to reset the feedback form state
+def reset_feedback_form_state():
+    st.session_state['feedback_text'] = ""
+    st.session_state['rating'] = None
+    st.session_state['feedback_submitted'] = False
 
-def collect_feedback():
-    # Feedback text input
-    feedback_text = st.text_input("Feedback:", placeholder="Your feedback is valuable to us!", key='feedback', max_chars=200)
-    rating = st.session_state.get('rating', 'No rating given')
-    # Submit button
-    if st.button("Submit"):
-        # Here you can perform an action with the feedback
-        feedback_data = {
-            "feedback": feedback_text,
-            "rating": rating,
-            # Include any additional data you might need
+# Initialize the session state variables
+if 'feedback_text' not in st.session_state:
+    st.session_state['feedback_text'] = ""
+if 'rating' not in st.session_state:
+    st.session_state['rating'] = None
+if 'feedback_submitted' not in st.session_state:
+    st.session_state['feedback_submitted'] = False
+
+# ... your existing code ...
+
+def create_feedback_form():
+    with st.form(key='feedback_form'):
+        st.markdown("### Your feedback:")
+        st.markdown("<span style='color:grey;'>(Please drag the red dot towards right to adjust the rating)</span>",unsafe_allow_html=True)
+
+        # Use a select slider for the smiley ratings
+        smiley_ratings = {
+            'Very Unsatisfied ☹️': 1,
+            'Unsatisfied 🙁': 2,
+            'Neutral 😐': 3,
+            'Satisfied 🙂': 4,
+            'Very Satisfied 😄': 5
         }
-        # Write data to Firestore
-        db.collection('feedback').add(feedback_data)
-        st.success("Thank you for your feedback!")
-        # Display the feedback and rating
-        st.write("Feedback:", feedback_text)
-        st.write("Rating:", rating)
+        # Display the slider only if feedback is not submitted
+        if not st.session_state['feedback_submitted']:
+            rating = st.select_slider("Rating:", options=list(smiley_ratings.keys()), format_func=lambda x: x)
+            st.session_state['rating'] = smiley_ratings[rating]
+
+            # Text input for additional feedback
+            feedback_text = st.text_area("Feedback:", placeholder="Your feedback is valuable to us!",
+                                         value=st.session_state['feedback_text'], max_chars=200)
+        else:
+            rating = st.empty()
+            feedback_text = st.empty()
+
+        # Submit button for the form
+        submitted = st.form_submit_button("Submit Feedback")
+        if submitted and not st.session_state['feedback_submitted']:
+            feedback_data = {
+                "feedback": feedback_text,
+                "rating": st.session_state['rating'],
+            }
+            # Write data to Firestore
+            db.collection('feedback').add(feedback_data)
+            st.success("Thank you for your feedback!")
+            st.write("Your Feedback:", feedback_text)
+            st.write("Your Rating:", st.session_state['rating'])
+            # Mark feedback as submitted
+            st.session_state['feedback_submitted'] = True
+            # Clearing the input fields
+            reset_feedback_form_state()
+
+# ... rest of your code ...
 
 if user_question:
-    with st.spinner('Getting response...'):
-        response, reference = get_response_and_reference(knowledge_store, user_question)
-    st.text_area("Response:", value=response, height=300)
-    st.text_area("Reference:", value=reference, height=150)
-
-    create_smiley_rating()
-    collect_feedback()
+    if not st.session_state['feedback_submitted']:
+        with st.spinner('Getting response...'):
+            response, reference = get_response_and_reference(knowledge_store, user_question)
+        st.text_area("Response:", value=response, height=300)
+        st.text_area("Reference:", value=reference, height=150)
+    create_feedback_form()
