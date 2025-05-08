@@ -1,7 +1,7 @@
-# 🏗️ InnovAiTors: AI-Powered Assistant for Engineers in the AEC Industry
+# 🏗️ PCL Bot: AI-Powered Assistant for Engineers in the AEC Industry
 
 ## 📘 Overview
-InnovAiTors is a domain-specific AI solution built to streamline how engineers in the Architecture, Engineering, and Construction (AEC) industry access and interact with technical documentation. Focused on standards like **ASME B31.3**, this digital assistant answers complex engineering queries with precise, referenced, and well-structured responses.
+PCL Bot is a domain-specific AI solution built to streamline how engineers in the Architecture, Engineering, and Construction (AEC) industry access and interact with technical documentation. Focused on standards like **ASME B31.3**, this digital assistant answers complex engineering queries with precise, referenced, and well-structured responses.
 
 ---
 
